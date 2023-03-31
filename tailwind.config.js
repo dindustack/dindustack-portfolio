@@ -6,7 +6,13 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        monument: ["Monument Extended"],
+        neutralFace: ["Neutral Face"],
+        segoe: ["Segoe UI"],
+      },
+    },
   },
   plugins: [],
 }
