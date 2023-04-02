@@ -20,7 +20,7 @@ export default function HomePage() {
   return (
     <>
       <Head>
-        <title>dindustack</title>
+        <title>Chinwendu Agbaetuo | Frontend Developer</title>
         <meta
           name="description"
           content="Portfolio showcasing frontend experience"
