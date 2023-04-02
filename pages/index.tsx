@@ -1,6 +1,7 @@
+import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import SplashScreen from "@/components/SplashScreen";
-import Head from "next/head";
+import Navbar from "@/components/Navbar";
 
 export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -11,16 +12,15 @@ export default function HomePage() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 5000);
-    return () => clearTimeout(timeout)
+    // }, 4800);
+  }, 0);
+    return () => clearTimeout(timeout);
   }, []);
-
-  
 
   return (
     <>
       <Head>
-        <title>DinduStack</title>
+        <title>dindustack</title>
         <meta
           name="description"
           content="Portfolio showcasing frontend experience"
@@ -29,7 +29,14 @@ export default function HomePage() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {isLoading ? <SplashScreen /> : <div>Hello</div>}
+      {isLoading ? (
+        // <SplashScreen />
+        <div>Hello</div>
+      ) : (
+        <div className="text-[#e7e7e7] uppercase">
+          <Navbar />
+        </div>
+      )}
     </>
   );
 }
