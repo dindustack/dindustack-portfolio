@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import SplashScreen from "@/components/SplashScreen";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import CustomCursor from "@/components/CustomCursor";
 
 export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -51,6 +52,7 @@ export default function HomePage() {
         <SplashScreen />
       ) : (
         <div className="text-[#e7e7e7] uppercase">
+          <CustomCursor />
           <Navbar />
           <Hero />
         </div>
