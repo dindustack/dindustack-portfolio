@@ -12,8 +12,7 @@ export default function HomePage() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    // }, 4800);
-  }, 0);
+    }, 4800);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -30,8 +29,7 @@ export default function HomePage() {
       </Head>
 
       {isLoading ? (
-        // <SplashScreen />
-        <div>Hello</div>
+        <SplashScreen />
       ) : (
         <div className="text-[#e7e7e7] uppercase">
           <Navbar />
