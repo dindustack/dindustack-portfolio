@@ -45,6 +45,7 @@ export default function Navbar() {
   });
 
   function menuOpen() {
+    // comment out
     menuCollapse.reversed() ? menuCollapse.play() : menuCollapse.reverse();
   }
 
