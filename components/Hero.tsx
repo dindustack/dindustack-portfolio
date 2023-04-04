@@ -6,7 +6,7 @@ import slideImageTwo from "../images/Chinwendu-Agbaetuo-5.jpeg";
 
 export default function Hero() {
   return (
-    <div className="relative pt-[13rem] md:pt-[15rem] pb-[7.5rem] w-[100vw] h-[95vh] overflow-hidden">
+    <div className="pt-[13rem] md:pt-[15rem] pb-[7.5rem] w-[100vw] h-[95vh] overflow-hidden">
       <div className="py-0 px-[1.3rem] md:px-[2.5rem] md:max-w-[90rem] mx-auto my-0">
         <div className="flex flex-col items-center md:items-stretch md:grid md:grid-cols-3 md:gap-4 ">
           <h1 className="text-4xl font-monument font-normal md:text-4xl text-center md:text-left lg:text-7xl -mb-[0.8rem] md:mb-0 leading-none z-20">
@@ -27,7 +27,7 @@ export default function Hero() {
           </div>
 
           <div className="flex justify-end flex-col">
-            <h2 className="text-3xl font-monument font-light md:text-4xl text-center md:text-right lg:text-5xl -mt-[0.5rem] md:mt-0 leading-none z-20">
+            <h2 className="text-3xl font-monument font-light md:text-4xl text-center md:text-right lg:text-5xl -mt-[0.5rem] md:mt-0 leading-none z-[2]">
               creative
               <br /> 
               <span className="relative lg:-left-[12rem]">frontend</span>
