@@ -13,6 +13,6 @@ export default function CustomCursor() {
     })
   })
   return (
-    <div ref={cursorRef} className="absolute z-[1000] rounded-[50%] w-[5rem] h-[5rem] border border-white pointer-events-none overflow-hidden translate-z-0"></div>
+    <div ref={cursorRef} className="hidden lg:block absolute z-[1000] rounded-[50%] w-[5rem] h-[5rem] border-2 border-white pointer-events-none overflow-hidden translate-z-0"></div>
   );
 }
