@@ -13,7 +13,7 @@ export default function Hero() {
             <span className="leading-none">Hey</span>
             <br />
             <span>i&apos;m</span>
-            <span className="ml-2 md:ml-8">Chinwendu</span>
+            <span className="ml-2 md:ml-4 lg:ml-8">Chinwendu</span>
           </h1>
           <div className="hidden md:flex flex-col items-start gap-y-[1rem]">
             <a href="https://www.instagram.com/dindustack/">
@@ -38,7 +38,7 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <div className="relative flex flex-col justify-center items-center">
+        <div className="relative flex flex-col md:-mt-[100px] lg:mt-0 justify-center items-center">
           <Image
             alt="Chinwendu Agbaetuo"
             src={slideImageOne}
@@ -56,7 +56,7 @@ export default function Hero() {
           <h2 className="text-3xl font-monument font-light md:text-4xl text-center md:text-right lg:text-6xl leading-none z-[2]">
             creative
             <br />
-            <span className="relative lg:-left-[16rem]">frontend</span>
+            <span className="relative md:-left-[8rem] lg:-left-[16rem]">frontend</span>
             <br />
             <span>developer</span>
           </h2>
