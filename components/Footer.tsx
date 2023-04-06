@@ -10,10 +10,10 @@ export default function Footer() {
       </div>
       <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between">
         <div>follow me</div>
-        <div className="text-4xl underline">instagram</div>
-        <div className="text-4xl underline">linkedin</div>
-        <div className="text-4xl underline">twitter</div>
-        <div className="text-4xl underline">dribbble</div>
+        <a href="https://www.instagram.com/dindustack/" className="text-4xl underline">instagram</a>
+        <a href="https://www.linkedin.com/in/dindustack/" className="text-4xl underline">linkedin</a>
+        <a href="https://twitter.com/dindustack" className="text-4xl underline">twitter</a>
+        <a href="https://dribbble.com/dindustack" className="text-4xl underline">dribbble</a>
       </div>
       <div className="flex pt-5 flex-col lg:flex-row items-end lg:items-center justify-between">
         <div>top</div>
