@@ -4,6 +4,7 @@ import SplashScreen from "@/components/SplashScreen";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import CustomCursor from "@/components/CustomCursor";
+import Footer from "@/components/Footer";
 
 export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -55,6 +56,7 @@ export default function HomePage() {
           <CustomCursor />
           <Navbar />
           <Hero />
+          <Footer />
         </div>
       )}
     </>

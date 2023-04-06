@@ -9,8 +9,8 @@ export default function Hero() {
     <div className="pt-[10rem] lg:pt-[15rem] pb-[7.5rem] px-[1.5rem] md:px-[3.375rem] lg:px-[7rem] w-[100vw] h-[95vh] overflow-hidden">
       <div className="flex flex-col lg:flex-row justify-center items-center lg:justify-between">
         <div className="relative flex justify-start md:justify-center flex-col md:pb-0 lg:pb-[6rem] pt-[2.125rem] md:pt-[0] md:gap-y-[1rem] lg:gap-y-[4rem] w-[100%] lg:w-[18.5rem] xl:w-[17.7rem]">
-          <h1 className=" mb-[10px] text-3xl font-monument font-normal md:text-4xl text-center md:text-left lg:text-7xl leading-none z-20">
-            <span className="leading-none">Hey</span>
+          <h1 className=" mb-[10px] text-3xl font-monument font-bold md:text-4xl text-center md:text-left lg:text-[4rem] z-20">
+            <span className="leading-[1.5]">Hey</span>
             <br />
             <span>i&apos;m</span>
             <span className="ml-2 md:ml-4 lg:ml-8">Chinwendu</span>
@@ -60,6 +60,7 @@ export default function Hero() {
             <br />
             <span>developer</span>
           </h2>
+          <div className="break-words font-light normal-case text-base hidden md:flex md:w-[18rem] xl:w-[0]">Crafting beautiful and intuitive user experiences, one line of code at a time.</div>
         </div>
       </div>
     </div>
