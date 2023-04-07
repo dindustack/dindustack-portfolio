@@ -7,7 +7,7 @@ export default function MarqueeSection() {
       <Marquee
         gradient={false}
         speed={100}
-        pauseOnHover={true}
+        // pauseOnHover={true}
         className="relative flex w-full border-white border-t border-b"
       >
         <div className="py-8">
