@@ -7,19 +7,18 @@ export default function MarqueeSection() {
       <Marquee
         gradient={false}
         speed={100}
-        // pauseOnHover={true}
         className="relative flex w-full border-white border-t border-b"
       >
         <div className="py-8">
           <span className="text-base leading-none mx-4">Frontend engineer</span>
           <span className="text-base leading-none mx-4">•</span>
-          <span className="text-base leading-none mx-4">ui engineer</span>
+          <span className="text-base leading-none mx-4">developer advocate</span>
           <span className="text-base leading-none mx-4">•</span>
           <span className="text-base leading-none mx-4">designer</span>
           <span className="text-base leading-none mx-4">•</span>
           <span className="text-base leading-none mx-4">Frontend engineer</span>
           <span className="text-base leading-none mx-4">•</span>
-          <span className="text-base leading-none mx-4">ui engineer</span>
+          <span className="text-base leading-none mx-4">developer advocate</span>
           <span className="text-base leading-none mx-4">•</span>
           <span className="text-base leading-none mx-4">designer</span>
           <span className="text-base leading-none mx-4">•</span>
@@ -28,13 +27,13 @@ export default function MarqueeSection() {
         <div className="py-8">
           <span className="text-base leading-none mx-4">Frontend engineer</span>
           <span className="text-base leading-none mx-4">•</span>
-          <span className="text-base leading-none mx-4">ui engineer</span>
+          <span className="text-base leading-none mx-4">developer advocate</span>
           <span className="text-base leading-none mx-4">•</span>
           <span className="text-base leading-none mx-4">designer</span>
           <span className="text-base leading-none mx-4">•</span>
           <span className="text-base leading-none mx-4">Frontend engineer</span>
           <span className="text-base leading-none mx-4">•</span>
-          <span className="text-base leading-none mx-4">ui engineer</span>
+          <span className="text-base leading-none mx-4">developer advocate</span>
           <span className="text-base leading-none mx-4">•</span>
           <span className="text-base leading-none mx-4">designer</span>
           <span className="text-base leading-none mx-4">•</span>
