@@ -1,6 +1,5 @@
 import React from 'react'
 
-// commit
 export default function Services() {
   return (
     <div className='relative py-[6.25rem] px-0'>
