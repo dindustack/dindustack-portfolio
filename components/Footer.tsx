@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="relative font-neutralFace px-3">
+    <div className="relative font-neutralFace px-[0.75rem] md:px-[2.5rem]">
       <div className="hidden lg:block mb-[10vh]">
         <div className="mx-1 font-monument font-semibold py-10 text-[11.5vmax] my-1 leading-none">
           dindustack

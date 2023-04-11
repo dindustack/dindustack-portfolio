@@ -109,7 +109,7 @@ export default function Navbar() {
       </div>
         {/* Mobile view - Navbar */}
 
-      <div className="absolute bg-black top-0 py-[5px] font-neutralFace h-[20vh] flex justify-between w-[100%] flex-col">
+      <div className="absolute bg-black px-[0.75rem] md:px-[2.5rem] top-0 py-[5px] font-neutralFace h-[20vh] flex justify-between w-[100%] flex-col">
         <div
           id="header"
           className="flex items-center justify-between w-[100%] h-fit"
