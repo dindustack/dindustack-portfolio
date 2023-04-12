@@ -7,6 +7,7 @@ import CustomCursor from "@/components/CustomCursor";
 import Footer from "@/components/Footer";
 import MarqueeSection from "@/components/Marquee";
 import Services from "@/components/Services";
+import Projects from "@/components/Projects";
 
 export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -17,8 +18,8 @@ export default function HomePage() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 4800);
-  // }, 0);
+    // }, 4800);
+  }, 0);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -56,11 +57,12 @@ export default function HomePage() {
         <SplashScreen />
       ) : (
         <div className="text-[#e7e7e7] uppercase">
-          <CustomCursor />
+          {/* <CustomCursor /> */}
           <Navbar />
           <Hero />
           <MarqueeSection />
           <Services />
+          <Projects />
           <Footer />
         </div>
       )}
