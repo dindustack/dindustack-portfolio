@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import SplashScreen from "@/components/SplashScreen";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import CustomCursor from "@/components/CustomCursor";
+// import CustomCursor from "@/components/CustomCursor";
 import Footer from "@/components/Footer";
 import MarqueeSection from "@/components/Marquee";
 import Services from "@/components/Services";
