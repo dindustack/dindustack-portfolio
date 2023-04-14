@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import ProjectItem from "./Item";
 import { projects } from "@/constants/projects";
 import ProjectBox from "./Box";
 
 export default function Projects() {
+  const [activeIndex, setActiveIndex] = useState(0);
   return (
     <div className="relative py-[6.25rem]">
       <div className="px-[0.75rem] md:px-[2.5rem] mx-auto">
@@ -17,10 +18,12 @@ export default function Projects() {
         </div>
 
         {React.Children.toArray(
-          projects.map((project) => (
+          projects.map((project, index) => (
             <ProjectItem
               serialNumber={project.id}
               projectName={project.projectName}
+              index={index}
+              onEnter={(index) => setActiveIndex(index)}
             />
           ))
         )}
