@@ -5,10 +5,10 @@ import React, { useEffect, useRef, useState } from "react";
 
 type ProjectBoxProps = {
   // imageSrc: StaticImageData | string;
-  imageSrc: any
+  imageSrc: any;
 };
 
-export default function ProjectBox({ imageSrc}: ProjectBoxProps) {
+export default function ProjectBox({ imageSrc }: ProjectBoxProps) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [wavyPosition, setWavyPosition] = useState({
     positionX: 0,
@@ -18,17 +18,15 @@ export default function ProjectBox({ imageSrc}: ProjectBoxProps) {
   const cursorRef = useRef() as React.MutableRefObject<HTMLDivElement>;
 
   useEffect(() => {
-    document.addEventListener("mousemove", (event) => {
+    const onMouseMove = (event: any) => {
       const { clientX, clientY } = event;
       const mouseX = clientX;
       const mouseY = clientY;
 
       setPosition({ x: mouseX, y: mouseY });
-    });
-
-    return () => {
-      document.removeEventListener("mousemove", () => {});
     };
+    window.addEventListener("mousemove", onMouseMove);
+    return () => window.removeEventListener("mousemove", onMouseMove);
   }, []);
 
   const rafFn = useRafFn(() => {
@@ -62,8 +60,7 @@ export default function ProjectBox({ imageSrc}: ProjectBoxProps) {
     >
       <div className="w-full h-full absolute top-0 left-0 opacity-0">
         <Image alt="" src={imageSrc} className="w-full h-full object-cover" />
-       </div>
-
+      </div>
     </div>
   );
 }

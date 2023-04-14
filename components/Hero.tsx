@@ -1,8 +1,8 @@
 import Image from "next/image";
 import React from "react";
 
-import slideImageOne from "../images/Chinwendu-Agbaetuo.jpeg";
-import slideImageTwo from "../images/Chinwendu-Agbaetuo-5.jpeg";
+import slideImageOne from "../images/Chinwendu_Agbaetuo-1.jpeg";
+import slideImageTwo from "../images/Chinwendu_Agbaetuo-2.jpeg";
 
 export default function Hero() {
   return (
