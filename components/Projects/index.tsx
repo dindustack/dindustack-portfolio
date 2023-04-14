@@ -4,8 +4,6 @@ import { projects } from "@/constants/projects";
 import ProjectBox from "./Box";
 
 export default function Projects() {
- 
-
   return (
     <div className="relative py-[6.25rem]">
       <div className="px-[0.75rem] md:px-[2.5rem] mx-auto">
@@ -27,7 +25,9 @@ export default function Projects() {
           ))
         )}
 
-        <ProjectBox />
+        {React.Children.toArray(
+          projects.map((project) => <ProjectBox imageSrc={project.imgSrc} />)
+        )}
 
         {/* Project Footer */}
         <div className="pt-[3rem]">
@@ -44,8 +44,6 @@ export default function Projects() {
             </a>
           </p>
         </div>
-
-       
       </div>
     </div>
   );

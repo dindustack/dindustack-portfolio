@@ -1,7 +1,14 @@
-import {  gsap } from "gsap";
+import { useRafFn } from "@/constants/animation";
+import { gsap } from "gsap";
+import Image, { StaticImageData } from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 
-export default function ProjectBox() {
+type ProjectBoxProps = {
+  // imageSrc: StaticImageData | string;
+  imageSrc: any
+};
+
+export default function ProjectBox({ imageSrc}: ProjectBoxProps) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [wavyPosition, setWavyPosition] = useState({
     positionX: 0,
@@ -24,44 +31,39 @@ export default function ProjectBox() {
     };
   }, []);
 
+  const rafFn = useRafFn(() => {
+    setWavyPosition({
+      positionX: gsap.utils.interpolate(
+        wavyPosition.positionX,
+        position.x,
+        0.08
+      ),
+      positionY: gsap.utils.interpolate(
+        wavyPosition.positionY,
+        position.y,
+        0.08
+      ),
+    });
+  });
+
   useEffect(() => {
-    let requestId: any;
-
-    const animate = () => {
-      setWavyPosition({
-        positionX: gsap.utils.interpolate(wavyPosition.positionX, position.x, 0.08),
-        positionY: gsap.utils.interpolate(wavyPosition.positionY, position.y, 0.08),
-      });
-
-      requestId = requestAnimationFrame(animate);
-    };
-
-    
-    if (position.x !== wavyPosition.positionX || position.y !== wavyPosition.positionY) {
-      animate();
-    }
-
-
-
-
-
-    return () => {
-      cancelAnimationFrame(requestId);
-    };
-  }, [position.x, position.y, wavyPosition.positionX, wavyPosition.positionY]);
-
-  
-
-  
+    // Call rafFn to start the animation
+    rafFn();
+  }, [rafFn]);
 
   return (
     <div
       ref={cursorRef}
-      className="w-[30vw] h-[18vw] fixed top-0 left-0  z-10 bg-green-500 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+      className="w-[30vw] h-[18vw] fixed top-0 left-0  z-10 bg-green-500 -translate-x-1/2 -translate-y-1/2 pointer-events-none overflow-hidden"
       style={{
         top: `${wavyPosition.positionY}px`,
         left: `${wavyPosition.positionX}px`,
       }}
-    ></div>
+    >
+      <div className="w-full h-full absolute top-0 left-0 opacity-0">
+        <Image alt="" src={imageSrc} className="w-full h-full object-cover" />
+       </div>
+
+    </div>
   );
 }
