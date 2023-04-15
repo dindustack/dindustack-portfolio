@@ -1,21 +1,26 @@
 import { useRafFn } from "@/constants/animation";
 import { gsap } from "gsap";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
+import {Project } from "@/constants/projects";
 
 type ProjectBoxProps = {
   // imageSrc: StaticImageData | string;
-  imageSrc: any;
+  activeIndex: number;
+  projectImages: Project[];
 };
 
-export default function ProjectBox({ imageSrc }: ProjectBoxProps) {
+export default function ProjectBox({
+  activeIndex,
+  projectImages,
+}: ProjectBoxProps) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [wavyPosition, setWavyPosition] = useState({
     positionX: 0,
     positionY: 0,
   });
-  console.log(wavyPosition.positionX, wavyPosition.positionY);
   const cursorRef = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const imagesRef = useRef([]) as React.MutableRefObject<HTMLDivElement[]>;
 
   useEffect(() => {
     const onMouseMove = (event: any) => {
@@ -49,6 +54,26 @@ export default function ProjectBox({ imageSrc }: ProjectBoxProps) {
     rafFn();
   }, [rafFn]);
 
+  useEffect(() => {
+    if (activeIndex !== null) {
+      gsap.to(imagesRef.current[activeIndex], {
+        opacity: 1,
+        duration: 0.445,
+        ease: "power2.inOut",
+      });
+    }
+
+    return () => {
+      if (activeIndex !== null) {
+        gsap.to(imagesRef.current[activeIndex], {
+          opacity: 0,
+          duration: 0.445,
+          ease: "power2.inOut",
+        });
+      }
+    };
+  }, [activeIndex]);
+
   return (
     <div
       ref={cursorRef}
@@ -58,9 +83,20 @@ export default function ProjectBox({ imageSrc }: ProjectBoxProps) {
         left: `${wavyPosition.positionX}px`,
       }}
     >
-      <div className="w-full h-full absolute top-0 left-0 opacity-0">
-        <Image alt="" src={imageSrc} className="w-full h-full object-cover" />
-      </div>
+      {React.Children.toArray(
+        projectImages.map((image, index) => (
+          <div
+            className="w-full h-full absolute top-0 left-0 opacity-1"
+            ref={(el) => (imagesRef.current[index] = el)}
+          >
+            <Image
+              alt=""
+              src={image.imgSrc}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        ))
+      )}
     </div>
   );
 }

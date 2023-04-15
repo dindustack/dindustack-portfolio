@@ -28,9 +28,8 @@ export default function Projects() {
           ))
         )}
 
-        {React.Children.toArray(
-          projects.map((project) => <ProjectBox imageSrc={project.imgSrc} />)
-        )}
+        <ProjectBox projectImages={projects} activeIndex={activeIndex}  />)
+        
 
         {/* Project Footer */}
         <div className="pt-[3rem]">
