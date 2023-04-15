@@ -28,7 +28,7 @@ export default function Projects() {
           ))
         )}
 
-        <ProjectBox projectImages={projects} activeIndex={activeIndex}  />)
+        <ProjectBox projectImages={projects} activeIndex={activeIndex}  />
         
 
         {/* Project Footer */}

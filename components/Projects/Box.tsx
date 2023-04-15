@@ -1,11 +1,10 @@
 import { useRafFn } from "@/constants/animation";
-import { gsap } from "gsap";
+import { gsap, Power2 } from "gsap";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import {Project } from "@/constants/projects";
 
 type ProjectBoxProps = {
-  // imageSrc: StaticImageData | string;
   activeIndex: number;
   projectImages: Project[];
 };
@@ -14,14 +13,24 @@ export default function ProjectBox({
   activeIndex,
   projectImages,
 }: ProjectBoxProps) {
+  /**
+   * State 
+   */
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [wavyPosition, setWavyPosition] = useState({
     positionX: 0,
     positionY: 0,
   });
+
+  /**
+   * Refs
+   */
   const cursorRef = useRef() as React.MutableRefObject<HTMLDivElement>;
   const imagesRef = useRef([]) as React.MutableRefObject<HTMLDivElement[]>;
 
+  /**
+   * Effects
+   */
   useEffect(() => {
     const onMouseMove = (event: any) => {
       const { clientX, clientY } = event;
@@ -59,7 +68,7 @@ export default function ProjectBox({
       gsap.to(imagesRef.current[activeIndex], {
         opacity: 1,
         duration: 0.445,
-        ease: "power2.inOut",
+        ease: Power2.easeInOut,
       });
     }
 
@@ -68,7 +77,7 @@ export default function ProjectBox({
         gsap.to(imagesRef.current[activeIndex], {
           opacity: 0,
           duration: 0.445,
-          ease: "power2.inOut",
+          ease: Power2.easeInOut,
         });
       }
     };
@@ -77,7 +86,7 @@ export default function ProjectBox({
   return (
     <div
       ref={cursorRef}
-      className="w-[30vw] h-[18vw] fixed top-0 left-0  z-10 bg-green-500 -translate-x-1/2 -translate-y-1/2 pointer-events-none overflow-hidden"
+      className="w-[30vw] h-[18vw] fixed top-0 left-0  z-10  -translate-x-1/2 -translate-y-1/2 pointer-events-none overflow-hidden"
       style={{
         top: `${wavyPosition.positionY}px`,
         left: `${wavyPosition.positionX}px`,
@@ -86,7 +95,7 @@ export default function ProjectBox({
       {React.Children.toArray(
         projectImages.map((image, index) => (
           <div
-            className="w-full h-full absolute top-0 left-0 opacity-1"
+            className="w-full h-full absolute top-0 left-0 opacity-0"
             ref={(el) => (imagesRef.current[index] = el)}
           >
             <Image
