@@ -2,7 +2,7 @@ import { useRafFn } from "@/constants/animation";
 import { gsap, Power2 } from "gsap";
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
-import {Project } from "@/constants/projects";
+import { Project } from "@/constants/projects";
 
 type ProjectBoxProps = {
   activeIndex: number;
@@ -14,7 +14,7 @@ export default function ProjectBox({
   projectImages,
 }: ProjectBoxProps) {
   /**
-   * State 
+   * State
    */
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [wavyPosition, setWavyPosition] = useState({
