@@ -7,10 +7,12 @@ type ProjectItemProps = {
   projectName: string;
   index: number;
   onEnter: (index: number) => void;
+  onMove: (data: { x: number; y: number; index: number }) => void;
+
 };
 
 
-export default function ProjectItem ({ index, serialNumber, projectName, onEnter }: ProjectItemProps) {
+export default function ProjectItem ({ index, serialNumber, projectName, onEnter, onMove }: ProjectItemProps) {
   const textRef = useRef() as React.MutableRefObject<HTMLAnchorElement>;
 
   const handleEnter = () => {
@@ -33,6 +35,19 @@ export default function ProjectItem ({ index, serialNumber, projectName, onEnter
       ease: Power2.easeInOut,
     });
   };
+
+  const handleMove = (event) => {
+    const {left, top, width, height } = textRef.current.getBoundingClientRect()
+
+    const progressionY = (1 / height) * (event.clientY - top);
+    const progressionX = (1 / width) * (event.clientX - left);
+
+    const x = gsap.utils.interpolate(-1, 1, progressionX)
+    const y = gsap.utils.interpolate(-1, 1, progressionY)
+
+    onMove({ x, y, index})
+  }
+
   return (
     <div>
       <a
@@ -41,6 +56,7 @@ export default function ProjectItem ({ index, serialNumber, projectName, onEnter
         className="relative md:pl-32 flex justify-between items-end py-[3rem] cursor-pointer border-b border-white w-[100%] border-t z-[1000]"
         onMouseEnter={handleEnter}
         onMouseLeave={handleLeave}
+        onMouseMove={handleMove}
       >
         <div className="flex space-x-4 md:space-x-8">
           <span className="text-base leading-[1.5] translate-y-[0.4rem] md:translate-y-3">{serialNumber}</span>

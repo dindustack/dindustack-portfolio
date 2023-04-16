@@ -13,13 +13,14 @@ import { Project } from "@/constants/projects";
 type ProjectBoxProps = {
   activeIndex: number;
   projectImages: Project[];
+  offsets: any;
 };
 
 export const ProjectBox = forwardRef(function ProjectBox(
   props: ProjectBoxProps,
   ref
 ) {
-  const { activeIndex, projectImages } = props;
+  const { activeIndex, projectImages, offsets } = props;
   /**
    * State
    */
@@ -141,6 +142,11 @@ export const ProjectBox = forwardRef(function ProjectBox(
             <div
               className="w-full h-full absolute top-0 left-0 opacity-0"
               ref={(el) => (imagesRef.current[index] = el)}
+              style={{
+                transform: `translateX(${12.5 * offsets[index]?.x || 0}%) 
+                translateY(${12.5 * offsets[index]?.y || 0}%) scale(1.25)
+                `,
+              }}
             >
               <Image
                 alt=""

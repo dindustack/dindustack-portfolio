@@ -6,6 +6,13 @@ import { ProjectBox } from "./Box";
 export default function Projects() {
   const [activeIndex, setActiveIndex] = useState(0);
   const projectBoxRef = useRef(null);
+  const offsets = useRef({ x: 0, y: 0 });
+
+  const handleMove = (event) => {
+    const { x, y, index } = event;
+    offsets.current[index] = { x, y };
+  };
+
 
   return (
     <div className="relative py-[6.25rem]">
@@ -30,6 +37,7 @@ export default function Projects() {
                 projectName={project.projectName}
                 index={index}
                 onEnter={(index) => setActiveIndex(index)}
+                onMove={(event) => handleMove(event)}
               />
             ))
           )}
@@ -39,6 +47,7 @@ export default function Projects() {
           projectImages={projects}
           activeIndex={activeIndex}
           ref={projectBoxRef}
+          offsets={offsets.current}
         />
 
         {/* Project Footer */}
