@@ -9,6 +9,7 @@ import React, {
   useState,
 } from "react";
 import { Project } from "@/constants/projects";
+import { mapRange } from "gsap/all";
 
 type ProjectBoxProps = {
   activeIndex: number;
@@ -29,13 +30,15 @@ export const ProjectBox = forwardRef(function ProjectBox(
     positionX: 0,
     positionY: 0,
   });
+  const [previousX, setPreviousX] = useState(0);
+  let [rotation, setRotation] = useState(0);
 
   /**
    * Refs
    */
-  const cursorRef = useRef() as React.MutableRefObject<HTMLDivElement>;
-  const imagesRef = useRef([]) as React.MutableRefObject<HTMLDivElement[]>;
+  const boxRef = useRef() as React.MutableRefObject<HTMLDivElement>;
   const elRef = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const imagesRef = useRef([]) as React.MutableRefObject<HTMLDivElement[]>;
 
   /**
    * Effects
@@ -65,6 +68,21 @@ export const ProjectBox = forwardRef(function ProjectBox(
         0.08
       ),
     });
+
+    const distance = gsap.utils.clamp(0, 100, Math.abs(previousX - position.x));
+    setRotation(
+      gsap.utils.interpolate(
+        rotation,
+        mapRange(0, 100, 0, previousX - position.x < 0 ? 45 : -45, distance),
+        0.08
+      )
+    );
+
+    gsap.set(boxRef.current, {
+      rotation,
+    });
+
+    setPreviousX(position.x);
   });
 
   useEffect(() => {
@@ -125,7 +143,7 @@ export const ProjectBox = forwardRef(function ProjectBox(
 
   return (
     <div
-      ref={cursorRef}
+      ref={boxRef}
       className="w-[30vw] h-[18vw] fixed top-0 left-0  z-10  -translate-x-1/2 -translate-y-1/2 pointer-events-none overflow-hidden"
       style={{
         top: `${wavyPosition.positionY}px`,
