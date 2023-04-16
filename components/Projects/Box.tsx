@@ -73,7 +73,7 @@ export const ProjectBox = forwardRef(function ProjectBox(
     setRotation(
       gsap.utils.interpolate(
         rotation,
-        mapRange(0, 100, 0, previousX - position.x < 0 ? 45 : -45, distance),
+        gsap.utils.mapRange(0, 100, 0, previousX - position.x < 0 ? 45 : -45, distance),
         0.08
       )
     );
