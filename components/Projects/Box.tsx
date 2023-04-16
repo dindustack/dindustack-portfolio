@@ -1,7 +1,13 @@
 import { useRafFn } from "@/constants/animation";
 import { gsap, Power2 } from "gsap";
 import Image from "next/image";
-import React, { useEffect, useRef, useState } from "react";
+import React, {
+  forwardRef,
+  useEffect,
+  useImperativeHandle,
+  useRef,
+  useState,
+} from "react";
 import { Project } from "@/constants/projects";
 
 type ProjectBoxProps = {
@@ -9,10 +15,11 @@ type ProjectBoxProps = {
   projectImages: Project[];
 };
 
-export default function ProjectBox({
-  activeIndex,
-  projectImages,
-}: ProjectBoxProps) {
+export const ProjectBox = forwardRef(function ProjectBox(
+  props: ProjectBoxProps,
+  ref
+) {
+  const { activeIndex, projectImages } = props;
   /**
    * State
    */
@@ -27,6 +34,7 @@ export default function ProjectBox({
    */
   const cursorRef = useRef() as React.MutableRefObject<HTMLDivElement>;
   const imagesRef = useRef([]) as React.MutableRefObject<HTMLDivElement[]>;
+  const elRef = useRef() as React.MutableRefObject<HTMLDivElement>;
 
   /**
    * Effects
@@ -83,6 +91,37 @@ export default function ProjectBox({
     };
   }, [activeIndex]);
 
+  const animateIn = () => {
+    gsap.killTweensOf(elRef.current);
+
+    gsap.to(elRef.current, {
+      clipPath: `inset(0% 0% 0% 0%)`,
+      duration: 0.455,
+      ease: Power2.easeInOut,
+    });
+  };
+
+  const animateOut = () => {
+    gsap.killTweensOf(elRef.current);
+
+    gsap.to(elRef.current, {
+      clipPath: `inset(0% 0% 100% 0%)`,
+      duration: 0.455,
+      ease: Power2.easeInOut,
+    });
+  };
+
+  useImperativeHandle(
+    ref,
+    () => {
+      return {
+        animateIn,
+        animateOut,
+      };
+    },
+    []
+  );
+
   return (
     <div
       ref={cursorRef}
@@ -92,20 +131,26 @@ export default function ProjectBox({
         left: `${wavyPosition.positionX}px`,
       }}
     >
-      {React.Children.toArray(
-        projectImages.map((image, index) => (
-          <div
-            className="w-full h-full absolute top-0 left-0 opacity-0"
-            ref={(el) => (imagesRef.current[index] = el)}
-          >
-            <Image
-              alt=""
-              src={image.imgSrc}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        ))
-      )}
+      <div
+        ref={elRef}
+        className="w-full h-full relative"
+        style={{ clipPath: "inset(0% 0% 100% 0%)" }}
+      >
+        {React.Children.toArray(
+          projectImages.map((image, index) => (
+            <div
+              className="w-full h-full absolute top-0 left-0 opacity-0"
+              ref={(el) => (imagesRef.current[index] = el)}
+            >
+              <Image
+                alt=""
+                src={image.imgSrc}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))
+        )}
+      </div>
     </div>
   );
-}
+});
