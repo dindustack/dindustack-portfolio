@@ -19,8 +19,8 @@ export default function Footer() {
         <div>top</div>
         <div className="mx-1 font-neutralFace font-bold text-[30px]">work</div>
         <div className="mx-1 font-neutralFace font-bold text-[30px]">about</div>
-        <div className="mx-1 font-neutralFace font-bold text-[30px]">publications</div>
-        <div className="mx-1 font-neutralFace font-bold text-[30px]">office</div>
+        <div className="mx-1 font-neutralFace font-bold text-[30px]">projects</div>
+        <div className="mx-1 font-neutralFace font-bold text-[30px]">contact</div>
       </div>
       <div className="w-full h-[2px] bg-white"></div>
       <div className="flex flex-col lg:flex-row lg:mt-20 items-start lg:items-end justify-between">
