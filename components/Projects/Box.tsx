@@ -100,6 +100,7 @@ export const ProjectBox = forwardRef(function ProjectBox(
 
     return () => {
       if (activeIndex !== null) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         gsap.to(imagesRef.current[activeIndex], {
           opacity: 0,
           duration: 0.445,

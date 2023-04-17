@@ -36,7 +36,7 @@ export default function ProjectItem ({ index, serialNumber, projectName, onEnter
     });
   };
 
-  const handleMove = (event) => {
+  const handleMove = (event: { clientY: number; clientX: number; }) => {
     const {left, top, width, height } = textRef.current.getBoundingClientRect()
 
     const progressionY = (1 / height) * (event.clientY - top);
