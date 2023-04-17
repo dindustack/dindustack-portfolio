@@ -53,7 +53,7 @@ export default function ProjectItem ({ index, serialNumber, projectName, onEnter
       <a
         href=""
         ref={textRef}
-        className="relative md:pl-32 flex justify-between items-end py-[3rem] cursor-pointer border-b border-white w-[100%] border-t z-[1000]"
+        className="relative md:pl-32 flex justify-between items-end py-[3rem] cursor-pointer border-b border-white w-[100%] border-t z-20"
         onMouseEnter={handleEnter}
         onMouseLeave={handleLeave}
         onMouseMove={handleMove}
