@@ -9,7 +9,6 @@ import React, {
   useState,
 } from "react";
 import { Project } from "@/constants/projects";
-import { mapRange } from "gsap/all";
 
 type ProjectBoxProps = {
   activeIndex: number;

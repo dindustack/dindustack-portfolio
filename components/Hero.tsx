@@ -1,10 +1,30 @@
+import { gsap, Power2 } from "gsap";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 
 import slideImageOne from "../images/Chinwendu_Agbaetuo-1.jpeg";
 import slideImageTwo from "../images/Chinwendu_Agbaetuo-2.jpeg";
 
 export default function Hero() {
+  const heroAnimation = gsap.timeline();
+  const socialAnimation = useRef(null);
+
+  useEffect(() => {    
+    heroAnimation.fromTo(
+      socialAnimation.current,
+      {
+        y: 0,
+        opacity: 0,
+      },
+      {
+        y: -10,
+        opacity: 1,
+        duration: 1,
+        ease: Power2.easeInOut,
+      }
+    );
+  }, [socialAnimation, heroAnimation]);
+
   return (
     <div className="pt-[10rem] lg:pt-[15rem] pb-[7.5rem] px-[2.5rem] mx-auto w-[100vw] h-[95vh] overflow-hidden">
       <div className="flex flex-col lg:flex-row justify-center items-center lg:justify-between">
@@ -15,7 +35,10 @@ export default function Hero() {
             <span>i&apos;m</span>
             <span className="ml-2 md:ml-4 xl:ml-8">Chinwendu</span>
           </h1>
-          <div className="hidden md:flex flex-col items-start gap-y-[1rem]">
+          <div
+            className="hidden md:flex flex-col items-start gap-y-[1rem]"
+            ref={socialAnimation}
+          >
             <a href="https://www.instagram.com/dindustack/">
               <h5 className="font-neutralFace font-normal text-base leading-none hover:underline hover:decoration-2 hover:underline-offset-4">
                 instagram
@@ -56,11 +79,16 @@ export default function Hero() {
           <h2 className="text-3xl font-monument font-light md:text-4xl text-center md:text-right xl:text-6xl leading-none z-[2]">
             creative
             <br />
-            <span className="relative md:-left-[8rem] xl:-left-[16rem]">frontend</span>
+            <span className="relative md:-left-[8rem] xl:-left-[16rem]">
+              frontend
+            </span>
             <br />
             <span>developer</span>
           </h2>
-          <div className="break-words font-light normal-case text-base hidden md:flex md:w-[18rem]">Crafting beautiful and intuitive user experiences, one line of code at a time.</div>
+          <div className="break-words font-light normal-case text-base hidden md:flex md:w-[18rem]">
+            Crafting beautiful and intuitive user experiences, one line of code
+            at a time.
+          </div>
         </div>
       </div>
     </div>
