@@ -65,7 +65,6 @@ export default function HomePage() {
           <Services />
           <Projects />
           <Footer />
-          {/* <SmoothScollBar /> */}
         </div>
       )}
     </>
