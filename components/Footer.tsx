@@ -17,8 +17,8 @@ export default function Footer() {
       </div>
       <div className="flex pt-5 flex-col lg:flex-row items-end lg:items-center justify-between">
         <div>top</div>
-        <div className="mx-1 font-neutralFace font-bold text-[30px]">work</div>
         <div className="mx-1 font-neutralFace font-bold text-[30px]">about</div>
+        <div className="mx-1 font-neutralFace font-bold text-[30px]">services</div>
         <div className="mx-1 font-neutralFace font-bold text-[30px]">projects</div>
         <div className="mx-1 font-neutralFace font-bold text-[30px]">contact</div>
       </div>

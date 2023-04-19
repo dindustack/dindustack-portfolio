@@ -68,7 +68,7 @@ export default function Navbar() {
             dindustack
           </div>
           <div
-            onClick={menuOpen}
+            // onClick={menuOpen}
             className="block md:hidden cursor-pointer mx-[5px]"
           >
             <Image src={close} className="w-9 object-contain invert" alt="" />
@@ -82,7 +82,7 @@ export default function Navbar() {
               ref={resMenuItem1}
               className="font-neutralFace font-bold text-[30px]"
             >
-              work
+              about
             </div>
           </span>
           <span className="overflow-hidden block">
@@ -90,7 +90,7 @@ export default function Navbar() {
               ref={resMenuItem2}
               className="font-neutralFace font-bold text-[30px]"
             >
-              about
+              services
             </div>
           </span>
           <span className="overflow-hidden block">
@@ -98,7 +98,7 @@ export default function Navbar() {
               ref={resMenuItem3}
               className="font-neutralFace font-bold text-[30px]"
             >
-              tools
+              projects
             </div>
           </span>
           <span className="overflow-hidden block">
