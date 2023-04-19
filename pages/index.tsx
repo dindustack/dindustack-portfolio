@@ -9,7 +9,6 @@ import MarqueeSection from "@/components/Marquee";
 import Services from "@/components/Services";
 import Projects from "@/components/Projects";
 import About from "@/components/About";
-import SmoothScollBar from "@/components/ScrollBar";
 
 export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
