@@ -45,8 +45,7 @@ body {
 }
 
 @layer base {
-  :root {
-    --color-primary: 255 255 255;
-    --color-secondary: 37 37 37;
+  html {
+    @apply scroll-smooth;
   }
 }

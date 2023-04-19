@@ -9,10 +9,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        primary: 'rgb(var(--color-primary) / 50)',
-        secondary: 'rgb(var(--color-secondary) / 50)',
-      },
       fontFamily: {
         monument: ["Monument Extended"],
         neutralFace: ["Neutral Face"],
@@ -42,8 +38,6 @@ module.exports = {
           color: 'transparent',
           backgroundClip: 'text',
           webkitBackgroundClip: 'text',
-          // marginBottom: '-250px',
-          // marginLeft: '50px',
         }
       })
     })

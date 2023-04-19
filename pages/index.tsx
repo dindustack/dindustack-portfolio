@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
+
 import SplashScreen from "@/components/SplashScreen";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
@@ -8,6 +9,7 @@ import MarqueeSection from "@/components/Marquee";
 import Services from "@/components/Services";
 import Projects from "@/components/Projects";
 import About from "@/components/About";
+import SmoothScollBar from "@/components/ScrollBar";
 
 export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -18,8 +20,8 @@ export default function HomePage() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    // }, 4800);
-  }, 0);
+      // }, 4800);
+    }, 0);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -64,6 +66,7 @@ export default function HomePage() {
           <Services />
           <Projects />
           <Footer />
+          {/* <SmoothScollBar /> */}
         </div>
       )}
     </>
