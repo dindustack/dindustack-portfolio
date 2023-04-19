@@ -9,6 +9,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: 'rgb(var(--color-primary) / 50)',
+        secondary: 'rgb(var(--color-secondary) / 50)',
+      },
       fontFamily: {
         monument: ["Monument Extended"],
         neutralFace: ["Neutral Face"],
@@ -28,5 +32,20 @@ module.exports = {
         { values: theme("translate") }
       );
     }),
+    plugin(function({ addComponents }) {
+      addComponents({
+        '.about-text': {
+          background: 'linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(37, 37, 37) 50%)',
+          backgroundSize: '200% 100%',
+          backgroundPositionX: '100%',
+          // display: 'inline-block',
+          color: 'transparent',
+          backgroundClip: 'text',
+          webkitBackgroundClip: 'text',
+          // marginBottom: '-250px',
+          // marginLeft: '50px',
+        }
+      })
+    })
   ],
 };

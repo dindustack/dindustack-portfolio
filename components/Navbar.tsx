@@ -76,7 +76,7 @@ export default function Navbar() {
         </div>
         {/* Desktop view - Navbar */}
 
-        <div className="mx-2 my-10 space-y-1">
+        {/* <div className="mx-2 my-10 space-y-1">
           <span className="overflow-hidden block">
             <div
               ref={resMenuItem1}
@@ -109,7 +109,7 @@ export default function Navbar() {
               contact
             </div>
           </span>
-        </div>
+        </div> */}
       </div>
         {/* Mobile view - Navbar */}
 
