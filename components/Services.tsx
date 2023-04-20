@@ -17,10 +17,10 @@ export default function Services() {
                 <span className="block mb-20 opacity-60 text-[3.58rem] leading-[1.1] tracking-tight">
                   {service.id}
                 </span>
-                <h2 className="mb-[0.5rem] normal-case text-[1.59rem] leading-none tracking-normal">
+                <h2 className="mb-[0.5rem] font-monument normal-case text-[1.59rem] leading-none tracking-normal">
                   {service.service}
                 </h2>
-                <p className=" text-base leading-[1.5] md:max-w-[25rem] normal-case">
+                <p className=" text-xl leading-[1.5] font-migra md:max-w-[25rem] normal-case">
                   {service.content}
                 </p>
               </div>
