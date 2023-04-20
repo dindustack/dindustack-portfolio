@@ -15,6 +15,24 @@
     url("https://fonts.cdnfonts.com/s/19595/MonumentExtended-Ultrabold.woff")
       format("woff");
 }
+
+@font-face {
+  font-family: "Migra";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Migra"),
+    url("../fonts/Migra-Extralight.woff")
+      format("woff");
+}
+@font-face {
+  font-family: "Migra";
+  font-style: normal;
+  font-weight: 800;
+  src: local("Migra"),
+    url("../fonts/Migra-Extrabold.woff")
+      format("woff");
+}
+
 @font-face {
   font-family: "Neutral Face";
   font-style: normal;

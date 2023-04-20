@@ -12,7 +12,7 @@ module.exports = {
       fontFamily: {
         monument: ["Monument Extended"],
         neutralFace: ["Neutral Face"],
-        segoe: ["Segoe UI"],
+        migra: ["Migra"],
       },
     },
   },
@@ -38,6 +38,17 @@ module.exports = {
           color: 'transparent',
           backgroundClip: 'text',
           webkitBackgroundClip: 'text',
+        },
+        '.hero-social-link': {
+          fontFamily: 'Migra',
+          fontSize: '1.25rem',
+          lineHeight: '1',
+
+          '&:hover': {
+            textDecoration: 'underline',
+            textDecorationThickness: '2px',
+            textUnderlineOffset: '4px',
+          }
         }
       })
     })

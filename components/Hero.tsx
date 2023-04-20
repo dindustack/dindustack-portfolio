@@ -94,22 +94,22 @@ export default function Hero() {
             ref={socialAnimation}
           >
             <a href="https://www.instagram.com/dindustack/">
-              <h5 className="font-neutralFace font-normal text-base leading-none hover:underline hover:decoration-2 hover:underline-offset-4">
+              <h5 className="hero-social-link">
                 instagram
               </h5>
             </a>
             <a href="https://www.linkedin.com/in/dindustack/">
-              <h5 className="font-neutralFace font-normal text-base leading-none hover:underline hover:decoration-2 hover:underline-offset-4">
+              <h5 className="hero-social-link">
                 linkedin
               </h5>
             </a>
             <a href="https://twitter.com/dindustack">
-              <h5 className="font-neutralFace font-normal text-base leading-none hover:underline hover:decoration-2 hover:underline-offset-4">
+              <h5 className="hero-social-link">
                 twitter
               </h5>
             </a>
             <a href="https://dribbble.com/dindustack">
-              <h5 className="font-neutralFace font-normal text-base leading-none hover:underline hover:decoration-2 hover:underline-offset-4">
+              <h5 className="hero-social-link">
                 dribbble
               </h5>
             </a>
@@ -144,7 +144,7 @@ export default function Hero() {
           </h2>
           <div
             ref={textAnimation}
-            className="break-words font-light normal-case text-base hidden md:flex md:w-[18rem]"
+            className="break-words font-migra normal-case text-xl hidden md:flex md:w-[20rem]"
           >
             Crafting beautiful and intuitive user experiences, one line of code
             at a time.
