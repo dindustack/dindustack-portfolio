@@ -8,14 +8,14 @@ export default function Footer() {
           dindustack
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between">
+      <div className="flex flex-col xl:flex-row items-start xl:items-center justify-between">
         <div>follow me</div>
         <a href="https://www.instagram.com/dindustack/" className="text-4xl underline">instagram</a>
         <a href="https://www.linkedin.com/in/dindustack/" className="text-4xl underline">linkedin</a>
         <a href="https://twitter.com/dindustack" className="text-4xl underline">twitter</a>
         <a href="https://dribbble.com/dindustack" className="text-4xl underline">dribbble</a>
       </div>
-      <div className="flex pt-5 flex-col lg:flex-row items-end lg:items-center justify-between">
+      <div className="flex pt-5 flex-col xl:flex-row items-end xl:items-center justify-between">
         <div>top</div>
         <div className="mx-1 font-neutralFace font-bold text-[30px]">about</div>
         <div className="mx-1 font-neutralFace font-bold text-[30px]">services</div>
