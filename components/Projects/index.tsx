@@ -15,7 +15,7 @@ export default function Projects() {
 
 
   return (
-    <div className="relative py-[6.25rem]">
+    <div className="relative py-[6.25rem] font-monument">
       <div className="px-[0.75rem] md:px-[2.5rem] mx-auto">
         <div className="grid grid-cols-[8fr_4fr] items-end pb-[1.25rem]  md:gap-x-[1.25rem]">
           <div className="flex">
@@ -52,10 +52,10 @@ export default function Projects() {
 
         {/* Project Footer */}
         <div className="pt-[3rem]">
-          <h3 className="text-[2.4rem] normal-case leading-none -tracking-[0.01rem] mb-3">
+          <h3 className="text-[2.4rem] font-monument normal-case leading-none -tracking-[0.01rem] mb-3">
             Want to see more?
           </h3>
-          <p className="normal-case">
+          <p className="normal-case font-migra text-xl">
             <span>Reach out to me at</span>
             <a
               href="mailto:contact@dindustack.com"

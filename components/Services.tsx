@@ -3,10 +3,10 @@ import React from "react";
 
 export default function Services() {
   return (
-    <div className="relative py-[6.25rem] px-0">
+    <div className="relative py-[6.25rem] px-0 font-monument">
       <div className="px-[0.75rem] md:px-[2.5rem] mx-auto 2xl:mx-0">
         <div className="pb-[3.75rem]">
-          <h2 className="font-monument normal-case text-[2rem] md:text-[3.58rem] leading-[1.1] -tracking-[0.02rem]">
+          <h2 className="normal-case text-[2rem] md:text-[3.58rem] leading-[1.1] -tracking-[0.02rem]">
             I can help you with ...
           </h2>
         </div>
@@ -17,10 +17,10 @@ export default function Services() {
                 <span className="block mb-20 opacity-60 text-[3.58rem] leading-[1.1] tracking-tight">
                   {service.id}
                 </span>
-                <h2 className="mb-[0.5rem] font-monument normal-case text-[1.59rem] leading-none tracking-normal">
+                <h2 className="mb-[0.5rem] normal-case text-[1.59rem] leading-none tracking-normal">
                   {service.service}
                 </h2>
-                <p className=" text-xl leading-[1.5] font-migra md:max-w-[25rem] normal-case">
+                <p className="text-xl font-migra leading-[1.5] md:max-w-[25rem] normal-case">
                   {service.content}
                 </p>
               </div>

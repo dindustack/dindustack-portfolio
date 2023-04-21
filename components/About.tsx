@@ -27,7 +27,7 @@ export default function About() {
   return (
     <div ref={aboutRef} className="relative flex justify-between items-start px-[0.75rem] md:px-[2.5rem] h-[80vh]  md:h-[100vh] font-monument w-[100%] py-[6.25rem]">
       <div className="about-content text-base md:text-5xl  normal-case space-y-8">
-        <p className="indent-8 about-text leading-loose md:leading-[4.5rem] font-bold">
+        <p className="indent-8 about-text leading-loose md:leading-[4.5rem] font-bold tracking-wide">
           As a frontend developer I create engaging and intuitive web
           applications that deliver a great user experience across all devices
           and platforms.

@@ -60,7 +60,7 @@ export default function ProjectItem ({ index, serialNumber, projectName, onEnter
       >
         <div className="flex space-x-4 md:space-x-8">
           <span className="text-base leading-[1.5] translate-y-[0.4rem] md:translate-y-3">{serialNumber}</span>
-          <h2 className="text-[2rem] md:text-[5.4rem] md:leading-none normal-case pointer-events-none -tracking-[0.03rem]">
+          <h2 className="text-[2rem] md:text-[4.4rem] xl:text-[5.4rem] md:leading-none normal-case pointer-events-none -tracking-[0.03rem]">
             {projectName}
           </h2>
         </div>
