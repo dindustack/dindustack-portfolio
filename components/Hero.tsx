@@ -119,13 +119,13 @@ export default function Hero() {
           <Image
             alt="Chinwendu Agbaetuo"
             src={slideImageOne}
-            className="w-[19rem] h-[19rem] md:w-[22rem] md:h-[22rem] lg:w-[29rem] lg:h-[29rem] max-w-[100%] border-white  border-2 rounded-[50%] object-cover"
+            className="w-[19rem] h-[19rem] md:w-[22rem] md:h-[22rem] xl:w-[29rem] xl:h-[29rem] max-w-[100%] border-white  border-2 rounded-[50%] object-cover"
           />
 
           <Image
             alt="Chinwendu Agbaetuo"
             src={slideImageTwo}
-            className="absolute top-0 opacity-0 left-0 w-[19rem] h-[19rem] md:w-[22rem] md:h-[22rem] lg:w-[29rem] lg:h-[29rem] border-white border-2 max-w-[100%] rounded-[50%] object-cover transition-all duration-700 ease-in-out hover:opacity-100"
+            className="absolute top-0 opacity-0 left-0 w-[19rem] h-[19rem] md:w-[22rem] md:h-[22rem] xl:w-[29rem] xl:h-[29rem] border-white border-2 max-w-[100%] rounded-[50%] object-cover transition-all duration-700 ease-in-out hover:opacity-100"
           />
         </div>
 
