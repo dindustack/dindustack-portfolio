@@ -10,7 +10,7 @@ export default function Services() {
             I can help you with ...
           </h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-[10px]">
+        <div className="grid grid-cols-1 xl:grid-cols-3 gap-x-[10px]">
           {React.Children.toArray(
             services.map((service) => (
               <div className="before:absolute before:w-[100%] md:before:w-[1px] before:h-[1px] md:before:h-[100%] before:left-[0] before:top-[auto] md:before:top-[0] before:bottom-[0] before:bg-[#e7e7e7] relative md:pl-[2rem] py-[2rem] md:py-0">

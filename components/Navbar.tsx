@@ -113,7 +113,7 @@ export default function Navbar() {
       </div>
         {/* Mobile view - Navbar */}
 
-      <div className="absolute bg-black px-[0.75rem] md:px-[2.5rem] top-0 py-[5px] font-neutralFace h-[20vh] flex justify-between w-[100%] flex-col">
+      <div className="absolute bg-black px-[0.75rem] md:px-[2.5rem] top-0 py-[5px] font-monument h-[20vh] flex justify-between w-[100%] flex-col">
         <div
           id="header"
           className="flex items-center justify-between w-[100%] h-fit"
@@ -121,16 +121,16 @@ export default function Navbar() {
           <div className="mx-[5px] mix-blend-difference font-monument font-semibold text-[20px] md:text-[30px]">
             dindustack
           </div>
-          <div className="mx-1 md:block hidden mix-blend-difference font-neutralFace font-bold text-[30px]">
+          <div className="mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px]">
             about
           </div>
-          <div className="mx-1 md:block hidden mix-blend-difference font-neutralFace font-bold text-[30px]">
-            work
+          <div className="mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px]">
+            services
           </div>
-          <div className="mx-1 md:block hidden mix-blend-difference font-neutralFace font-bold text-[30px]">
-            tools
+          <div className="mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px]">
+            projects
           </div>
-          <div className="mx-1 md:block hidden mix-blend-difference font-neutralFace font-bold text-[30px]">
+          <div className="mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px]">
             contact
           </div>
           <div
