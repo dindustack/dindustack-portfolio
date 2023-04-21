@@ -11,7 +11,6 @@ module.exports = {
     extend: {
       fontFamily: {
         monument: ["Monument Extended"],
-        neutralFace: ["Neutral Face"],
         migra: ["Migra"],
       },
     },

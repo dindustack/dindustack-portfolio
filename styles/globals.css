@@ -33,21 +33,6 @@
       format("woff");
 }
 
-@font-face {
-  font-family: "Neutral Face";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Neutral Face"),
-    url("../fonts/neutralface-webfont.woff") format("woff");
-}
-@font-face {
-  font-family: "Neutral Face";
-  font-style: normal;
-  font-weight: 800;
-  src: local("Neutral Face"),
-    url("../fonts/neutralface-bold-webfont.woff") format("woff");
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

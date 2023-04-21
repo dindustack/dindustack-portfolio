@@ -7,7 +7,7 @@ export default function MarqueeSection() {
       <Marquee
         gradient={false}
         speed={100}
-        className="relative flex w-full border-white border-t border-b"
+        className="relative flex w-full font-migra border-white border-t border-b"
       >
         <div className="py-8">
           <span className="text-base leading-none mx-4">Frontend engineer</span>

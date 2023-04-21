@@ -24,17 +24,17 @@ export default function About() {
   return (
     <div
       ref={aboutRef}
-      className="relative flex justify-between items-start px-[0.75rem] md:px-[2.5rem] h-[100vh] font-monument w-[100%] py-[6.25rem]"
+      className="relative flex justify-between items-start px-[0.75rem] md:px-[2.5rem] font-monument py-[6.25rem]"
     >
       <div className="normal-case space-y-8">
-        <p className="indent-8 about-text leading-loose md:leading-[4.5rem] text-[1.2rem] md:text-5xl font-bold tracking-wide">
+        <p className="indent-8 about-text break-words hyphens-auto leading-loose md:leading-[4.5rem] text-[1.5rem] md:text-5xl font-bold tracking-wide first-letter:text-7xl">
           As a frontend developer I create engaging and intuitive web
           applications that deliver a great user experience across all devices
           and platforms.
         </p>
 
-        <div className="text-[1.2rem] md:text-5xl space-y-8">
-          <p className="about-text">I am proficient in:</p>
+        <div className="text-[2.2rem] md:text-5xl space-y-8">
+          <p className="about-text font-migra text-[2rem] md:text-5xl">I am proficient in:</p>
           <p className="about-text">React</p>
           <p className="about-text indent-[2vw]">TypeScript</p>
           <p className="about-text indent-[4vw]">Next.js</p>
