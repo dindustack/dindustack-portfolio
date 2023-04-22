@@ -9,6 +9,7 @@ import MarqueeSection from "@/components/Marquee";
 import Services from "@/components/Services";
 import Projects from "@/components/Projects";
 import About from "@/components/About";
+import Contact from "@/components/Contact";
 
 export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -64,6 +65,7 @@ export default function HomePage() {
           <About />
           <Services />
           <Projects />
+          <Contact />
           <Footer />
         </div>
       )}
