@@ -23,7 +23,6 @@ export default function Navbar() {
    * Fix navbar
    */
 
-
   useEffect(() => {
     menuCollapse.to(resMenu.current, {
       y: 0,
@@ -59,7 +58,6 @@ export default function Navbar() {
         ref={resMenu}
         className="fixed w-full top-0 left-0 overflow-hidden h-screen bg-black"
       >
-
         <div
           className="flex items-center justify-between w-[100%] h-fit py-[5px]"
           ref={resMenuHeader}
@@ -111,9 +109,9 @@ export default function Navbar() {
           </span>
         </div> */}
       </div>
-        {/* Mobile view - Navbar */}
+      {/* Mobile view - Navbar */}
 
-      <div className="absolute bg-black px-[0.75rem] md:px-[2.5rem] top-0 py-[5px] font-monument h-[20vh] flex justify-between w-[100%] flex-col">
+      <div className="absolute  bg-black px-[0.75rem] md:px-[2.5rem] top-0 py-[5px] font-monument h-[20vh] flex justify-between w-[100%] flex-col">
         <div
           id="header"
           className="flex items-center justify-between w-[100%] h-fit"
@@ -121,17 +119,19 @@ export default function Navbar() {
           <div className="mx-[5px] mix-blend-difference font-monument font-semibold text-[20px] md:text-[30px]">
             dindustack
           </div>
-          <div className="mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px]">
-            about
-          </div>
-          <div className="mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px]">
-            services
-          </div>
-          <div className="mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px]">
-            projects
-          </div>
-          <div className="mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px]">
-            contact
+          <div className="hidden xl:flex">
+            <div className="mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px]">
+              about
+            </div>
+            <div className="mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px]">
+              services
+            </div>
+            <div className="mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px]">
+              projects
+            </div>
+            <div className="mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px]">
+              contact
+            </div>
           </div>
           <div
             onClick={menuOpen}
