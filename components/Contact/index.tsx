@@ -1,4 +1,7 @@
 import React from "react";
+// import contactPhoto from "../../images/Chinwendu Agbaetuo_contact.jpeg";
+import Image from "next/image";
+import RotatingCircularText from "../RotatingCircularText";
 
 export default function Contact() {
   return (
@@ -31,10 +34,22 @@ export default function Contact() {
               placeholder="Your Message"
               className="bg-transparent text-[#E7E7E7] tracking-[0.1rem] font-monument border-b border-t-0 border-l-0 border-r-0 border-[#E7E7E7] text-sm leading-[1.5rem] focus:ring-blue-500 focus:border-blue-500 block w-full pt-[1.5rem] pb-[5rem] px-0 placeholder-[#e7e7e7] focus:outline-none"
             ></textarea>
+
+            <button className="px-[1.2rem] py-[1.75rem]">
+              Send me a message
+            </button>
           </div>
 
-          <div>
-            <p>able</p>
+          <div className="flex justify-center items-center">
+            {/* <RotatingCircularText text="Hello World!" radius={30} speed={5} imageSrc={contactPhoto} /> */}
+            {/* <div className="relative">
+              <Image
+                className="w-[29rem] h-[29rem] rounded-[50%] max-w-[100%] object-fill"
+                src={contactPhoto}
+                alt="Chinwendu Agbaetuo"
+              />
+              <span className="bottom-0 left-7 absolute  w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"></span>
+            </div> */}
           </div>
         </div>
       </div>

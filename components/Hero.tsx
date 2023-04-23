@@ -2,8 +2,8 @@ import { gsap, Power2 } from "gsap";
 import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 
-import slideImageOne from "../images/Chinwendu_Agbaetuo-1.jpeg";
-import slideImageTwo from "../images/Chinwendu_Agbaetuo-2.jpeg";
+import slideImageOne from "../public/images/Chinwendu_Agbaetuo-1.jpeg";
+import slideImageTwo from "../public/images/Chinwendu_Agbaetuo-2.jpeg";
 
 export default function Hero() {
   const heroAnimation = gsap.timeline();
