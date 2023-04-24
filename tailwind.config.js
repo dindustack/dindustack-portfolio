@@ -55,6 +55,9 @@ module.exports = {
             textDecorationThickness: '2px',
             textUnderlineOffset: '4px',
           }
+        },
+        '.circular-text': {
+          transform: 'translate(-50%, -50%)'
         }
       })
     })

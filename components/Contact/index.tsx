@@ -1,7 +1,6 @@
 import React from "react";
-// import contactPhoto from "../../images/Chinwendu Agbaetuo_contact.jpeg";
-import Image from "next/image";
-import RotatingCircularText from "../RotatingCircularText";
+import contactPhoto from "../../public/images/Chinwendu Agbaetuo_contact.jpeg";
+import AnimatedCircleText from "../AnimatedCircleText";
 
 export default function Contact() {
   return (
@@ -42,6 +41,7 @@ export default function Contact() {
 
           <div className="flex justify-center items-center">
             {/* <RotatingCircularText text="Hello World!" radius={30} speed={5} imageSrc={contactPhoto} /> */}
+            <AnimatedCircleText imageSrc={contactPhoto} imageAlt="Chinwendu Agbaetuo" text="Money makes the world go round" />
             {/* <div className="relative">
               <Image
                 className="w-[29rem] h-[29rem] rounded-[50%] max-w-[100%] object-fill"
