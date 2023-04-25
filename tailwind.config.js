@@ -27,39 +27,38 @@ module.exports = {
         { values: theme("translate") }
       );
     }),
-    plugin(function({ addComponents }) {
+    plugin(function ({ addComponents }) {
       addComponents({
-        '.about-text': {
-          background: 'linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(37, 37, 37) 50%)',
-          backgroundSize: '200% 100%',
-          backgroundPositionX: '100%',
-          color: 'transparent',
-          backgroundClip: 'text',
-          webkitBackgroundClip: 'text',
+        ".about-text": {
+          background:
+            "linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(37, 37, 37) 50%)",
+          backgroundSize: "200% 100%",
+          backgroundPositionX: "100%",
+          color: "transparent",
+          backgroundClip: "text",
+          webkitBackgroundClip: "text",
         },
-        '.about-first-text': {
-          background: 'linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(37, 37, 37) 50%)',
-          backgroundSize: '200% 100%',
-          backgroundPositionX: '100%',
-          color: 'transparent',
-          backgroundClip: 'text',
-          webkitBackgroundClip: 'text',
+        ".about-first-text": {
+          background:
+            "linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(37, 37, 37) 50%)",
+          backgroundSize: "200% 100%",
+          backgroundPositionX: "100%",
+          color: "transparent",
+          backgroundClip: "text",
+          webkitBackgroundClip: "text",
         },
-        '.hero-social-link': {
-          fontFamily: 'Migra',
-          fontSize: '1.25rem',
-          lineHeight: '1',
+        ".hero-social-link": {
+          fontFamily: "Migra",
+          fontSize: "1.25rem",
+          lineHeight: "1",
 
-          '&:hover': {
-            textDecoration: 'underline',
-            textDecorationThickness: '2px',
-            textUnderlineOffset: '4px',
-          }
+          "&:hover": {
+            textDecoration: "underline",
+            textDecorationThickness: "2px",
+            textUnderlineOffset: "4px",
+          },
         },
-        '.circular-text': {
-          transform: 'translate(-50%, -50%)'
-        }
-      })
-    })
+      });
+    }),
   ],
 };
