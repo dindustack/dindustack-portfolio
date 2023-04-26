@@ -28,12 +28,12 @@ export const Contact = () => {
 
   
 
-  // useEffect(() => {
-  //   if(isSubmitSuccessful) {
-  //     reset();
-  //   }
+  useEffect(() => {
+    if(isSubmitSuccessful) {
+      reset();
+    }
 
-  // }, [isSubmitSuccessful, reset]);
+  }, [isSubmitSuccessful, reset]);
 
   return (
     <div className="relative py-[6.25rem] px-0">
@@ -52,7 +52,8 @@ export const Contact = () => {
             <form
               target="_blank"
               className="space-y-[3rem]"
-              onSubmit={handleSubmit(onSubmit)}
+              // onSubmit={handleSubmit(onSubmit)}
+              onSubmit={onSubmit}
               method="POST"
               action="https://formsubmit.co/8478e357829ce9d5a95c6a6a1288ab7c"
               noValidate
