@@ -65,7 +65,7 @@ export default function HomePage() {
           <About />
           <Services />
           <Projects />
-          <Contact />
+          {/* <Contact /> */}
           <Footer />
         </div>
       )}

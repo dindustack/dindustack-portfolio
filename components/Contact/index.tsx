@@ -14,17 +14,21 @@ export const Contact = () => {
   const { errors, isDirty, isValid, isSubmitting, isSubmitSuccessful } = formState;
 
 
-  // const onSubmit = (data: FormValues) => {
-  //   console.log("Form submitted", data);
-  // };
-
-  const onSubmit = async (e) => {
-    console.log("~ e", e);
-    const isValid = await trigger();
-    if (!isValid) {
-      e.preventDefault();
+  async function onSubmit(data: FormValues) {
+    const response = await fetch('https://formsubmit.co/8478e357829ce9d5a95c6a6a1288ab7c', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    });
+  
+    if (response.ok) {
+      console.log('Form submitted successfully!');
+    } else {
+      console.error('Form submission failed:', response.statusText);
     }
-  };
+  }
 
   
 
@@ -52,8 +56,8 @@ export const Contact = () => {
             <form
               target="_blank"
               className="space-y-[3rem]"
-              // onSubmit={handleSubmit(onSubmit)}
-              onSubmit={onSubmit}
+              onSubmit={handleSubmit(onSubmit)}
+              // onSubmit={onSubmit}
               method="POST"
               action="https://formsubmit.co/8478e357829ce9d5a95c6a6a1288ab7c"
               noValidate
