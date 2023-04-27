@@ -39,7 +39,7 @@ export default function Hero() {
     heroAnimation.fromTo(
       textAnimation.current,
       {
-        x: 500,
+        x: 100,
         opacity: 0,
       },
       {
@@ -53,7 +53,7 @@ export default function Hero() {
     heroAnimation.fromTo(
       nameAnimation.current,
       {
-        x: -500,
+        x: -100,
         opacity: 0,
       },
       {
