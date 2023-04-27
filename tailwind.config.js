@@ -58,6 +58,37 @@ module.exports = {
             textUnderlineOffset: "4px",
           },
         },
+        // 
+        ".hero-image": {
+          position: "relative",
+          width: "19rem",
+          height: "19rem",
+          maxWidth: "100%",
+          borderRadius: "50%",
+          overflow: "hidden",
+          border: "2px solid white",
+          objectFit: "cover",
+
+          "@screen md": {
+            width: "22rem",
+            height: "22rem",
+          },
+
+          "@screen xl": {
+            width: "29rem",
+            height: "29rem",
+          },
+
+          "& canvas": {
+            position: "absolute",
+            top: "0",
+            left: "0",
+            width: "100%",
+            height: "100%",
+            borderRadius: "50%",
+            objectFit: "cover",
+          },
+        }
       });
     }),
   ],

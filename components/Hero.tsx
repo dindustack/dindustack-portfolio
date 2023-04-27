@@ -1,9 +1,6 @@
 import { gsap, Power2 } from "gsap";
-import Image from "next/image";
+import hoverEffect from "hover-effect";
 import React, { useEffect, useRef } from "react";
-
-import slideImageOne from "../public/images/Chinwendu_Agbaetuo-1.jpeg";
-import slideImageTwo from "../public/images/Chinwendu_Agbaetuo-2.jpeg";
 
 export default function Hero() {
   const heroAnimation = gsap.timeline();
@@ -14,8 +11,13 @@ export default function Hero() {
 
   const didAnimate = useRef(false);
 
+  /**
+   * GSAP Animation
+   */
   useEffect(() => {
-    if (didAnimate.current) { return; }
+    if (didAnimate.current) {
+      return;
+    }
 
     didAnimate.current = true;
 
@@ -82,6 +84,21 @@ export default function Hero() {
     );
   }, []);
 
+  /**
+   * Liquid Image Distortion
+   */
+
+  useEffect(() => {
+    new hoverEffect({
+      parent: document.querySelector(".hero-image"),
+      intensity: 0.3,
+      // imagesRatio: 1080 / 1920,
+      image1: "./images/Chinwendu_Agbaetuo-1.jpeg",
+      image2: "./images/Chinwendu_Agbaetuo-2.jpeg",
+      displacementImage: "./images/displacement_image.jpeg",
+    });
+  });
+
   return (
     <div className="pt-[10rem] lg:pt-[15rem] pb-[7.5rem] px-[2.5rem] mx-auto w-[100vw] h-[95vh] overflow-hidden">
       <div className="flex flex-col lg:flex-row justify-center items-center lg:justify-between">
@@ -100,39 +117,21 @@ export default function Hero() {
             ref={socialAnimation}
           >
             <a href="https://www.instagram.com/dindustack/" target="_blank">
-              <h5 className="hero-social-link">
-                instagram
-              </h5>
+              <h5 className="hero-social-link">instagram</h5>
             </a>
             <a href="https://www.linkedin.com/in/dindustack/" target="_blank">
-              <h5 className="hero-social-link">
-                linkedin
-              </h5>
+              <h5 className="hero-social-link">linkedin</h5>
             </a>
             <a href="https://twitter.com/dindustack" target="_blank">
-              <h5 className="hero-social-link">
-                twitter
-              </h5>
+              <h5 className="hero-social-link">twitter</h5>
             </a>
             <a href="https://dribbble.com/dindustack" target="_blank">
-              <h5 className="hero-social-link">
-                dribbble
-              </h5>
+              <h5 className="hero-social-link">dribbble</h5>
             </a>
           </div>
         </div>
         <div className="relative flex flex-col md:-mt-[100px] lg:mt-0 justify-center items-center">
-          <Image
-            alt="Chinwendu Agbaetuo"
-            src={slideImageOne}
-            className="w-[19rem] h-[19rem] md:w-[22rem] md:h-[22rem] xl:w-[29rem] xl:h-[29rem] max-w-[100%] border-white  border-2 rounded-[50%] object-cover"
-          />
-
-          <Image
-            alt="Chinwendu Agbaetuo"
-            src={slideImageTwo}
-            className="absolute top-0 opacity-0 left-0 w-[19rem] h-[19rem] md:w-[22rem] md:h-[22rem] xl:w-[29rem] xl:h-[29rem] border-white border-2 max-w-[100%] rounded-[50%] object-cover transition-all duration-700 ease-in-out hover:opacity-100"
-          />
+          <div className="hero-image"></div>
         </div>
 
         <div className="relative flex flex-col gap-y-[2rem] md:justify-center md:items-end pt-0 -mt-2 lg:pt-[15rem] w-[100%] lg:w-[18.5rem] xl:w-[17.7rem]">

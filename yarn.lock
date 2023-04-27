@@ -1443,7 +1443,7 @@ grapheme-splitter@^1.0.4:
   resolved "https://registry.yarnpkg.com/grapheme-splitter/-/grapheme-splitter-1.0.4.tgz#9cf3a665c6247479896834af35cf1dbb4400767e"
   integrity sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==
 
-gsap@^3.11.5:
+gsap@^3.11.4, gsap@^3.11.5:
   version "3.11.5"
   resolved "https://registry.yarnpkg.com/gsap/-/gsap-3.11.5.tgz#97ef65091f43868be387803f9db277e8cd5bd041"
   integrity sha512-Q89nKCLgoX5xUjznh9LcaIUkz54k1voNucT1Rpf9SJNFIQznBwFqt5qUUQbeVInFyN/n18OUJkpeI6CNEDt74w==
@@ -1500,6 +1500,14 @@ hoist-non-react-statics@^3.3.1:
   integrity sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==
   dependencies:
     react-is "^16.7.0"
+
+hover-effect@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/hover-effect/-/hover-effect-1.2.1.tgz#e1aec281caf42a2618b5355942cdb46e1659cf00"
+  integrity sha512-13PjirDy/CKuMkQMzgyM04lWkizhTw90PTUKSbCr+hHG63u8B53VVNY5idpkTOnsZlhq4Poz/qZH/N/BI9N/WA==
+  dependencies:
+    gsap "^3.11.4"
+    three "^0.149.0"
 
 ignore@^5.2.0:
   version "5.2.4"
@@ -2575,6 +2583,16 @@ thenify-all@^1.0.0:
   integrity sha512-RVZSIV5IG10Hk3enotrhvz0T9em6cyHBLkH/YAZuKqd8hRkKhSfCGIcP2KUY0EPxndzANBmNllzWPwak+bheSw==
   dependencies:
     any-promise "^1.0.0"
+
+three@^0.149.0:
+  version "0.149.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.149.0.tgz#a9cf78b17d02f063ffe6dfca1e300eff2eab2927"
+  integrity sha512-tohpUxPDht0qExRLDTM8sjRLc5d9STURNrdnK3w9A+V4pxaTBfKWWT/IqtiLfg23Vfc3Z+ImNfvRw1/0CtxrkQ==
+
+three@^0.152.0:
+  version "0.152.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.152.0.tgz#a50034af675c636322135b6bb829d6e7e3a6213d"
+  integrity sha512-uvKoYo4b2bnqzsR4RJFuWecxwMKcgT1nFNmiWooCNr6AxZLCtfkj/xcfFgoi5mFopSVorh7bnvTHPfeW8DINGg==
 
 tiny-glob@^0.2.9:
   version "0.2.9"
