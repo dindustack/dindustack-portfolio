@@ -7,12 +7,18 @@ import slideImageTwo from "../public/images/Chinwendu_Agbaetuo-2.jpeg";
 
 export default function Hero() {
   const heroAnimation = gsap.timeline();
-  const socialAnimation = useRef(null);
-  const textAnimation = useRef(null);
-  const nameAnimation = useRef(null);
-  const roleAnimation = useRef(null);
+  let socialAnimation = useRef(null);
+  let textAnimation = useRef(null);
+  let nameAnimation = useRef(null);
+  let roleAnimation = useRef(null);
+
+  const didAnimate = useRef(false);
 
   useEffect(() => {
+    if (didAnimate.current) { return; }
+
+    didAnimate.current = true;
+
     heroAnimation.fromTo(
       socialAnimation.current,
       {
@@ -74,7 +80,7 @@ export default function Hero() {
         },
       }
     );
-  }, [heroAnimation]);
+  }, []);
 
   return (
     <div className="pt-[10rem] lg:pt-[15rem] pb-[7.5rem] px-[2.5rem] mx-auto w-[100vw] h-[95vh] overflow-hidden">

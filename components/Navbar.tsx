@@ -19,9 +19,7 @@ export default function Navbar() {
     reversed: true,
   });
 
-  /**
-   * Fix navbar
-   */
+  
 
   useEffect(() => {
     menuCollapse.to(resMenu.current, {
