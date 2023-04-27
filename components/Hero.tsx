@@ -92,7 +92,6 @@ export default function Hero() {
     new hoverEffect({
       parent: document.querySelector(".hero-image"),
       intensity: 0.3,
-      // imagesRatio: 1080 / 1920,
       image1: "./images/Chinwendu_Agbaetuo-1.jpeg",
       image2: "./images/Chinwendu_Agbaetuo-2.jpeg",
       displacementImage: "./images/displacement_image.jpeg",
