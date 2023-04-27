@@ -94,7 +94,7 @@ export default function Hero() {
       intensity: 0.3,
       image1: "./images/Chinwendu_Agbaetuo-1.jpeg",
       image2: "./images/Chinwendu_Agbaetuo-2.jpeg",
-      displacementImage: "./images/displacement_image.jpeg",
+      displacementImage: "https://cdn.rawgit.com/robin-dela/hover-effect/b6c6fd26/images/stripe1mul.png?raw=true",
     });
   });
 

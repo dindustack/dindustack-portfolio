@@ -58,7 +58,7 @@ module.exports = {
             textUnderlineOffset: "4px",
           },
         },
-        // 
+        
         ".hero-image": {
           position: "relative",
           width: "19rem",
@@ -67,7 +67,6 @@ module.exports = {
           borderRadius: "50%",
           overflow: "hidden",
           border: "2px solid white",
-          objectFit: "cover",
 
           "@screen md": {
             width: "22rem",
@@ -86,7 +85,6 @@ module.exports = {
             width: "100%",
             height: "100%",
             borderRadius: "50%",
-            objectFit: "cover",
           },
         }
       });
