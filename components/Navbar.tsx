@@ -19,7 +19,6 @@ export default function Navbar() {
     reversed: true,
   });
 
-  // Fix navbar on scroll
 
   
 
