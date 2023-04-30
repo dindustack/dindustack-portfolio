@@ -19,6 +19,12 @@ export default function Navbar() {
     reversed: true,
   });
 
+  /**
+   * I need to fix the navbar this week
+   * - Navbar is not responsive
+   *  !  GSAP is messing with the navbar
+   */
+
 
   
 
