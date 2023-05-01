@@ -59,7 +59,7 @@ export default function HomePage() {
         <SplashScreen />
       ) : (
         <div className="text-[#e7e7e7] uppercase">
-          {/* <Navbar /> */}
+          <Navbar />
           <Hero />
           <MarqueeSection />
           <About />
