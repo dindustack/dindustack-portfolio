@@ -1,7 +1,7 @@
 import { services } from "@/constants/services";
 import React from "react";
 
-export default function Services() {
+export function Services() {
   return (
     <div className="relative py-[6.25rem] px-0 font-monument">
       <div className="px-[0.75rem] md:px-[2.5rem] mx-auto 2xl:mx-0">

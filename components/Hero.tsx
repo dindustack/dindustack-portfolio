@@ -2,7 +2,7 @@ import { gsap, Power2 } from "gsap";
 import hoverEffect from "hover-effect";
 import React, { useEffect, useRef } from "react";
 
-export default function Hero() {
+export function Hero() {
   const heroAnimation = gsap.timeline();
   let socialAnimation = useRef(null);
   let textAnimation = useRef(null);
@@ -94,7 +94,7 @@ export default function Hero() {
       intensity: 0.3,
       image1: "./images/Chinwendu_Agbaetuo-1.jpeg",
       image2: "./images/Chinwendu_Agbaetuo-2.jpeg",
-      displacementImage: "https://cdn.rawgit.com/robin-dela/hover-effect/b6c6fd26/images/stripe1mul.png?raw=true",
+      displacementImage: "./images/displacement_image.jpeg",
     });
   });
 

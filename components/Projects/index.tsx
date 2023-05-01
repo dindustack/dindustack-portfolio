@@ -3,7 +3,7 @@ import ProjectItem from "./Item";
 import { projects } from "@/constants/projects";
 import { ProjectBox } from "./Box";
 
-export default function Projects() {
+export function Projects() {
   const [activeIndex, setActiveIndex] = useState(0);
   const projectBoxRef = useRef(null);
   const offsets = useRef({ x: 0, y: 0 });

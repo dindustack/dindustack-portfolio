@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function About() {
+export function About() {
   const aboutRef = useRef(null);
 
   const [lettersRef, setlettersRef] = useArrayRef();

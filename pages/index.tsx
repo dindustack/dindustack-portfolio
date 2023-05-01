@@ -1,14 +1,15 @@
 import Head from "next/head";
 import React, { useState, useEffect } from "react";
 
-import SplashScreen from "@/components/SplashScreen";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
-import Footer from "@/components/Footer";
-import MarqueeSection from "@/components/Marquee";
-import Services from "@/components/Services";
-import Projects from "@/components/Projects";
-import About from "@/components/About";
+import { About } from "@/components/About";
+import { Footer } from "@/components/Footer";
+import { Hero } from "@/components/Hero";
+import { MarqueeSection } from "@/components/Marquee";
+import { Navbar } from "@/components/Navbar";
+import { Services } from "@/components/Services";
+import { SplashScreen } from "@/components/SplashScreen";
+import { Projects } from "@/components/Projects";
+
 
 export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -58,13 +59,12 @@ export default function HomePage() {
         <SplashScreen />
       ) : (
         <div className="text-[#e7e7e7] uppercase">
-          <Navbar />
+          {/* <Navbar /> */}
           <Hero />
           <MarqueeSection />
           <About />
           <Services />
           <Projects />
-          {/* <Contact /> */}
           <Footer />
         </div>
       )}

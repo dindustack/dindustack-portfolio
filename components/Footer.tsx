@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Footer() {
+export function Footer() {
   return (
     <div className="relative font-monument px-[0.75rem] md:px-[2.5rem]">
       <div className="hidden lg:block mb-[10vh]">

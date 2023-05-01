@@ -1,7 +1,7 @@
 import gsap, { Sine } from "gsap";
 import React, { useEffect, useRef } from "react";
 
-export default function SplashScreen() {
+export function SplashScreen() {
   let loadingScreen: any = useRef<HTMLDivElement | null>(null);
   let logoOne: any = useRef(null);
   let logoTwo: any = useRef(null);

@@ -1,7 +1,7 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 
-export default function MarqueeSection() {
+export function MarqueeSection() {
   return (
     <div className="pt-8 pb-8">
       <Marquee
