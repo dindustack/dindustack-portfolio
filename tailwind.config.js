@@ -61,13 +61,16 @@ module.exports = {
         
         ".hero-image": {
           position: "relative",
-          width: "16rem",
-          height: "16rem",
+          width: "19rem",
+          height: "19rem",
           maxWidth: "100%",
-          borderRadius: "50%",
+          borderRadius: "100%",
+          // borderRadius: "50%",
           overflow: "hidden",
           cursor: "pointer",
           border: "2px solid white",
+          backgroundPosition: "50% 50%",
+          backgroundSize: "cover",
 
           "@screen md": {
             width: "22rem",
@@ -83,8 +86,8 @@ module.exports = {
             position: "absolute",
             top: "0",
             left: "0",
-            width: "100%",
-            height: "100%",
+            // width: "100%",
+            // height: "100%",
             borderRadius: "50%",
           },
         }
