@@ -1,4 +1,6 @@
 import React, { useRef, useState } from "react";
+import { Element } from "react-scroll";
+
 import ProjectItem from "./Item";
 import { projects } from "@/constants/projects";
 import { ProjectBox } from "./Box";
@@ -15,6 +17,7 @@ export function Projects() {
 
 
   return (
+    <Element name="projects">
     <div className="relative py-[6.25rem] font-monument">
       <div className="px-[0.75rem] md:px-[2.5rem] mx-auto">
         <div className="pb-[1.25rem]">
@@ -67,5 +70,6 @@ export function Projects() {
         </div>
       </div>
     </div>
+    </Element>
   );
 }

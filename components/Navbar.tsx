@@ -1,24 +1,23 @@
 import React, { useState } from "react";
-import Link from "next/link";
-import { useRouter } from "next/router";
 import Image from "next/image";
+import { Link } from "react-scroll";
 
 import close from "../icons/close-outline.svg";
 import menu from "../icons/menu-outline.svg";
 
 type NavItem = {
   label: string;
+  path: string;
 };
 
 const navItems: NavItem[] = [
-  { label: "About" },
-  { label: "Services" },
-  { label: "Projects" },
-  { label: "Contact" },
+  { label: "About", path: "about" },
+  { label: "Services", path: "services" },
+  { label: "Projects", path: "projects" },
+  { label: "Contact", path: "contact" },
 ];
 
 export const Navbar: React.FC = () => {
-  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleClick = () => {
@@ -31,18 +30,24 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0">
-              <Link href="/" legacyBehavior>
-                <div className="mx-[5px] mix-blend-difference font-monument font-semibold text-[20px] md:text-[30px]">
-                  dindustack
-                </div>
-              </Link>
+              <div className="mx-[5px] mix-blend-difference font-monument font-semibold text-[20px] md:text-[30px]">
+                dindustack
+              </div>
             </div>
           </div>
           <div className="hidden sm:block sm:ml-6">
             <div className="flex space-x-4">
-              {navItems.map(({ label }, index) => (
-                <Link key={index} href="#" legacyBehavior>
-                  <a className="hover:underline hover:decoration-2 decoration-[#E7E7E7] hover:underline-offset-[6px] mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px] tracking-[0.05em]">
+              {navItems.map(({ label, path }) => (
+                <Link
+                  key={path}
+                  activeClass=""
+                  className="cursor-pointer"
+                  to={path}
+                  spy={true}
+                  smooth="easeInQuad"
+                  duration={200}
+                >
+                  <a className="hover:underline underline-offset-[6px] decoration-2 decoration-[#E7E7E7] mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px] tracking-[0.05em]">
                     {label}
                   </a>
                 </Link>
@@ -74,10 +79,19 @@ export const Navbar: React.FC = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="sm:hidden absolute left-0 top-[6.25rem] h-screen w-[100%] bg-black z-[22] overflow-hidden">
-          <div className="px-[0.75rem] pt-2 pb-3  text-center space-y-16">
-            {navItems.map(({ label }, index) => (
-              <Link key={index} href="#" legacyBehavior>
+        <div className="sm:hidden absolute left-0 top-[10rem] h-screen w-[100%] bg-black z-[22] overflow-hidden">
+          <div className="px-[0.75rem] pt-2 pb-3 text-center space-y-16">
+            {navItems.map(({ label, path }) => (
+              <Link
+                key={path}
+                activeClass=""
+                className="block cursor-pointer"
+                to={path}
+                spy={true}
+                smooth="easeInQuad"
+                duration={200}
+                onClick={handleClick}
+              >
                 <a className="hover:underline hover:decoration-2 decoration-[#E7E7E7] hover:underline-offset-[6px] block text-[#e7e7e7] px-3 py-2 font-monument font-semibold text-[20px] tracking-[0.15em]">
                   {label}
                 </a>
