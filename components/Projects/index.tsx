@@ -17,12 +17,12 @@ export function Projects() {
   return (
     <div className="relative py-[6.25rem] font-monument">
       <div className="px-[0.75rem] md:px-[2.5rem] mx-auto">
-        <div className="grid grid-cols-[8fr_4fr] items-end pb-[1.25rem]  md:gap-x-[1.25rem]">
-          <div className="flex">
-            <h3 className="text-[1.3rem] md:text-[2.4rem] normal-case leading-none -tracking-[0.01rem]">
+        <div className="pb-[1.25rem]">
+          <div className="flex space-x-4 items-center">
+            <h3 className="text-[1.5rem] md:text-[2.4rem] normal-case leading-none -tracking-[0.01rem]">
               Selected Work
             </h3>
-            <span className="ml-[0.5rem] ">(4)</span>
+            <span>(4)</span>
           </div>
         </div>
 

@@ -66,6 +66,7 @@ module.exports = {
           maxWidth: "100%",
           borderRadius: "50%",
           overflow: "hidden",
+          cursor: "pointer",
           border: "2px solid white",
 
           "@screen md": {

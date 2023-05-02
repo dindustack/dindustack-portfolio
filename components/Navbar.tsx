@@ -141,12 +141,14 @@
 // );
 // }
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Image from "next/image";
+import { gsap } from "gsap";
+
 import close from "../icons/close-outline.svg";
 import menu from "../icons/menu-outline.svg";
-import Image from "next/image";
 
 // import { FaBars, FaTimes } from 'react-icons/fa';
 
@@ -156,26 +158,63 @@ type NavItem = {
 };
 
 const navItems: NavItem[] = [
-  { label: "Home", path: "/" },
   { label: "About", path: "/about" },
   { label: "Services", path: "/services" },
   { label: "Projects", path: "/projects" },
   { label: "Contact", path: "/contact" },
 ];
 
+
+
 export const Navbar: React.FC = () => {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  /**
+   * Refs
+   */
+
+  let resMenuItem = useRef(null);
+  let resMenuItem2 = useRef(null);
+  let resMenuItem3 = useRef(null);
+  let resMenuItem4 = useRef(null);
+
+  const menuCollapse = gsap.timeline({
+    paused: true,
+    reversed: true,
+  });
+
+  useEffect(() => {
+    menuCollapse.from(
+      [
+        resMenuItem.current,
+        resMenuItem2.current,
+        resMenuItem3.current,
+        resMenuItem4.current,
+      ],
+      {
+        duration: 0.5,
+        stagger: {
+          amount: 0.4,
+        },
+        y: -50,
+      }
+    );
+  });
+
+  function menuOpen() {
+
+    menuCollapse.reversed() ? menuCollapse.play() : menuCollapse.reverse();
+  }
 
   const handleClick = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <nav className="relative w-full top-0 left-0 overflow-hidden  bg-black">
+    <nav className="relative w-full bg-black">
       <div className="px-[0.75rem] md:px-[2.5rem] mx-auto">
         <div className="flex items-center justify-between h-16">
-          
           <div className="flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0">
               <Link href="/" legacyBehavior>
@@ -184,25 +223,25 @@ export const Navbar: React.FC = () => {
                 </div>
               </Link>
             </div>
-            
           </div>
           <div className="hidden sm:block sm:ml-6">
-              <div className="flex space-x-4">
-                {navItems.map(({ label, path }) => (
-                  <Link key={path} href={path} legacyBehavior>
-                    <a
-                      className={`${
-                        router.pathname === path
-                          ? "bg-gray-900 text-white"
-                          : "text-gray-300 hover:bg-gray-700 hover:text-white"
-                      } mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px]`}
-                    >
-                      {label}
-                    </a>
-                  </Link>
-                ))}
-              </div>
+            <div className="flex space-x-4">
+              {navItems.map(({ label, path }) => (
+                <Link key={path} href={path} legacyBehavior>
+                  <a
+                    ref={resMenuItem}
+                    className={`${
+                      router.pathname === path
+                        ? "bg-gray-900 text-white"
+                        : "text-gray-300 hover:bg-gray-700 hover:text-white"
+                    } mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px] tracking-[0.05em]`}
+                  >
+                    {label}
+                  </a>
+                </Link>
+              ))}
             </div>
+          </div>
           <div className=" flex items-center sm:hidden">
             <button
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
@@ -228,8 +267,8 @@ export const Navbar: React.FC = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="sm:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1">
+        <div className="sm:hidden absolute left-0 top-[6.25rem] h-screen w-[100%] bg-black z-[22] overflow-hidden">
+          <div className="px-[0.75rem] pt-2 pb-3  text-center space-y-16">
             {navItems.map(({ label, path }) => (
               <Link key={path} href={path} legacyBehavior>
                 <a
@@ -237,7 +276,7 @@ export const Navbar: React.FC = () => {
                     router.pathname === path
                       ? "bg-gray-900 text-white"
                       : "text-gray-300 hover:bg-gray-700 hover:text-white"
-                  } block px-3 py-2 rounded-md text-base font-medium`}
+                  } block px-3 py-2 font-monument font-semibold text-[20px] tracking-[0.15em]`}
                 >
                   {label}
                 </a>
