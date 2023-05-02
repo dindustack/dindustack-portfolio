@@ -20,8 +20,8 @@ export default function HomePage() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-      // }, 4800);
-    }, 0);
+      }, 4800);
+    // }, 0);
     return () => clearTimeout(timeout);
   }, []);
 
