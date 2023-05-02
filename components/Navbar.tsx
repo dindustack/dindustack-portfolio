@@ -1,211 +1,25 @@
-// import React, { useEffect, useRef } from "react";
-
-// import close from "../icons/close-outline.svg";
-// import menu from "../icons/menu-outline.svg";
-// import Image from "next/image";
-// import gsap from "gsap";
-
-// export default function Navbar() {
-//   let resMenu = useRef(null);
-//   let resMenuHeader = useRef(null);
-
-//   let resMenuItem1 = useRef(null);
-//   let resMenuItem2 = useRef(null);
-//   let resMenuItem3 = useRef(null);
-//   let resMenuItem4 = useRef(null);
-
-//   const menuCollapse = gsap.timeline({
-//     paused: true,
-//     reversed: true,
-//   });
-
-//   useEffect(() => {
-//     menuCollapse.to(resMenu.current, {
-//       y: 0,
-//       zIndex: 100,
-//       duration: 0.2,
-//     });
-//     menuCollapse.from(
-//       [
-//         resMenuHeader.current,
-//         resMenuItem1.current,
-//         resMenuItem2.current,
-//         resMenuItem3.current,
-//         resMenuItem4.current,
-//       ],
-//       {
-//         duration: 0.5,
-//         stagger: {
-//           amount: 0.4,
-//         },
-//         y: -50,
-//       }
-//     );
-//   });
-
-//   function menuOpen() {
-//     // comment out
-//     menuCollapse.reversed() ? menuCollapse.play() : menuCollapse.reverse();
-//   }
-
-// return (
-//   <div>
-//     <div
-//       ref={resMenu}
-//       className="fixed w-full top-0 left-0 overflow-hidden h-screen bg-black"
-//     >
-//       <div
-//         className="flex items-center justify-between w-[100%] h-fit py-[5px]"
-//         ref={resMenuHeader}
-//       >
-//         <div className="mx-[5px] mix-blend-difference font-monument font-semibold text-[20px]">
-//           dindustack
-//         </div>
-//         <div
-//           onClick={menuOpen}
-//           className="block md:hidden cursor-pointer mx-[5px]"
-//         >
-//           <Image src={close} className="w-9 object-contain invert" alt="" />
-//         </div>
-//       </div>
-//       {/* Desktop view - Navbar */}
-
-//       <div className="mx-2 my-10 space-y-1">
-//         <span className="overflow-hidden block">
-//           <div
-//             ref={resMenuItem1}
-//             className="font-neutralFace font-bold text-[30px]"
-//           >
-//             about
-//           </div>
-//         </span>
-//         <span className="overflow-hidden block">
-//           <div
-//             ref={resMenuItem2}
-//             className="font-neutralFace font-bold text-[30px]"
-//           >
-//             services
-//           </div>
-//         </span>
-//         <span className="overflow-hidden block">
-//           <div
-//             ref={resMenuItem3}
-//             className="font-neutralFace font-bold text-[30px]"
-//           >
-//             projects
-//           </div>
-//         </span>
-//         <span className="overflow-hidden block">
-//           <div
-//             ref={resMenuItem4}
-//             className="font-neutralFace font-bold text-[30px]"
-//           >
-//             contact
-//           </div>
-//         </span>
-//       </div>
-//     </div>
-//     {/* Mobile view - Navbar */}
-
-//     <div className="absolute  bg-black px-[0.75rem] md:px-[2.5rem] top-0 py-[5px] font-monument h-[20vh] flex justify-between w-[100%] flex-col">
-//       <div
-//         id="header"
-//         className="flex items-center justify-between w-[100%] h-fit"
-//       >
-//         <div className="mx-[5px] mix-blend-difference font-monument font-semibold text-[20px] md:text-[30px]">
-//           dindustack
-//         </div>
-//         <div className="hidden xl:flex">
-//           <div className="mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px]">
-//             about
-//           </div>
-//           <div className="mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px]">
-//             services
-//           </div>
-//           <div className="mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px]">
-//             projects
-//           </div>
-//           <div className="mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px]">
-//             contact
-//           </div>
-//         </div>
-//         <div
-//           onClick={menuOpen}
-//           className="block md:hidden cursor-pointer mx-[5px]"
-//         >
-//           <Image alt="" src={menu} className="w-9 object-contain invert" />
-//         </div>
-//       </div>
-//     </div>
-//   </div>
-// );
-// }
-
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import { gsap } from "gsap";
 
 import close from "../icons/close-outline.svg";
 import menu from "../icons/menu-outline.svg";
 
-// import { FaBars, FaTimes } from 'react-icons/fa';
-
 type NavItem = {
   label: string;
-  path: string;
 };
 
 const navItems: NavItem[] = [
-  { label: "About", path: "/about" },
-  { label: "Services", path: "/services" },
-  { label: "Projects", path: "/projects" },
-  { label: "Contact", path: "/contact" },
+  { label: "About" },
+  { label: "Services" },
+  { label: "Projects" },
+  { label: "Contact" },
 ];
-
-
 
 export const Navbar: React.FC = () => {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  /**
-   * Refs
-   */
-
-  let resMenuItem = useRef(null);
-  let resMenuItem2 = useRef(null);
-  let resMenuItem3 = useRef(null);
-  let resMenuItem4 = useRef(null);
-
-  const menuCollapse = gsap.timeline({
-    paused: true,
-    reversed: true,
-  });
-
-  useEffect(() => {
-    menuCollapse.from(
-      [
-        resMenuItem.current,
-        resMenuItem2.current,
-        resMenuItem3.current,
-        resMenuItem4.current,
-      ],
-      {
-        duration: 0.5,
-        stagger: {
-          amount: 0.4,
-        },
-        y: -50,
-      }
-    );
-  });
-
-  function menuOpen() {
-
-    menuCollapse.reversed() ? menuCollapse.play() : menuCollapse.reverse();
-  }
 
   const handleClick = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -226,16 +40,9 @@ export const Navbar: React.FC = () => {
           </div>
           <div className="hidden sm:block sm:ml-6">
             <div className="flex space-x-4">
-              {navItems.map(({ label, path }) => (
-                <Link key={path} href={path} legacyBehavior>
-                  <a
-                    ref={resMenuItem}
-                    className={`${
-                      router.pathname === path
-                        ? "bg-gray-900 text-white"
-                        : "text-gray-300 hover:bg-gray-700 hover:text-white"
-                    } mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px] tracking-[0.05em]`}
-                  >
+              {navItems.map(({ label }, index) => (
+                <Link key={index} href="#" legacyBehavior>
+                  <a className="hover:underline hover:decoration-2 decoration-[#E7E7E7] hover:underline-offset-[6px] mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px] tracking-[0.05em]">
                     {label}
                   </a>
                 </Link>
@@ -269,15 +76,9 @@ export const Navbar: React.FC = () => {
       {isMenuOpen && (
         <div className="sm:hidden absolute left-0 top-[6.25rem] h-screen w-[100%] bg-black z-[22] overflow-hidden">
           <div className="px-[0.75rem] pt-2 pb-3  text-center space-y-16">
-            {navItems.map(({ label, path }) => (
-              <Link key={path} href={path} legacyBehavior>
-                <a
-                  className={`${
-                    router.pathname === path
-                      ? "bg-gray-900 text-white"
-                      : "text-gray-300 hover:bg-gray-700 hover:text-white"
-                  } block px-3 py-2 font-monument font-semibold text-[20px] tracking-[0.15em]`}
-                >
+            {navItems.map(({ label }, index) => (
+              <Link key={index} href="#" legacyBehavior>
+                <a className="hover:underline hover:decoration-2 decoration-[#E7E7E7] hover:underline-offset-[6px] block text-[#e7e7e7] px-3 py-2 font-monument font-semibold text-[20px] tracking-[0.15em]">
                   {label}
                 </a>
               </Link>
