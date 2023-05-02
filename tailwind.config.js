@@ -63,7 +63,7 @@ module.exports = {
           position: "relative",
           width: "19rem",
           height: "19rem",
-          maxWidth: "100%",
+          // maxWidth: "100%",
           borderRadius: "50%",
           overflow: "hidden",
           cursor: "pointer",
@@ -83,9 +83,9 @@ module.exports = {
             position: "absolute",
             top: "0",
             left: "0",
-            width: "100%",
-            height: "100%",
-            borderRadius: "50%",
+            // width: "100%",
+            // height: "100%",
+            // borderRadius: "50%",
           },
         }
       });
