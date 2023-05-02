@@ -41,7 +41,7 @@ export function Hero() {
     heroAnimation.fromTo(
       textAnimation.current,
       {
-        x: 100,
+        x: 40,
         opacity: 0,
       },
       {
@@ -55,7 +55,7 @@ export function Hero() {
     heroAnimation.fromTo(
       nameAnimation.current,
       {
-        x: -100,
+        x: -40,
         opacity: 0,
       },
       {
@@ -99,7 +99,7 @@ export function Hero() {
   });
 
   return (
-    <div className="pt-[10rem] lg:pt-[15rem] pb-[7.5rem] px-[2.5rem] mx-auto w-[100vw] h-[95vh] overflow-hidden">
+    <div className="pt-[5rem] lg:pt-[15rem] pb-[7.5rem] px-[2.5rem] mx-auto w-[100vw] h-[87vh] md:h-[95vh] overflow-hidden">
       <div className="flex flex-col lg:flex-row justify-center items-center lg:justify-between">
         <div className="relative flex justify-start md:justify-center flex-col md:pb-0 lg:pb-[6rem] pt-[2.125rem] md:pt-[0] md:gap-y-[1rem] lg:gap-y-[4rem] w-[100%] lg:w-[18.5rem] xl:w-[17.7rem]">
           <h1

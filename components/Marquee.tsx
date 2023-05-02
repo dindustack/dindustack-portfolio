@@ -3,10 +3,10 @@ import Marquee from "react-fast-marquee";
 
 export function MarqueeSection() {
   return (
-    <div className="pt-8 pb-8">
+    <div className="md:pt-8 pb-8">
       <Marquee
         gradient={false}
-        speed={100}
+        speed={25}
         className="relative flex w-full font-migra border-white border-t border-b"
       >
         <div className="py-8">
