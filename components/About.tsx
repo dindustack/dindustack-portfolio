@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export function About() {
-  const aboutRef = useRef(null);
+  const aboutRef = useRef() as React.MutableRefObject<HTMLDivElement>;
 
   const [lettersRef, setlettersRef] = useArrayRef();
   const triggerRef = useRef(null);
@@ -49,7 +49,7 @@ export function About() {
     return () => {
       anim.kill();
     };
-  }, []);
+  });
 
   return (
     <Element name="about">

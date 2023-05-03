@@ -37,7 +37,9 @@ export const ProjectBox = forwardRef(function ProjectBox(
    */
   const boxRef = useRef() as React.MutableRefObject<HTMLDivElement>;
   const elRef = useRef() as React.MutableRefObject<HTMLDivElement>;
-  const imagesRef = useRef([]) as React.MutableRefObject<HTMLDivElement[]>;
+  const imagesRef = useRef<HTMLDivElement[]>([]);
+
+  
 
   /**
    * Effects
@@ -72,7 +74,13 @@ export const ProjectBox = forwardRef(function ProjectBox(
     setRotation(
       gsap.utils.interpolate(
         rotation,
-        gsap.utils.mapRange(0, 100, 0, previousX - position.x < 0 ? 45 : -45, distance),
+        gsap.utils.mapRange(
+          0,
+          100,
+          0,
+          previousX - position.x < 0 ? 45 : -45,
+          distance
+        ),
         0.08
       )
     );
@@ -159,7 +167,11 @@ export const ProjectBox = forwardRef(function ProjectBox(
           projectImages.map((image, index) => (
             <div
               className="w-full h-full absolute top-0 left-0 opacity-0"
-              ref={(el) => (imagesRef.current[index] = el)}
+              ref={(el) => {
+                if (el !== null) {
+                  imagesRef.current[index] = el;
+                }
+              }}
               style={{
                 transform: `translateX(${12.5 * offsets[index]?.x || 0}%) 
                 translateY(${12.5 * offsets[index]?.y || 0}%) scale(1.25)
