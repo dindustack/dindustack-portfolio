@@ -82,7 +82,7 @@ export function Hero() {
         },
       }
     );
-  }, []);
+  });
 
   /**
    * Liquid Image Distortion
