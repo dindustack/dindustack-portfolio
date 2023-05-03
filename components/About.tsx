@@ -76,12 +76,13 @@ export function About() {
               I am proficient in:
             </p>
             <p className="about-text">React</p>
-            <p className="about-text indent-[2vw]">TypeScript</p>
-            <p className="about-text indent-[4vw]">Next.js</p>
-            <p className="about-text indent-[6vw]">React-Query</p>
-            <p className="about-text indent-[8vw]">GraqhQL</p>
-            <p className="about-text indent-[9vw]">TailwindCSS</p>
-            <p className="about-text indent-[10vw]">Storybook</p>
+            <p className="about-text indent-[2vw]">GraqhQL</p>
+            <p className="about-text indent-[3vw]">Next.js</p>
+            <p className="about-text indent-[5vw]">React-Query</p>
+            <p className="about-text indent-[6vw]">Storybook</p>
+            <p className="about-text indent-[7vw]">TailwindCSS</p>
+            <p className="about-text indent-[9vw]">TypeScript</p>
+            <p className="about-text indent-[10vw]">Zustand</p>
           </div>
         </div>
       </div>
