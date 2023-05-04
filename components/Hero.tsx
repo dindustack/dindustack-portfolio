@@ -92,8 +92,8 @@ export function Hero() {
     new hoverEffect({
       parent: document.querySelector(".hero-image"),
       intensity: 0.3,
-      image1: "./images/Chinwendu_Agbaetuo-1.jpeg",
-      image2: "./images/Chinwendu_Agbaetuo-2.jpeg",
+      image1: "./images/Chinwendu_Agbaetuo-2.jpeg",
+      image2: "./images/Chinwendu_Agbaetuo-1.jpeg",
       displacementImage: "./images/displacement_image.jpeg",
     });
   });

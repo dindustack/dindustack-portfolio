@@ -26,7 +26,7 @@ export function Projects() {
       <div className="relative py-[6.25rem] font-monument">
         <div className="px-[0.75rem] md:px-[2.5rem] mx-auto">
           <div className="pb-[1.25rem]">
-            <div className="flex space-x-4 items-center">
+            <div className="flex space-x-4 items-start">
               <h3 className="text-[1.5rem] md:text-[2.4rem] normal-case leading-none -tracking-[0.01rem]">
                 Selected Work
               </h3>
