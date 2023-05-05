@@ -115,8 +115,8 @@ export function Hero() {
             className="hidden md:flex flex-col items-start gap-y-[1rem]"
             ref={socialAnimation}
           >
-            <a href="https://www.instagram.com/dindustack/" target="_blank">
-              <h5 className="hero-social-link">instagram</h5>
+            <a href="https://www.github.com/dindustack/" target="_blank">
+              <h5 className="hero-social-link">github</h5>
             </a>
             <a href="https://www.linkedin.com/in/dindustack/" target="_blank">
               <h5 className="hero-social-link">linkedin</h5>

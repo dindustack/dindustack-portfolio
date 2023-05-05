@@ -13,10 +13,10 @@ export function Footer() {
         <div className="flex flex-col xl:flex-row items-start xl:items-center justify-between">
           <div>follow me</div>
           <a
-            href="https://www.instagram.com/dindustack/"
+            href="https://www.github.com/dindustack/"
             className="text-4xl hover:underline"
           >
-            instagram
+            github
           </a>
           <a
             href="https://www.linkedin.com/in/dindustack/"
