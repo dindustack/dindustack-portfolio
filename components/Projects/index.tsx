@@ -30,7 +30,7 @@ export function Projects() {
               <h3 className="text-[1.5rem] md:text-[2.4rem] normal-case leading-none -tracking-[0.01rem]">
                 Selected Work
               </h3>
-              <span>(4)</span>
+              <span className="normal-case">(Work in progress)</span>
             </div>
           </div>
 
