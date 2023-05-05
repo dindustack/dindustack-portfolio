@@ -10,7 +10,6 @@ import { Services } from "@/components/Services";
 import { SplashScreen } from "@/components/SplashScreen";
 import { Projects } from "@/components/Projects";
 
-
 export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -20,7 +19,7 @@ export default function HomePage() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-      }, 4800);
+    }, 4800);
     // }, 0);
     return () => clearTimeout(timeout);
   }, []);
@@ -53,6 +52,23 @@ export default function HomePage() {
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest"></link>
+        {/* Google tag (gtag.js) */}
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+          }}
+        />
       </Head>
 
       {isLoading ? (
