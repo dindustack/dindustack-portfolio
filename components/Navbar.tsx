@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Link } from "react-scroll";
 
-import close from "../icons/close-outline.svg";
-import menu from "../icons/menu-outline.svg";
+import close from "../public/icons/close-outline.svg";
+import menu from "../public/icons/menu-outline.svg";
 
 type NavItem = {
   label: string;
