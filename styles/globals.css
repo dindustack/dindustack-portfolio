@@ -48,8 +48,8 @@ body {
   display: none;
 }
 
-@layer base {
-  html {
-    @apply scroll-smooth;
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 1px #E7E7E7;
   }
 }

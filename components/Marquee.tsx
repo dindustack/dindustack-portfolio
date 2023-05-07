@@ -1,5 +1,8 @@
+import Image from "next/image";
 import React from "react";
 import Marquee from "react-fast-marquee";
+import star from "../public/images/star.svg";
+import { marqueeContent } from "@/constants/marquee";
 
 export function MarqueeSection() {
   return (
@@ -38,7 +41,8 @@ export function MarqueeSection() {
           <span className="text-base leading-none mx-4">designer</span>
           <span className="text-base leading-none mx-4">•</span>
         </div>
-      </Marquee>
+      </Marquee> 
+      
     </div>
   );
 }
