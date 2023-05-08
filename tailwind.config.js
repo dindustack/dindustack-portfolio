@@ -65,7 +65,6 @@ module.exports = {
           height: "19rem",
           maxWidth: "100%",
           borderRadius: "100%",
-          // borderRadius: "50%",
           overflow: "hidden",
           cursor: "pointer",
           border: "2px solid white",
@@ -90,20 +89,21 @@ module.exports = {
             // height: "100%",
             borderRadius: "50%",
           },
-
-          // marquee image animation
         },
         ".marquee-img": {
           display: "block",
           position: "absolute",
           top: "50%",
           right: "0",
-          width: "5rem",
-          height: "5rem",
+          width: "2.5rem",
+          height: "2.5rem",
           transform: "translateY(-50%)",
           animation: "rotate 8s linear infinite",
 
-          
+          "@screen md": {
+            width: "5rem",
+            height: "5rem",
+          },
         },
 
         "@keyframes rotate": {
