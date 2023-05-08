@@ -30,7 +30,7 @@ export function MarqueeSection() {
               <SplideSlide>
                 <span className="inline-block relative pr-[7.5rem] text-[1.5rem] md:text-[3.75rem] uppercase text-[#E7E7E7] tracking-wider">
                   {content.firstWord}
-                  <span className="ml-6 text-transparent text-stroke tracking-wider">
+                  <span className="ml-4 md:ml-6 text-transparent text-stroke tracking-wider">
                     {content.secondWord}
                   </span>
                   <Image
