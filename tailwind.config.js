@@ -58,7 +58,7 @@ module.exports = {
             textUnderlineOffset: "4px",
           },
         },
-        
+
         ".hero-image": {
           position: "relative",
           width: "19rem",
@@ -90,7 +90,30 @@ module.exports = {
             // height: "100%",
             borderRadius: "50%",
           },
-        }
+
+          // marquee image animation
+        },
+        ".marquee-img": {
+          display: "block",
+          position: "absolute",
+          top: "50%",
+          right: "0",
+          width: "5rem",
+          height: "5rem",
+          transform: "translateY(-50%)",
+          animation: "rotate 8s linear infinite",
+
+          
+        },
+
+        "@keyframes rotate": {
+          from: {
+            transform: "translateY(-50%) rotate(0)",
+          },
+          to: {
+            transform: "translateY(-50%) rotate(360deg)",
+          },
+        },
       });
     }),
   ],

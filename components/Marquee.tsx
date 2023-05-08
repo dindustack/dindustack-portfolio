@@ -1,48 +1,49 @@
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+import "@splidejs/splide/dist/css/splide.min.css";
 import Image from "next/image";
 import React from "react";
-import Marquee from "react-fast-marquee";
-import star from "../public/images/star.svg";
 import { marqueeContent } from "@/constants/marquee";
 
 export function MarqueeSection() {
   return (
     <div className="md:pt-8 pb-8">
-      <Marquee
-        gradient={false}
-        speed={25}
-        className="relative flex w-full font-migra border-white border-t border-b"
-      >
-        <div className="py-8">
-          <span className="text-base leading-none mx-4">Frontend engineer</span>
-          <span className="text-base leading-none mx-4">•</span>
-          <span className="text-base leading-none mx-4">technical writer</span>
-          <span className="text-base leading-none mx-4">•</span>
-          <span className="text-base leading-none mx-4">designer</span>
-          <span className="text-base leading-none mx-4">•</span>
-          <span className="text-base leading-none mx-4">Frontend engineer</span>
-          <span className="text-base leading-none mx-4">•</span>
-          <span className="text-base leading-none mx-4">technical writer</span>
-          <span className="text-base leading-none mx-4">•</span>
-          <span className="text-base leading-none mx-4">designer</span>
-          <span className="text-base leading-none mx-4">•</span>
-        </div>
-
-        <div className="py-8">
-          <span className="text-base leading-none mx-4">Frontend engineer</span>
-          <span className="text-base leading-none mx-4">•</span>
-          <span className="text-base leading-none mx-4">technical writer</span>
-          <span className="text-base leading-none mx-4">•</span>
-          <span className="text-base leading-none mx-4">designer</span>
-          <span className="text-base leading-none mx-4">•</span>
-          <span className="text-base leading-none mx-4">Frontend engineer</span>
-          <span className="text-base leading-none mx-4">•</span>
-          <span className="text-base leading-none mx-4">technical writer</span>
-          <span className="text-base leading-none mx-4">•</span>
-          <span className="text-base leading-none mx-4">designer</span>
-          <span className="text-base leading-none mx-4">•</span>
-        </div>
-      </Marquee> 
-      
+      <div className="border-white border-t border-b font-monument">
+        <Splide
+          options={{
+            type: "loop",
+            drag: "free",
+            focus: "center",
+            autoWidth: true,
+            gap: 40,
+            arrows: false,
+            pagination: false,
+            autoScroll: {
+              speed: 2,
+            },
+          }}
+          extensions={{ AutoScroll }}
+          className="py-[1.3rem] px-0"
+        >
+          {React.Children.toArray(
+            marqueeContent.map((content) => (
+              <SplideSlide>
+                <span className="inline-block relative pr-[7.5rem] text-[3.75rem] uppercase text-[#E7E7E7] tracking-wider">
+                  {content.firstWord}
+                  <span className="ml-6 text-transparent text-stroke tracking-wider">
+                    {content.secondWord}
+                  </span>
+                  <Image
+                    src={content.imgSrc}
+                    alt="Chinwendu Agbaetuo"
+                    className="marquee-img"
+                  />
+                </span>
+              </SplideSlide>
+            ))
+          )}
+        </Splide>
+      </div>
     </div>
   );
 }
