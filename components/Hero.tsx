@@ -98,6 +98,11 @@ export function Hero() {
     });
   });
 
+  /**
+   * 1. create hover animation on social links
+   * 2. use GSAP to create animation
+   */
+
   return (
     <div className="pt-[5rem] lg:pt-[15rem] pb-[7.5rem] px-[2.5rem] mx-auto w-[100vw] h-[87vh] md:h-[95vh] overflow-hidden">
       <div className="flex flex-col lg:flex-row justify-center items-center lg:justify-between">
