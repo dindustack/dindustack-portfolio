@@ -101,7 +101,6 @@ export function Hero() {
   /**
    * 1. create hover animation on social links
    * 2. use GSAP to create animation
-   * 3. Work on projects to display in the project section
    */
 
   return (
