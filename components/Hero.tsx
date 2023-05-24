@@ -9,6 +9,12 @@ export function Hero() {
   let nameAnimation = useRef(null);
   let roleAnimation = useRef(null);
 
+  // social links ref
+  const linkOne = useRef(null);
+  const linkTwo = useRef(null);
+  const linkThree = useRef(null);
+  const linkFour = useRef(null);
+
   const didAnimate = useRef(false);
 
   /**
@@ -98,10 +104,30 @@ export function Hero() {
     });
   });
 
-  /**
-   * 1. create hover animation on social links
-   * 2. use GSAP to create animation
-   */
+  // Social Links
+  const socialLinks = [
+    {
+      name: "Github",
+      link: "https://www.github.com/dindustack/",
+      ref: linkTwo,
+    },
+    {
+      name: "LinkedIn",
+      link: "https://www.linkedin.com/in/dindustack/",
+      ref: linkOne,
+    },
+    {
+      name: "Twitter",
+      link: "https://www.twitter.com/dindustack/",
+      ref: linkThree,
+    },
+    {
+      name: "Instagram",
+      link: "https://www.instagram.com/dindustack/",
+      ref: linkFour,
+    },
+  ];
+
 
   return (
     <div className="pt-[5rem] lg:pt-[15rem] pb-[7.5rem] px-[2.5rem] mx-auto w-[100vw] h-[87vh] md:h-[95vh] overflow-hidden">
@@ -120,18 +146,13 @@ export function Hero() {
             className="hidden md:flex flex-col items-start gap-y-[1rem]"
             ref={socialAnimation}
           >
-            <a href="https://www.github.com/dindustack/" target="_blank">
-              <h5 className="hero-social-link">github</h5>
-            </a>
-            <a href="https://www.linkedin.com/in/dindustack/" target="_blank">
-              <h5 className="hero-social-link">linkedin</h5>
-            </a>
-            <a href="https://twitter.com/dindustack" target="_blank">
-              <h5 className="hero-social-link">twitter</h5>
-            </a>
-            <a href="https://dribbble.com/dindustack" target="_blank">
-              <h5 className="hero-social-link">dribbble</h5>
-            </a>
+            {React.Children.toArray(
+              socialLinks.map(({ name, link }) => (
+                <a href={link} target="_blank">
+                  <span className="hero-social-link">{name}</span>
+                </a>
+              ))
+            )}
           </div>
         </div>
         <div className="relative flex flex-col md:-mt-[100px] lg:mt-0 justify-center items-center">
