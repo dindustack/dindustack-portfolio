@@ -50,6 +50,6 @@ body {
 
 @layer utilities {
   .text-stroke {
-    -webkit-text-stroke: 2px #E7E7E7;
+    -webkit-text-stroke: 2px #202020;
   }
 }

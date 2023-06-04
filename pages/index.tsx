@@ -57,7 +57,7 @@ export default function HomePage() {
       {isLoading ? (
         <SplashScreen />
       ) : (
-        <div className="text-[#e7e7e7] uppercase">
+        <div className="text-[#202020] bg-[#fffef4] uppercase">
           <Navbar />
           <Hero />
           <MarqueeSection />

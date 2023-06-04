@@ -30,8 +30,10 @@ module.exports = {
     plugin(function ({ addComponents }) {
       addComponents({
         ".about-text": {
+          // background:
+          //   "linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(37, 37, 37) 50%)",
           background:
-            "linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(37, 37, 37) 50%)",
+            "linear-gradient(to right, rgb(32, 32, 32) 50%, rgb(139, 139, 139) 50%)",
           backgroundSize: "200% 100%",
           backgroundPositionX: "100%",
           color: "transparent",
@@ -39,8 +41,10 @@ module.exports = {
           webkitBackgroundClip: "text",
         },
         ".about-first-text": {
-          background:
-            "linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(37, 37, 37) 50%)",
+          // background:
+          //   "linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(37, 37, 37) 50%)",
+            background:
+            "linear-gradient(to right, rgb(32, 32, 32) 50%, rgb(139, 139, 139) 50%)",
           backgroundSize: "200% 100%",
           backgroundPositionX: "100%",
           color: "transparent",
@@ -67,7 +71,7 @@ module.exports = {
           borderRadius: "100%",
           overflow: "hidden",
           cursor: "pointer",
-          border: "2px solid white",
+          border: "2px solid #202020",
           backgroundPosition: "50% 50%",
           backgroundSize: "cover",
 
@@ -101,8 +105,8 @@ module.exports = {
           animation: "rotate 8s linear infinite",
 
           "@screen md": {
-            width: "5rem",
-            height: "5rem",
+            width: "3rem",
+            height: "3rem",
           },
         },
 

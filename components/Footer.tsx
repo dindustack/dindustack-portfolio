@@ -4,7 +4,7 @@ import { Element } from "react-scroll";
 export function Footer() {
   return (
     <Element name="contact">
-      <div className="relative font-monument px-[0.75rem] md:px-[2.5rem]">
+      <div className="relative font-monument px-[0.75rem] md:px-[2.5rem] bg-[#202020] text-[#fffef4]">
         <div className="hidden lg:block mb-[10vh]">
           <div className="mx-1 font-monument font-semibold py-10 text-[11.5vmax] my-1 leading-none">
             dindustack

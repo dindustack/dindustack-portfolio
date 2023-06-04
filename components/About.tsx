@@ -42,7 +42,8 @@ export function About() {
         start: "top center",
         end: "bottom top",
       },
-      color: "rgba(255,255,255,1)",
+      // color: "rgba(255,255,255,1)",
+      color: "rgb(32, 32, 32, 1)",
       duration: 5,
       stagger: 1,
     });

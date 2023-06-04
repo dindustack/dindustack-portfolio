@@ -25,12 +25,12 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="relative w-full bg-black">
+    <nav className="relative w-full">
       <div className="px-[0.75rem] md:px-[2.5rem] mx-auto">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0">
-              <div className="mx-[5px] mix-blend-difference font-monument font-semibold text-[20px] md:text-[30px]">
+              <div className="mx-[5px]  font-monument font-semibold text-[20px] md:text-[30px]">
                 dindustack
               </div>
             </div>
@@ -47,7 +47,7 @@ export const Navbar: React.FC = () => {
                   smooth="easeInQuad"
                   duration={200}
                 >
-                  <a className="hover:underline underline-offset-[6px] decoration-2 decoration-[#E7E7E7] mx-1 md:block hidden mix-blend-difference font-monument font-bold text-[30px] tracking-[0.05em]">
+                  <a className="hover:underline underline-offset-[6px] decoration-2 decoration-[#E7E7E7] mx-1 md:block hidden  font-monument font-bold text-[30px] tracking-[0.05em]">
                     {label}
                   </a>
                 </Link>

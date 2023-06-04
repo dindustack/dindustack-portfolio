@@ -135,7 +135,7 @@ export function Hero() {
         <div className="relative flex justify-start md:justify-center flex-col md:pb-0 lg:pb-[6rem] pt-[2.125rem] md:pt-[0] md:gap-y-[1rem] lg:gap-y-[4rem] w-[100%] lg:w-[18.5rem] xl:w-[17.7rem]">
           <h1
             ref={nameAnimation}
-            className="mb-[10px] text-3xl font-monument font-bold md:text-4xl text-center md:text-left xl:text-[4rem] z-[2]"
+            className="mb-[10px] text-3xl  font-monument font-bold md:text-4xl text-center md:text-left xl:text-[4rem] z-[2]"
           >
             <span className="leading-[1.5]">Hey</span>
             <br />
