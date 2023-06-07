@@ -9,8 +9,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'gray-900': '#202020',
+      },
       fontFamily: {
-        monument: ["Monument Extended"],
+        eastman: ['Eastman Regular', 'sans-serif'],
+        'eastman-offset': ['Eastman Regular Offset', 'sans-serif'],
+        'eastman-bold': ['Eastman Bold', 'sans-serif'],
         migra: ["Migra"],
       },
     },
@@ -30,8 +35,6 @@ module.exports = {
     plugin(function ({ addComponents }) {
       addComponents({
         ".about-text": {
-          // background:
-          //   "linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(37, 37, 37) 50%)",
           background:
             "linear-gradient(to right, rgb(32, 32, 32) 50%, rgb(139, 139, 139) 50%)",
           backgroundSize: "200% 100%",
@@ -41,9 +44,7 @@ module.exports = {
           webkitBackgroundClip: "text",
         },
         ".about-first-text": {
-          // background:
-          //   "linear-gradient(to right, rgb(255, 255, 255) 50%, rgb(37, 37, 37) 50%)",
-            background:
+          background:
             "linear-gradient(to right, rgb(32, 32, 32) 50%, rgb(139, 139, 139) 50%)",
           backgroundSize: "200% 100%",
           backgroundPositionX: "100%",

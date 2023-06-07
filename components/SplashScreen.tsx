@@ -1,12 +1,12 @@
 import gsap, { Sine } from "gsap";
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 export function SplashScreen() {
   const loadingScreen: any = useRef<HTMLDivElement | null>(null);
 
   const timeline = gsap.timeline();
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const ctx = gsap.context(() => {
       timeline.from(".logoOne", {
         opacity: 0,

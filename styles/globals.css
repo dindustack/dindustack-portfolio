@@ -1,27 +1,11 @@
 /** @format */
-@font-face {
-  font-family: "Monument Extended";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Monument Extended"),
-    url("https://fonts.cdnfonts.com/s/19595/MonumentExtended-Regular.woff")
-      format("woff");
-}
-@font-face {
-  font-family: "Monument Extended";
-  font-style: normal;
-  font-weight: 800;
-  src: local("Monument Extended"),
-    url("https://fonts.cdnfonts.com/s/19595/MonumentExtended-Ultrabold.woff")
-      format("woff");
-}
 
 @font-face {
   font-family: "Migra";
   font-style: normal;
   font-weight: 400;
   src: local("Migra"),
-  url("../public/fonts/Migra-Extralight.woff")
+  url("/fonts/Migra-Extralight.woff")
 
       format("woff");
 }
@@ -30,8 +14,17 @@
   font-style: normal;
   font-weight: 800;
   src: local("Migra"),
-    url("../public/fonts/Migra-Extrabold.woff")
+    url("/fonts/Migra-Extrabold.woff")
       format("woff");
+}
+
+@font-face {
+  font-family: "Eastman Regular Offset";
+  src: url("/fonts/archive/Eastman-RegularOffset.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Eastman Bold";
+  src: url("/fonts/archive/Eastman-Bold.ttf") format("truetype");
 }
 
 @tailwind base;

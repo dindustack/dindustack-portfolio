@@ -25,8 +25,16 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="relative w-full">
-      <div className="px-[0.75rem] md:px-[2.5rem] mx-auto">
+    <nav className="w-full">
+      <div className="pt-8 pl-8">
+        <div className="max-w-[6.875rem] text-center">
+          <span className="inline-block uppercase font-eastman-bold text-gray-900 text-[1.3125rem] leading-[0] tracking-[0.28em]">dindu</span>
+          <br/>
+          <span className="bg-gray-900 px-[0.375rem] pt-[0.25rem] pb-[0.0625rem] text-[#FFFEF4] inline-block uppercase font-eastman-offset text-[1.3125rem] leading-[1.3rem] tracking-[0.28em]">stack</span>
+        </div>
+
+      </div>
+      {/* <div className="">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0">
@@ -76,9 +84,9 @@ export const Navbar: React.FC = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      {isMenuOpen && (
+      {/* {isMenuOpen && (
         <div className="sm:hidden absolute left-0 top-[10rem] h-screen w-[100%] bg-black z-[22] overflow-hidden">
           <div className="px-[0.75rem] pt-2 pb-3 text-center space-y-16">
             {navItems.map(({ label, path }) => (
@@ -99,7 +107,7 @@ export const Navbar: React.FC = () => {
             ))}
           </div>
         </div>
-      )}
+      )} */}
     </nav>
   );
 };
