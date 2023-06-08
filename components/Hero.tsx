@@ -7,7 +7,6 @@ import { Sidebar } from "./Sidebar";
 export function Hero() {
   const heroAnimation = gsap.timeline();
   const heroTextAnimation = useRef(null);
- 
 
   /**
    * GSAP Animation
@@ -60,7 +59,7 @@ export function Hero() {
       );
     }, heroTextAnimation);
     return () => ctx.revert();
-  }, []);
+  });
 
   /**
    * Liquid Image Distortion
@@ -83,13 +82,13 @@ export function Hero() {
         <div className="absolute  left-0 z-[20]">
           <div
             ref={heroTextAnimation}
-            className="leading-[3.75rem]    text-gray-900"
+            className="leading-[3.75rem] text-gray-900"
           >
             <div className="name-animation font-migra-extrabold font-extrabold">
               <div className=" leading-[0] hero-text text-[5.7425rem]">Hey</div>
               <br />
               <span className=" leading-[0] text-[5.7425rem]">I&apos;m</span>
-              <span className=" ml-2 md:ml-4 xl:ml-8 text-[5.7425rem] mix-blend-difference">
+              <span className=" ml-2 md:ml-4 xl:ml-8 text-[5.7425rem]">
                 Chinwendu
               </span>
             </div>

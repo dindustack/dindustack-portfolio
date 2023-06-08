@@ -41,6 +41,6 @@ body {
 
 @layer utilities {
   .text-stroke {
-    -webkit-text-stroke: 2px #fffef4;
+    -webkit-text-stroke: 1px #FFFEF4;
   }
 }
