@@ -17,6 +17,11 @@
 }
 
 @font-face {
+  font-family: "Eastman Medium";
+  src: url("/fonts/archive/Eastman-Medium.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Eastman Regular Offset";
   src: url("/fonts/archive/Eastman-RegularOffset.ttf") format("truetype");
 }
@@ -41,6 +46,6 @@ body {
 
 @layer utilities {
   .text-stroke {
-    -webkit-text-stroke: 1px #FFFEF4;
+    -webkit-text-stroke: 1px #fffef4;
   }
 }

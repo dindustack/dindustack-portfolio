@@ -92,7 +92,7 @@ export function Hero() {
                 Chinwendu
               </span>
             </div>
-            <div className="role-animation uppercase font-eastman-offset  text-[2rem] tracking-[0.06em]">
+            <div className="role-animation uppercase font-eastman-offset text-[2rem] tracking-[0.06em]">
               creative frontend developer
             </div>
             <div className="text-animation font-eastman leading-[1.25rem] text-[#000000] mt-6 text-[1rem] max-w-[28.6875rem]">

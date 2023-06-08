@@ -15,6 +15,7 @@ module.exports = {
       },
       fontFamily: {
         eastman: ["Eastman Regular", "sans-serif"],
+        "eastman-medium": ["Eastman Medium", "sans-serif"],
         "eastman-offset": ["Eastman Regular Offset", "sans-serif"],
         "eastman-bold": ["Eastman Bold", "sans-serif"],
         migra: ["Migra", "sans-serif"],
@@ -54,16 +55,9 @@ module.exports = {
           backgroundClip: "text",
           webkitBackgroundClip: "text",
         },
-        ".hero-social-link": {
-          fontFamily: "Migra",
-          fontSize: "1.25rem",
-          lineHeight: "1",
 
-          "&:hover": {
-            textDecoration: "underline",
-            textDecorationThickness: "2px",
-            textUnderlineOffset: "4px",
-          },
+        ".about-title": {
+          transform: " rotate(-90deg)",
         },
 
         ".hero-text": {
