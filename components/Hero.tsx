@@ -131,8 +131,8 @@ export function Hero() {
 
   return (
     <Sidebar>
-      <div className="flex  justify-center">
-      <div className="hero-image"></div>
+      <div className="flex flex-col items-center justify-center h-screen">
+        <div className="hero-image"></div>
       </div>
 
       {/* <div className="flex flex-col justify-center absolute top-[50%] left-[50%]">

@@ -21,7 +21,7 @@ export function Sidebar({ children }: SidebarProps) {
   return (
     <div className="grid grid-cols-12 min-h-screen px-8">
       <div className="flex col-start-1 col-end-1">
-        <div className="flex w-[3.25rem] flex-col justify-center items-center p-0 gap-[4.5rem]">
+        <div className="flex max-w-[3.25rem] flex-col justify-center items-center p-0 gap-[4.5rem]">
           {React.Children.toArray(
             navItems.map(({ label }) => (
               <a href="#" className="sidebar-item">
