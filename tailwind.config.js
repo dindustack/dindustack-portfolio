@@ -10,12 +10,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'gray-900': '#202020',
+        "gray-500": "#565656",
+        "gray-900": "#202020",
       },
       fontFamily: {
-        eastman: ['Eastman Regular', 'sans-serif'],
-        'eastman-offset': ['Eastman Regular Offset', 'sans-serif'],
-        'eastman-bold': ['Eastman Bold', 'sans-serif'],
+        eastman: ["Eastman Regular", "sans-serif"],
+        "eastman-offset": ["Eastman Regular Offset", "sans-serif"],
+        "eastman-bold": ["Eastman Bold", "sans-serif"],
         migra: ["Migra"],
       },
     },
@@ -64,6 +65,13 @@ module.exports = {
           },
         },
 
+        ".hero-image-container": {
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+        },
+
         ".hero-image": {
           position: "relative",
           width: "19rem",
@@ -75,6 +83,7 @@ module.exports = {
           border: "2px solid #202020",
           backgroundPosition: "50% 50%",
           backgroundSize: "cover",
+          boxShadow:" 0px 4px 32px rgba(0, 0, 0, 0.12)",
 
           "@screen md": {
             width: "22rem",
@@ -95,6 +104,7 @@ module.exports = {
             borderRadius: "50%",
           },
         },
+
         ".marquee-img": {
           display: "block",
           position: "absolute",
@@ -117,6 +127,29 @@ module.exports = {
           },
           to: {
             transform: "translateY(-50%) rotate(360deg)",
+          },
+        },
+
+        ".sidebar-item": {
+          transform: " rotate(-90deg)",
+          color: "#565656",
+          fontSize: "0.875rem",
+          cursor: "pointer",
+          textTransform: "uppercase",
+          fontFamily: "Eastman Regular",
+
+          ".active": {
+            color: "#202020",
+            fontFamily: "Eastman Bold",
+          },
+
+          "&:hover": {
+            color: "#202020",
+          },
+
+          "&:focus": {
+            color: "#202020",
+            fontFamily: "Eastman Bold",
           },
         },
       });

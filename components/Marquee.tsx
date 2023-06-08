@@ -7,8 +7,8 @@ import { marqueeContent } from "@/constants/marquee";
 
 export function MarqueeSection() {
   return (
-    <div className="md:pt-8 pb-8">
-      <div className="border-[#202020] border-t border-b font-monument">
+    <div className="pb-8">
+      <div className="border-[#202020] bg-gray-900 border-t border-b font-eastman-offset">
         <Splide
           options={{
             type: "loop",
@@ -28,9 +28,9 @@ export function MarqueeSection() {
           {React.Children.toArray(
             marqueeContent.map((content) => (
               <SplideSlide>
-                <span className="inline-block relative pr-[7.5rem] text-[1.5rem] md:text-[1.75rem] uppercase  tracking-wider">
+                <span className="inline-block relative pr-[7.5rem] text-[1.5rem] md:text-[1.25rem] text-[#FFFEF4] uppercase  tracking-wider">
                   {content.firstWord}
-                  <span className="ml-4 md:ml-6 text-transparent text-stroke tracking-wider">
+                  <span className="ml-2 md:ml-4 text-transparent text-stroke tracking-wider">
                     {content.secondWord}
                   </span>
                   <Image

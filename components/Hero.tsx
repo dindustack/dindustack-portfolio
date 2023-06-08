@@ -1,6 +1,7 @@
 import { gsap, Power2 } from "gsap";
 import hoverEffect from "hover-effect";
 import React, { useEffect, useRef } from "react";
+import { Sidebar } from "./Sidebar";
 
 export function Hero() {
   const heroAnimation = gsap.timeline();
@@ -128,11 +129,15 @@ export function Hero() {
     },
   ];
 
-
   return (
-    <div className="pt-[5rem] lg:pt-[15rem] pb-[7.5rem] px-[2.5rem] mx-auto w-[100vw] h-[87vh] md:h-[95vh] overflow-hidden">
-      <div className="flex flex-col lg:flex-row justify-center items-center lg:justify-between">
-        <div className="relative flex justify-start md:justify-center flex-col md:pb-0 lg:pb-[6rem] pt-[2.125rem] md:pt-[0] md:gap-y-[1rem] lg:gap-y-[4rem] w-[100%] lg:w-[18.5rem] xl:w-[17.7rem]">
+    <Sidebar>
+      <div className="self-center justify-self-center">
+      </div>
+
+      {/* <div className="flex flex-col justify-center absolute top-[50%] left-[50%]">
+      <div className="hero-image"></div> */}
+
+      {/* <div className="  ">
           <h1
             ref={nameAnimation}
             className="mb-[10px] text-3xl  font-monument font-bold md:text-4xl text-center md:text-left xl:text-[4rem] z-[2]"
@@ -142,21 +147,25 @@ export function Hero() {
             <span>i&apos;m</span>
             <span className="ml-2 md:ml-4 xl:ml-8">Chinwendu</span>
           </h1>
-          <div
-            className="hidden md:flex flex-col items-start gap-y-[1rem]"
-            ref={socialAnimation}
+        </div>
+        <div className=" ">
+          <div className="hero-image"></div>
+        </div> */}
+      {/* <div className="">
+        <div className=" ">
+          <h1
+            ref={nameAnimation}
+            className="mb-[10px] text-3xl  font-monument font-bold md:text-4xl text-center md:text-left xl:text-[4rem] z-[2]"
           >
-            {React.Children.toArray(
-              socialLinks.map(({ name, link }) => (
-                <a href={link} target="_blank">
-                  <span className="hero-social-link">{name}</span>
-                </a>
-              ))
-            )}
-          </div>
+            <span className="leading-[1.5]">Hey</span>
+            <br />
+            <span>i&apos;m</span>
+            <span className="ml-2 md:ml-4 xl:ml-8">Chinwendu</span>
+          </h1>
+          
         </div>
         <div className="relative flex flex-col md:-mt-[100px] lg:mt-0 justify-center items-center">
-          <div className="hero-image"></div>
+         
         </div>
 
         <div className="relative flex flex-col gap-y-[2rem] md:justify-center md:items-end pt-0 -mt-2 lg:pt-[15rem] w-[100%] lg:w-[18.5rem] xl:w-[17.7rem]">
@@ -180,7 +189,12 @@ export function Hero() {
             at a time.
           </div>
         </div>
-      </div>
-    </div>
+      </div> */}
+      {/* </div> */}
+    </Sidebar>
   );
+}
+
+{
+  /* <div className="hero-image"></div> */
 }

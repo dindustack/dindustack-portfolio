@@ -19,6 +19,11 @@
 }
 
 @font-face {
+  font-family: "Eastman Regular";
+  src: url("/fonts/archive/Eastman-Regular.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Eastman Regular Offset";
   src: url("/fonts/archive/Eastman-RegularOffset.ttf") format("truetype");
 }
@@ -43,6 +48,6 @@ body {
 
 @layer utilities {
   .text-stroke {
-    -webkit-text-stroke: 2px #202020;
+    -webkit-text-stroke: 2px #FFFEF4;
   }
 }
