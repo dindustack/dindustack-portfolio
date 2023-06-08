@@ -17,7 +17,8 @@ module.exports = {
         eastman: ["Eastman Regular", "sans-serif"],
         "eastman-offset": ["Eastman Regular Offset", "sans-serif"],
         "eastman-bold": ["Eastman Bold", "sans-serif"],
-        migra: ["Migra"],
+        migra: ["Migra", "sans-serif"],
+        "migra-extrabold": ["Migra Extrabold", "sans-serif"],
       },
     },
   },
@@ -65,6 +66,17 @@ module.exports = {
           },
         },
 
+        ".hero-text": {
+          "&::after": {
+            content: '""',
+            display: "inline-block",
+            border: "1px solid #202020",
+            width: "100px",
+            margin: "0 1.3rem 0.625rem 1.3125rem",
+            transform: "translateY(-3px)",
+          },
+        },
+
         ".hero-image-container": {
           position: "absolute",
           top: "50%",
@@ -83,7 +95,7 @@ module.exports = {
           border: "2px solid #202020",
           backgroundPosition: "50% 50%",
           backgroundSize: "cover",
-          boxShadow:" 0px 4px 32px rgba(0, 0, 0, 0.12)",
+          boxShadow: " 0px 4px 32px rgba(0, 0, 0, 0.12)",
 
           "@screen md": {
             width: "22rem",

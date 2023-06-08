@@ -131,8 +131,31 @@ export function Hero() {
 
   return (
     <Sidebar>
-      <div className="flex flex-col items-center justify-center h-screen">
-        <div className="hero-image"></div>
+      <div className="flex flex-col items-center justify-center relative h-screen">
+        {/* absolute text to the left */}
+        <div className="absolute  left-0">
+          <div
+            ref={nameAnimation}
+            className=" leading-[3.75rem]    text-gray-900"
+          >
+            <div className="font-migra-extrabold font-extrabold">
+              <div className=" leading-[0] hero-text text-[5.7425rem]">Hey</div>
+              <br />
+              <span className=" leading-[0] text-[5.7425rem]">I&apos;m</span>
+              <span className=" ml-2 md:ml-4 xl:ml-8 text-[5.7425rem]">
+                Chinwendu
+              </span>
+            </div>
+            <div className="uppercase font-eastman-offset  text-[2rem] tracking-[0.06em]">
+              creative frontend developer
+            </div>
+            <div className="font-eastman leading-[1.25rem] text-[#000000] mt-6 text-[1rem] max-w-[28.6875rem]">
+              Crafting beautiful and intuitive user experiences, one line of
+              code at a time.
+            </div>
+          </div>
+        </div>
+        <div className="hero-image absolute top-[144px]"></div>
       </div>
 
       {/* <div className="flex flex-col justify-center absolute top-[50%] left-[50%]">

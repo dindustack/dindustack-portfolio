@@ -3,19 +3,12 @@
 @font-face {
   font-family: "Migra";
   font-style: normal;
-  font-weight: 400;
-  src: local("Migra"),
-  url("/fonts/Migra-Extralight.woff")
-
-      format("woff");
+  src: url("/fonts/Migra-Extralight.woff") format("woff");
 }
 @font-face {
-  font-family: "Migra";
+  font-family: "Migra ExtraBold";
   font-style: normal;
-  font-weight: 800;
-  src: local("Migra"),
-    url("/fonts/Migra-Extrabold.woff")
-      format("woff");
+  src: url("/fonts/Migra-Extrabold.woff") format("woff");
 }
 
 @font-face {
@@ -39,7 +32,7 @@
 body {
   background-color: black;
   overflow-x: hidden;
-  color: #E7E7E7;
+  color: #e7e7e7;
 }
 
 ::-webkit-scrollbar {
@@ -48,6 +41,6 @@ body {
 
 @layer utilities {
   .text-stroke {
-    -webkit-text-stroke: 2px #FFFEF4;
+    -webkit-text-stroke: 2px #fffef4;
   }
 }
