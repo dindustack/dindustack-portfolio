@@ -13,22 +13,22 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: "01",
+    id: "01 -",
     projectName: "Bridge Uplift",
     imgSrc: imageOne,
   },
   {
-    id: "02",
+    id: "02 -",
     projectName: "Happy Camper",
     imgSrc: imageTwo,
   },
   {
-    id: "03",
+    id: "03 -",
     projectName: "Wealthy Smiles",
     imgSrc: imageThree,
   },
   {
-    id: "04",
+    id: "04 -",
     projectName: "Joyful Degree",
     imgSrc: imageFour,
   },

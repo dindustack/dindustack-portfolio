@@ -20,7 +20,7 @@ export default function ProjectItem ({ index, serialNumber, projectName, onEnter
     gsap.killTweensOf(textRef.current);
 
     gsap.to(textRef.current, {
-      paddingLeft: 0,
+      paddingLeft: "9rem",
       duration: 0.335,
       ease: Power2.easeInOut,
     });
@@ -30,7 +30,7 @@ export default function ProjectItem ({ index, serialNumber, projectName, onEnter
     gsap.killTweensOf(textRef.current);
 
     gsap.to(textRef.current, {
-      paddingLeft: "9rem",
+      paddingLeft: 0,
       duration: 0.335,
       ease: Power2.easeInOut,
     });
@@ -51,21 +51,23 @@ export default function ProjectItem ({ index, serialNumber, projectName, onEnter
   return (
     <div>
       <a
-        href=""
+        href="#"
         ref={textRef}
-        className="relative md:pl-32 flex justify-between items-end py-[3rem] cursor-pointer border-b border-white w-[100%] border-t z-20"
+        className="relative  flex py-[2.5rem] cursor-pointer border-b border-gray-300 w-[100%] border-t z-20"
         onMouseEnter={handleEnter}
         onMouseLeave={handleLeave}
         onMouseMove={handleMove}
       >
-        <div className="flex space-x-4 md:space-x-8">
-          <span className="text-base leading-[1.5] translate-y-[0.4rem] md:translate-y-3">{serialNumber}</span>
-          <h2 className="text-[2rem] md:text-[4.4rem] xl:text-[5.4rem] md:leading-none normal-case pointer-events-none -tracking-[0.03rem]">
+        <div className="flex flex-row items-start gap-x-4">
+          <span className="font-eastman text-gray-300 text-[1.125rem] translate-y-[0.4rem] md:translate-y-3">{serialNumber}</span>
+          <p className="font-eastman-offset text-[4rem] text-gray-900 leading-[40px] normal-case pointer-events-none">
             {projectName}
-          </h2>
+          </p>
         </div>
         
       </a>
     </div>
   );
 }
+
+
