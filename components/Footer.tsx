@@ -1,66 +1,48 @@
-import { Element } from "react-scroll";
-
-
 export function Footer() {
   return (
-    <Element name="contact">
-      <div className="relative font-monument px-[0.75rem] md:px-[2.5rem] bg-[#202020] text-[#fffef4]">
-        <div className="hidden lg:block mb-[10vh]">
-          <div className="mx-1 font-monument font-semibold py-10 text-[11.5vmax] my-1 leading-none">
-            dindustack
+      <div className="bg-[#070707] text-[#FFFEF4] px-8">
+        <div className="hidden lg:flex mb-[1.5rem] justify-center">
+          <div className="text-[11.5vmax]  leading-none mt-[3.75rem] uppercase">
+            <span className="font-eastman-extrabold">dindu</span>
+            <span className="font-migra-extrabold">stack</span>
           </div>
         </div>
-        <div className="flex flex-col xl:flex-row items-start xl:items-center justify-between">
-          <div>follow me</div>
+        <div className="flex flex-col xl:flex-row items-start xl:items-center justify-center gap-24 uppercase text-white text-[0.875rem]">
+          <div className="font-eastman-bold ">socials</div>
           <a
             href="https://www.github.com/dindustack/"
-            className="text-4xl hover:underline"
+            className="font-eastman hover:underline"
           >
             github
           </a>
           <a
             href="https://www.linkedin.com/in/dindustack/"
-            className="text-4xl hover:underline"
+            className="font-eastman hover:underline"
           >
             linkedin
           </a>
           <a
             href="https://twitter.com/dindustack"
-            className="text-4xl hover:underline"
+            className="font-eastman hover:underline"
           >
             twitter
           </a>
           <a
             href="https://dribbble.com/dindustack"
-            className="text-4xl hover:underline"
+            className="font-eastman hover:underline"
           >
             dribbble
           </a>
         </div>
-        {/* <div className="flex pt-5 flex-col xl:flex-row items-end xl:items-center justify-between">
-          <div>top</div>
-          <div className="mx-1 font-neutralFace font-bold text-[30px]">
-            about
+
+        <div className="flex flex-col lg:flex-row lg:mt-[4.5rem] items-start lg:items-end justify-between mb-[2.5rem] font-eastman-offset text-[0.75rem]">
+          <div className="my-5 lg:my-0">
+            Made with 💚 in <span className="font-eastman-bold">Nigeria</span>
           </div>
-          <div className="mx-1 font-neutralFace font-bold text-[30px]">
-            services
-          </div>
-          <div className="mx-1 font-neutralFace font-bold text-[30px]">
-            projects
-          </div>
-          <div className="mx-1 font-neutralFace font-bold text-[30px]">
-            contact
-          </div>
-        </div>
-        */}
-        <div className="w-full h-[2px] bg-white my-10"></div> 
-        <div className="flex flex-col lg:flex-row lg:mt-10 items-start lg:items-end justify-between">
-          <div className="my-5 lg:my-0">copyright 2023 - ds</div>
-          <div>
-            frontend engineer <br /> in Lagos, Nigeria
+          <div className="uppercase">
+            all rights reserved. copyright 2023 — ds
           </div>
         </div>
       </div>
-    </Element>
   );
 }
