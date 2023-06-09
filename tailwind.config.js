@@ -10,6 +10,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        "gray-300": "#8C8C8C",
         "gray-500": "#565656",
         "gray-900": "#202020",
       },
@@ -39,7 +40,8 @@ module.exports = {
       addComponents({
         ".about-text": {
           background:
-            "linear-gradient(to right, rgb(32, 32, 32) 50%, rgb(139, 139, 139) 50%)",
+            "linear-gradient(to right, rgb(32, 32, 32) 50%, #000)",
+          // background: "#F00",
           backgroundSize: "200% 100%",
           backgroundPositionX: "100%",
           color: "transparent",
@@ -47,17 +49,14 @@ module.exports = {
           webkitBackgroundClip: "text",
         },
         ".about-first-text": {
-          background:
-            "linear-gradient(to right, rgb(32, 32, 32) 50%, rgb(139, 139, 139) 50%)",
+          // background:
+          //   "linear-gradient(to right, #202020, #8C8C8C)",
+          background: "#8C8C8C",
           backgroundSize: "200% 100%",
           backgroundPositionX: "100%",
           color: "transparent",
           backgroundClip: "text",
           webkitBackgroundClip: "text",
-        },
-
-        ".about-title": {
-          transform: " rotate(-90deg)",
         },
 
         ".hero-text": {

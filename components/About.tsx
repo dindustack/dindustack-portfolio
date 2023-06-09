@@ -44,7 +44,7 @@ export function About() {
         end: "bottom top",
       },
       // color: "rgba(255,255,255,1)",
-      color: "rgb(32, 32, 32, 1)",
+      color: "#202020",
       duration: 5,
       stagger: 1,
     });
@@ -59,8 +59,8 @@ export function About() {
         <div className="capitalize font-migra-extrabold text-[3.5rem] text-gray-900">
           about
         </div>
-        <div className="flex items-center space-x-[2.875rem] mt-[44px]">
-          <div className="flex justify-start font-eastman-medium text-[1rem] uppercase ">
+        <div className="flex font-eastman-medium space-x-[2.875rem] mt-[44px]">
+        <div className="text-[1rem] uppercase ">
             <span className="transform -rotate-90 whitespace-nowrap">
               my role
             </span>
@@ -70,13 +70,30 @@ export function About() {
               <span
                 key={index}
                 ref={setlettersRef}
-                className="indent-8 about-first-text break-words leading-loose md:leading-[4.5rem] text-[1.5rem] md:text-5xl font-bold tracking-wide first-letter:text-7xl"
+                className="about-first-text break-words  text-[1.5rem] md:text-[2rem]  first-letter:text-7xl"
               >
                 {letter}
               </span>
             ))}
           </div>
         </div>
+
+        {/* <div className="mt-[5.5rem] flex items-baseline font-eastman-medium space-x-[2.875rem]">
+          <div className="flex   text-[1rem] uppercase ">
+            <span className="transform -rotate-90 whitespace-nowrap">
+              my stack
+            </span>
+          </div>
+          <div className="grid grid-cols-3">
+            <div className="about-text">GraqhQL</div>
+            <div className="about-text">Next.js</div>
+            <div className="about-text">React-Query</div>
+            <div className="about-text">Storybook</div>
+            <div className="about-text">TailwindCSS</div>
+            <div className="about-text">TypeScript</div>
+            <div className="about-text">Zustand</div>
+          </div>
+        </div> */}
       </div>
     </Sidebar>
     // <Element name="about">
@@ -103,7 +120,7 @@ export function About() {
     //           I am proficient in:
     //         </p>
     //         <p className="about-text">React</p>
-    //         <p className="about-text indent-[2vw]">GraqhQL</p>
+    //         <p className="about-text ">GraqhQL</p>
     //         <p className="about-text indent-[3vw]">Next.js</p>
     //         <p className="about-text indent-[5vw]">React-Query</p>
     //         <p className="about-text indent-[6vw]">Storybook</p>
