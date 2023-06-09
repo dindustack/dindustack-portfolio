@@ -39,9 +39,8 @@ module.exports = {
     plugin(function ({ addComponents }) {
       addComponents({
         ".about-text": {
-          background:
-            "linear-gradient(to right, rgb(32, 32, 32) 50%, #000)",
-          // background: "#F00",
+          background: "#8C8C8C",
+          fontSize: "2rem",
           backgroundSize: "200% 100%",
           backgroundPositionX: "100%",
           color: "transparent",
@@ -68,6 +67,14 @@ module.exports = {
             margin: "0 1.3rem 0.625rem 1.3125rem",
             transform: "translateY(-3px)",
           },
+        },
+
+        ".about-title": {
+          flex: "0 0 15px",
+          minWidth: 0,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         },
 
         ".hero-image-container": {

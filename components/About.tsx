@@ -21,19 +21,20 @@ export function About() {
   const text =
     "As a frontend developer I create engaging and intuitive web applications that deliver a great user experience across all devices and platforms.";
 
-  // useEffect(() => {
-  //   const element = aboutRef.current;
-  //   gsap.to(element.querySelectorAll(".about-text"), {
-  //     backgroundPositionX: "0%",
-  //     stagger: 1,
-  //     scrollTrigger: {
-  //       trigger: element.querySelectorAll(".about-text"),
-  //       scrub: 1,
-  //       start: "top center",
-  //       end: "bottom top",
-  //     },
-  //   });
-  // }, []);
+  useEffect(() => {
+    const element = aboutRef.current;
+    gsap.to(element.querySelectorAll(".about-text"), {
+      backgroundPositionX: "0%",
+      stagger: 1,
+      color: "#565656",
+      scrollTrigger: {
+        trigger: element.querySelectorAll(".about-text"),
+        scrub: 1,
+        start: "top center",
+        end: "bottom top",
+      },
+    });
+  }, []);
 
   useEffect(() => {
     const anim = gsap.to(lettersRef.current, {
@@ -43,7 +44,6 @@ export function About() {
         start: "top center",
         end: "bottom top",
       },
-      // color: "rgba(255,255,255,1)",
       color: "#202020",
       duration: 5,
       stagger: 1,
@@ -55,17 +55,17 @@ export function About() {
 
   return (
     <Sidebar>
-      <div className="flex flex-col justify-center min-h-screen ">
-        <div className="capitalize font-migra-extrabold text-[3.5rem] text-gray-900">
+      <div className="flex flex-col justify-center h-screen ">
+        <span className="uppercase font-migra-extrabold text-[3.5rem] text-gray-900">
           about
-        </div>
+        </span>
         <div className="flex font-eastman-medium space-x-[2.875rem] mt-[44px]">
-        <div className="text-[1rem] uppercase ">
-            <span className="transform -rotate-90 whitespace-nowrap">
+          <div className="about-title">
+            <span className="transform -rotate-90 whitespace-nowrap text-[1rem] text-gray-300 uppercase -mt-[2.5rem]">
               my role
             </span>
           </div>
-          <div ref={triggerRef}>
+          <div ref={triggerRef} className="max-w-[60vw]">
             {text.split("").map((letter, index) => (
               <span
                 key={index}
@@ -78,13 +78,13 @@ export function About() {
           </div>
         </div>
 
-        {/* <div className="mt-[5.5rem] flex items-baseline font-eastman-medium space-x-[2.875rem]">
-          <div className="flex   text-[1rem] uppercase ">
-            <span className="transform -rotate-90 whitespace-nowrap">
+        <div className="mt-[5.5rem] flex font-eastman-medium space-x-[2.875rem]">
+          <div className="about-title">
+            <span className="transform -rotate-90 whitespace-nowrap text-[1rem] text-gray-300 uppercase -mt-[6.5rem]">
               my stack
             </span>
           </div>
-          <div className="grid grid-cols-3">
+          <div ref={aboutRef} className="grid grid-cols-3 gap-x-16 gap-y-8">
             <div className="about-text">GraqhQL</div>
             <div className="about-text">Next.js</div>
             <div className="about-text">React-Query</div>
@@ -93,7 +93,7 @@ export function About() {
             <div className="about-text">TypeScript</div>
             <div className="about-text">Zustand</div>
           </div>
-        </div> */}
+        </div>
       </div>
     </Sidebar>
     // <Element name="about">
