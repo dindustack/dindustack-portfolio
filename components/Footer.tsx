@@ -1,8 +1,8 @@
 export function Footer() {
   return (
-      <div className="bg-[#070707] text-[#FFFEF4] px-8">
+      <div className="bg-[#070707] text-[#FFFEF4] px-8 pb-[2.5rem]">
         <div className="hidden lg:flex mb-[1.5rem] justify-center">
-          <div className="text-[11.5vmax]  leading-none mt-[3.75rem] uppercase">
+          <div className="text-[11.5vmax] mt-[3.75rem] uppercase">
             <span className="font-eastman-extrabold">dindu</span>
             <span className="font-migra-extrabold">stack</span>
           </div>
@@ -35,7 +35,8 @@ export function Footer() {
           </a>
         </div>
 
-        <div className="flex flex-col lg:flex-row lg:mt-[4.5rem] items-start lg:items-end justify-between mb-[2.5rem] font-eastman-offset text-[0.75rem]">
+        <div className="flex flex-col lg:flex-row lg:mt-[4.5rem] items-start lg:items-end justify-between font-eastman-offset text-[0.75rem]
+        ">
           <div className="my-5 lg:my-0">
             Made with 💚 in <span className="font-eastman-bold">Nigeria</span>
           </div>
