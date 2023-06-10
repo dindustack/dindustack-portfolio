@@ -137,7 +137,7 @@ export function SplashScreen() {
         left: "10px",
         ease: Sine.easeInOut,
       });
-    }, loadingScreen); // <- Scope!
+    }, loadingScreen);
 
     return () => ctx.revert();
   }, []);

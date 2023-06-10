@@ -1,4 +1,5 @@
 import React from "react";
+import { ScrollDownArrow } from "./ScrollDownArrow";
 
 type NavItem = {
   label: string;
@@ -29,11 +30,11 @@ export function Sidebar({ children }: SidebarProps) {
               </a>
             ))
           )}
-        {/* <div className="w-[2px] bg-gray-500 p-0"></div> */}
         </div>
       </div>
 
       <div className="col-start-2 col-end-13">{children}</div>
+      <ScrollDownArrow />
     </div>
   );
 }
