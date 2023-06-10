@@ -7,7 +7,7 @@ import { marqueeContent } from "@/constants/marquee";
 
 export function MarqueeSection() {
   return (
-    <div className="border-gray-900 bg-gray-900 border-t border-b font-eastman-offset">
+    <div className="border-gray-900 bg-gray-900 border-t border-b font-eastman-offset relative z-50">
       <Splide
         options={{
           type: "loop",
