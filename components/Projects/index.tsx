@@ -23,7 +23,7 @@ export function Projects() {
 
   return (
     <Sidebar>
-      <div className="flex flex-col justify-center min-h-screen">
+      <div className="flex flex-col justify-center min-h-screen" id="projects">
         <div className="font-migra-extrabold text-[3.5rem] text-gray-900 uppercase py-12">
           works
           <span className="ml-4 normal-case text-[1.5rem]">

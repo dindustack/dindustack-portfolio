@@ -55,7 +55,7 @@ export function About() {
 
   return (
     <Sidebar>
-      <div className="flex flex-col justify-center min-h-screen ">
+      <div className="flex flex-col justify-center min-h-screen" id="about">
         <span className="uppercase font-migra-extrabold text-[3.5rem] text-gray-900">
           about
         </span>

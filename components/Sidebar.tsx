@@ -1,5 +1,7 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { ScrollDownArrow } from "./ScrollDownArrow";
+import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 type NavItem = {
   label: string;
@@ -19,13 +21,27 @@ type SidebarProps = {
 };
 
 export function Sidebar({ children }: SidebarProps) {
+  const { scroll } = useLocomotiveScroll();
+  const [activeLink, setActiveLink] = useState('');
+
+  const handleClick = (sectionId: string) => {
+    const target = document.getElementById(sectionId);
+    if (target) {
+      scroll.scrollTo(target);
+      setActiveLink(sectionId);
+    }
+  };
+
   return (
     <div className="grid grid-cols-12 min-h-screen px-8">
       <div className="flex col-start-1 col-end-1 ">
         <div className="flex max-w-[3.25rem] flex-col justify-center items-center p-0 gap-[4.5rem] h-full fixed z-10 border-r-2 border-gray-500 top-0 overflow-x-hidden ">
           {React.Children.toArray(
-            navItems.map(({ label }) => (
-              <a href="#" className="sidebar-item">
+            navItems.map(({ label, path }) => (
+              <a href={`#${path}`} 
+              className={`sidebar-item ${activeLink === path && 'font-eastman-bold text-gray-900'}`}
+              onClick={() => handleClick(path)}
+              >
                 {label}
               </a>
             ))

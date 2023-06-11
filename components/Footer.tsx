@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-      <div className="bg-[#070707] text-[#FFFEF4] px-8 pb-[2.5rem] relative z-[9999]">
+      <div className="bg-[#070707] text-[#FFFEF4] px-8 pb-[2.5rem] relative z-[9999]" id="contact">
         <div className="hidden lg:flex mb-[1.5rem] justify-center">
           <div className="text-[11.5vmax] mt-[3.75rem] uppercase">
             <span className="font-eastman-extrabold">dindu</span>

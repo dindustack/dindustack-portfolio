@@ -1,5 +1,7 @@
 import Head from "next/head";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { LocomotiveScrollProvider } from "react-locomotive-scroll";
+import "locomotive-scroll/dist/locomotive-scroll.css";
 
 import { About } from "@/components/About";
 import { Footer } from "@/components/Footer";
@@ -12,6 +14,7 @@ import { Projects } from "@/components/Projects";
 
 export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
+  const containerRef = useRef(null);
 
   /**
    * Display Splash Screen
@@ -19,8 +22,8 @@ export default function HomePage() {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    // }, 4800);
-    }, 0);
+    }, 4800);
+    // }, 0);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -57,15 +60,27 @@ export default function HomePage() {
       {isLoading ? (
         <SplashScreen />
       ) : (
-        <div className="text-[#202020] bg-[#fffef4]">
-          <Navbar />
-          <Hero />
-          <MarqueeSection />
-          <About />
-          <Services />
-          <Projects />
-          <Footer />
-        </div>
+        <LocomotiveScrollProvider
+          options={{
+            smooth: true,
+          }}
+          watch={[]}
+          containerRef={containerRef}
+        >
+          <main
+            data-scroll-container
+            ref={containerRef}
+            className="text-[#202020] bg-[#fffef4]"
+          >
+            <Navbar />
+            <Hero />
+            <MarqueeSection />
+            <About />
+            <Services />
+            <Projects />
+            <Footer />
+          </main>
+        </LocomotiveScrollProvider>
       )}
     </>
   );
