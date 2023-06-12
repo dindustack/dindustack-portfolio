@@ -60,27 +60,29 @@ export default function HomePage() {
       {isLoading ? (
         <SplashScreen />
       ) : (
-        <LocomotiveScrollProvider
-          options={{
-            smooth: true,
-          }}
-          watch={[]}
-          containerRef={containerRef}
-        >
-          <main
-            data-scroll-container
-            ref={containerRef}
+        // <LocomotiveScrollProvider
+        //   options={{
+        //     smooth: true,
+        //   }}
+        //   watch={[]}
+        //   containerRef={containerRef}
+        // >
+          <div
+            // data-scroll-container
+            // ref={containerRef}
             className="text-[#202020] bg-[#fffef4]"
           >
+            {/* <div data-scroll-section> */}
             <Navbar />
-            <Hero />
-            <MarqueeSection />
-            <About />
-            <Services />
-            <Projects />
-            <Footer />
-          </main>
-        </LocomotiveScrollProvider>
+              <Hero />
+              <MarqueeSection />
+              <About />
+              <Services />
+              <Projects />
+              <Footer />
+            </div>
+        //   </div>
+        // </LocomotiveScrollProvider>
       )}
     </>
   );

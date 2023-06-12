@@ -5,7 +5,7 @@ import { Sidebar } from "./Sidebar";
 export function Services() {
   return (
     <Sidebar>
-      <div className="flex flex-col justify-center min-h-screen" id="services">
+      <div className="flex flex-col justify-center min-h-screen">
         <div className="font-migra-extrabold text-[3.5rem] text-gray-900 uppercase pb-12">
           what i do
         </div>
