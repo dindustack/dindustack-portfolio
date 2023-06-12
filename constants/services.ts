@@ -13,6 +13,10 @@ export const services = [
         id: "03.",
         service: "Technical writing",
         content: "Write technical documentation for web applications, APIs, and other software projects."
-      
-    }
+    },
+    {
+      id: "04.",
+      service: "Mobile app development",
+      content: "Develop scalable mobile solutions that drive business forward in this ever-evolving digital landscape."
+  }
   ]
