@@ -77,7 +77,7 @@ export function Hero() {
 
   return (
     <Sidebar>
-      <div className="flex flex-col items-center justify-center relative h-screen">
+      <div className="flex flex-col items-center justify-center relative h-screen" data-scroll-section id="intro">
         {/* absolute text to the left */}
         <div className="absolute  left-0 z-[20]">
           <div

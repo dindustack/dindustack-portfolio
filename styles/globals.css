@@ -35,9 +35,9 @@
 @tailwind utilities;
 
 body {
-  background-color: black;
+  background-color: #fffef4;
   overflow-x: hidden;
-  color: #e7e7e7;
+  color: #202020;
 }
 
 ::-webkit-scrollbar {
@@ -47,5 +47,5 @@ body {
 @layer utilities {
   .text-stroke {
     -webkit-text-stroke: 1px #fffef4;
-  }
+  }   
 }

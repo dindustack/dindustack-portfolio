@@ -55,7 +55,7 @@ export function About() {
 
   return (
     <Sidebar>
-      <div className="flex flex-col justify-center min-h-screen">
+      <div className="flex flex-col justify-center min-h-screen" data-scroll-section id="about">
         <span className="uppercase font-migra-extrabold text-[3.5rem] text-gray-900">
           about
         </span>
@@ -96,40 +96,5 @@ export function About() {
         </div>
       </div>
     </Sidebar>
-    // <Element name="about">
-    //   <div
-    //     ref={aboutRef}
-
-    //     className="relative flex justify-between items-start px-[0.75rem] md:px-[2.5rem] font-monument py-[6.25rem]"
-    //   >
-    //     <div className="normal-case space-y-8">
-    //       <div ref={triggerRef}>
-    //         {text.split("").map((letter, index) => (
-    //           <span
-    //             key={index}
-    //             ref={setlettersRef}
-    //             className="indent-8 about-first-text break-words leading-loose md:leading-[4.5rem] text-[1.5rem] md:text-5xl font-bold tracking-wide first-letter:text-7xl"
-    //           >
-    //             {letter}
-    //           </span>
-    //         ))}
-    //       </div>
-
-    //       <div className="text-[2.2rem] md:text-5xl space-y-8">
-    //         <p className="about-text font-migra text-[2rem] md:text-5xl">
-    //           I am proficient in:
-    //         </p>
-    //         <p className="about-text">React</p>
-    //         <p className="about-text ">GraqhQL</p>
-    //         <p className="about-text indent-[3vw]">Next.js</p>
-    //         <p className="about-text indent-[5vw]">React-Query</p>
-    //         <p className="about-text indent-[6vw]">Storybook</p>
-    //         <p className="about-text indent-[7vw]">TailwindCSS</p>
-    //         <p className="about-text indent-[9vw]">TypeScript</p>
-    //         <p className="about-text indent-[10vw]">Zustand</p>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </Element>
   );
 }

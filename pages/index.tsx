@@ -16,6 +16,10 @@ export default function HomePage() {
   const [isLoading, setIsLoading] = useState(true);
   const containerRef = useRef(null);
 
+  const options = {
+    smooth: true,
+  };
+
   /**
    * Display Splash Screen
    */
@@ -60,29 +64,17 @@ export default function HomePage() {
       {isLoading ? (
         <SplashScreen />
       ) : (
-        // <LocomotiveScrollProvider
-        //   options={{
-        //     smooth: true,
-        //   }}
-        //   watch={[]}
-        //   containerRef={containerRef}
-        // >
-          <div
-            // data-scroll-container
-            // ref={containerRef}
-            className="text-[#202020] bg-[#fffef4]"
-          >
-            {/* <div data-scroll-section> */}
-            <Navbar />
-              <Hero />
-              <MarqueeSection />
-              <About />
-              <Services />
-              <Projects />
-              <Footer />
-            </div>
-        //   </div>
-        // </LocomotiveScrollProvider>
+        <LocomotiveScrollProvider options={options} ref={containerRef}>
+          <main data-scroll-container ref={containerRef}>
+          <Navbar />
+          <Hero />
+          <MarqueeSection />
+          <About />
+          <Services />
+          <Projects />
+          <Footer />
+          </main>
+        </LocomotiveScrollProvider>
       )}
     </>
   );
