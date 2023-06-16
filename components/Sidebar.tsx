@@ -31,20 +31,32 @@ export function Sidebar({ children }: SidebarProps) {
     }
   };
 
+ 
+
   useEffect(() => {
     const handleScroll = () => {
       const sectionElements = Array.from(
         document.querySelectorAll("[data-scroll-section]")
       );
-  
+
       // Remove duplicates and overlapping elements
-      const uniqueSectionElements = sectionElements.filter((sectionElement, index) => {
-        const rect = sectionElement.getBoundingClientRect();
-        const isUnique = sectionElements.findIndex((el, i) => i !== index && el.id === sectionElement.id) === -1;
-        const isNonOverlapping = !sectionElements.some((el, i) => i !== index && el.getBoundingClientRect().top < rect.bottom && el.getBoundingClientRect().bottom > rect.top);
-        return isUnique && isNonOverlapping;
-      });
-  
+      const uniqueSectionElements = sectionElements.filter(
+        (sectionElement, index) => {
+          const rect = sectionElement.getBoundingClientRect();
+          const isUnique =
+            sectionElements.findIndex(
+              (el, i) => i !== index && el.id === sectionElement.id
+            ) === -1;
+          const isNonOverlapping = !sectionElements.some(
+            (el, i) =>
+              i !== index &&
+              el.getBoundingClientRect().top < rect.bottom &&
+              el.getBoundingClientRect().bottom > rect.top
+          );
+          return isUnique && isNonOverlapping;
+        }
+      );
+
       const visibleSections = uniqueSectionElements.filter((sectionElement) => {
         const rect = sectionElement.getBoundingClientRect();
         return (
@@ -52,16 +64,16 @@ export function Sidebar({ children }: SidebarProps) {
           rect.bottom >= window.innerHeight / 2
         );
       });
-  
+
       if (visibleSections.length > 0) {
         const visibleSectionId = visibleSections[0].getAttribute("id");
         setActiveLink(visibleSectionId || "");
       }
     };
-  
+
     if (scroll) {
       scroll.on("scroll", handleScroll);
-  
+
       return () => {
         scroll.off("scroll", handleScroll);
       };
@@ -80,6 +92,7 @@ export function Sidebar({ children }: SidebarProps) {
                 activeLink === path && "font-eastman-bold text-gray-900"
               }`}
               onClick={() => handleClick(path)}
+              data-scroll-to
             >
               {label}
             </a>
