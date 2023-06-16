@@ -24,7 +24,6 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.9",
     "react-locomotive-scroll": "^0.2.2",
-    "react-scroll": "^1.8.9",
     "smooth-scrollbar": "^8.8.3",
     "smooth-scrollbar-react": "^2.4.1",
     "three": "^0.152.0",
@@ -33,7 +32,6 @@
   "devDependencies": {
     "@hookform/devtools": "^4.3.1",
     "@types/locomotive-scroll": "^4.1.0",
-    "@types/react-scroll": "^1.8.7",
     "autoprefixer": "^10.4.14",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.3.1"

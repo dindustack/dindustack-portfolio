@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import { Element } from "react-scroll";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { Sidebar } from "./Sidebar";

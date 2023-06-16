@@ -48,8 +48,6 @@ module.exports = {
           webkitBackgroundClip: "text",
         },
         ".about-first-text": {
-          // background:
-          //   "linear-gradient(to right, #202020, #8C8C8C)",
           background: "#8C8C8C",
           backgroundSize: "200% 100%",
           backgroundPositionX: "100%",
@@ -88,11 +86,12 @@ module.exports = {
           position: "relative",
           width: "19rem",
           height: "19rem",
+          objectFit: "contain",
           maxWidth: "100%",
           borderRadius: "100%",
           overflow: "hidden",
           cursor: "pointer",
-          border: "2px solid #202020",
+          // border: "2px solid #202020",
           backgroundPosition: "50% 50%",
           backgroundSize: "cover",
           boxShadow: " 0px 4px 32px rgba(0, 0, 0, 0.12)",

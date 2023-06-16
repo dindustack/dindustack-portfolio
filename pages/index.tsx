@@ -9,27 +9,15 @@ import { Hero } from "@/components/Hero";
 import { MarqueeSection } from "@/components/Marquee";
 import { Navbar } from "@/components/Navbar";
 import { Services } from "@/components/Services";
-import { SplashScreen } from "@/components/SplashScreen";
 import { Projects } from "@/components/Projects";
 
-export default function HomePage() {
-  const [isLoading, setIsLoading] = useState(true);
+const HomePage = () => {
   const containerRef = useRef(null);
 
   const options = {
     smooth: true,
   };
 
-  /**
-   * Display Splash Screen
-   */
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsLoading(false);
-    }, 4800);
-    // }, 0);
-    return () => clearTimeout(timeout);
-  }, []);
 
   return (
     <>
@@ -61,11 +49,8 @@ export default function HomePage() {
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
 
-      {isLoading ? (
-        <SplashScreen />
-      ) : (
-        <LocomotiveScrollProvider options={options} ref={containerRef}>
-          <main data-scroll-container ref={containerRef}>
+      <LocomotiveScrollProvider options={options}>
+        <main data-scroll-container ref={containerRef}>
           <Navbar />
           <Hero />
           <MarqueeSection />
@@ -73,9 +58,12 @@ export default function HomePage() {
           <Services />
           <Projects />
           <Footer />
-          </main>
-        </LocomotiveScrollProvider>
-      )}
+        </main>
+      </LocomotiveScrollProvider>
     </>
   );
-}
+};
+
+HomePage.displayName = "HomePage";
+
+export default HomePage;

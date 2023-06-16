@@ -38,7 +38,7 @@ export const ScrollDownArrow = () => {
       </span>
       <div ref={arrowRef}>
         <span className="inline-block p-2">
-          <Image src={arrowDown} alt="Arrow down icon" />
+          <Image src={arrowDown} alt="Arrow down icon" priority />
         </span>
       </div>
     </div>
