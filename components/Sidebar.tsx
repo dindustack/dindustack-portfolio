@@ -36,28 +36,32 @@ export function Sidebar({ children }: SidebarProps) {
       const sectionElements = Array.from(
         document.querySelectorAll("[data-scroll-section]")
       );
-      console.log("hn", sectionElements)
-
-      const visibleSections = sectionElements.filter((sectionElement) => {
+  
+      // Remove duplicates and overlapping elements
+      const uniqueSectionElements = sectionElements.filter((sectionElement, index) => {
+        const rect = sectionElement.getBoundingClientRect();
+        const isUnique = sectionElements.findIndex((el, i) => i !== index && el.id === sectionElement.id) === -1;
+        const isNonOverlapping = !sectionElements.some((el, i) => i !== index && el.getBoundingClientRect().top < rect.bottom && el.getBoundingClientRect().bottom > rect.top);
+        return isUnique && isNonOverlapping;
+      });
+  
+      const visibleSections = uniqueSectionElements.filter((sectionElement) => {
         const rect = sectionElement.getBoundingClientRect();
         return (
           rect.top <= window.innerHeight / 2 &&
           rect.bottom >= window.innerHeight / 2
         );
       });
-
-      console.log("visibleSections", visibleSections)
-
-
+  
       if (visibleSections.length > 0) {
         const visibleSectionId = visibleSections[0].getAttribute("id");
         setActiveLink(visibleSectionId || "");
       }
     };
-
+  
     if (scroll) {
       scroll.on("scroll", handleScroll);
-
+  
       return () => {
         scroll.off("scroll", handleScroll);
       };
