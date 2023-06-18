@@ -1,5 +1,6 @@
 import Head from "next/head";
-import React, { useState, useEffect, useRef } from "react";
+import { NextPage } from "next";
+import { useRef } from "react";
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
 
@@ -10,14 +11,10 @@ import { MarqueeSection } from "@/components/Marquee";
 import { Navbar } from "@/components/Navbar";
 import { Services } from "@/components/Services";
 import { Projects } from "@/components/Projects";
+import { ScrollTriggerProxy } from "@/components/ScrollTriggerProxy";
 
-const HomePage = () => {
+const HomePage: NextPage = () => {
   const containerRef = useRef(null);
-
-  const options = {
-    smooth: true,
-  };
-
 
   return (
     <>
@@ -48,8 +45,20 @@ const HomePage = () => {
         />
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
-
-      <LocomotiveScrollProvider options={options}>
+      <LocomotiveScrollProvider
+        options={{
+          smooth: true,
+          smartphone: {
+            smooth: true,
+          },
+          tablet: {
+            smooth: true,
+          },
+        }}
+        watch={[]}
+        containerRef={containerRef}
+      >
+        <ScrollTriggerProxy />
         <main data-scroll-container ref={containerRef}>
           <Navbar />
           <Hero />
@@ -63,7 +72,5 @@ const HomePage = () => {
     </>
   );
 };
-
-HomePage.displayName = "HomePage";
 
 export default HomePage;

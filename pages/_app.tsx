@@ -8,6 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
       {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ? (
         <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
       ) : null}
+
       <Component {...pageProps} />
     </>
   );

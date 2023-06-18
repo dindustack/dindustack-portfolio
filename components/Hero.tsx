@@ -72,6 +72,7 @@ export function Hero() {
       image1: "./images/Chinwendu_Agbaetuo-2.jpeg",
       image2: "./images/Chinwendu_Agbaetuo-1.jpeg",
       displacementImage: "./images/displacement_image.jpeg",
+      speedIn: 1.2,
     });
   });
 

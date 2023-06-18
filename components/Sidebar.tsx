@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { ScrollDownArrow } from "./ScrollDownArrow";
-import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 type NavItem = {
   label: string;
@@ -20,69 +19,41 @@ type SidebarProps = {
 };
 
 export function Sidebar({ children }: SidebarProps) {
-  const { scroll } = useLocomotiveScroll();
   const [activeLink, setActiveLink] = useState("");
 
-  const handleClick = (sectionId: string) => {
-    const target = document.getElementById(sectionId);
-    if (target && scroll) {
-      scroll.scrollTo(target);
-      setActiveLink(sectionId);
-    }
-  };
-
- 
-
   useEffect(() => {
-    const handleScroll = () => {
-      const sectionElements = Array.from(
-        document.querySelectorAll("[data-scroll-section]")
-      );
-
-      // Remove duplicates and overlapping elements
-      const uniqueSectionElements = sectionElements.filter(
-        (sectionElement, index) => {
-          const rect = sectionElement.getBoundingClientRect();
-          const isUnique =
-            sectionElements.findIndex(
-              (el, i) => i !== index && el.id === sectionElement.id
-            ) === -1;
-          const isNonOverlapping = !sectionElements.some(
-            (el, i) =>
-              i !== index &&
-              el.getBoundingClientRect().top < rect.bottom &&
-              el.getBoundingClientRect().bottom > rect.top
-          );
-          return isUnique && isNonOverlapping;
+    const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log("scroll", entry.target.id);
+          setActiveLink(entry.target.id);
         }
-      );
-
-      const visibleSections = uniqueSectionElements.filter((sectionElement) => {
-        const rect = sectionElement.getBoundingClientRect();
-        return (
-          rect.top <= window.innerHeight / 2 &&
-          rect.bottom >= window.innerHeight / 2
-        );
       });
-
-      if (visibleSections.length > 0) {
-        const visibleSectionId = visibleSections[0].getAttribute("id");
-        setActiveLink(visibleSectionId || "");
-      }
     };
 
-    if (scroll) {
-      scroll.on("scroll", handleScroll);
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
 
-      return () => {
-        scroll.off("scroll", handleScroll);
-      };
-    }
-  }, [scroll]);
+    const observer = new IntersectionObserver(
+      handleIntersection,
+      observerOptions
+    );
+
+    document.querySelectorAll("*[data-scroll-section]").forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <div className="grid grid-cols-12 min-h-screen px-8">
-      <div className="flex col-start-1 col-end-1" data-scroll-sticky>
+      <div className="flex col-start-1 col-end-1">
         <div className="flex max-w-[3.25rem] flex-col justify-center items-center p-0 gap-[4.5rem] h-full fixed z-10 border-r-2 border-gray-500 top-0 overflow-x-hidden">
           {navItems.map(({ label, path }) => (
             <a
@@ -91,7 +62,6 @@ export function Sidebar({ children }: SidebarProps) {
               className={`sidebar-item ${
                 activeLink === path && "font-eastman-bold text-gray-900"
               }`}
-              onClick={() => handleClick(path)}
               data-scroll-to
             >
               {label}
