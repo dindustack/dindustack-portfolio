@@ -25,7 +25,6 @@ export function Sidebar({ children }: SidebarProps) {
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log("scroll", entry.target.id);
           setActiveLink(entry.target.id);
         }
       });
