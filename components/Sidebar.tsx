@@ -69,7 +69,7 @@ export function Sidebar({ children }: SidebarProps) {
         </div>
       </div>
 
-      <div className="col-start-2 col-end-13" data-scroll-container>
+      <div className="col-start-2 col-end-13">
         {children}
       </div>
       <ScrollDownArrow />
