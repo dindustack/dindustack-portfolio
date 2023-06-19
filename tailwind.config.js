@@ -142,7 +142,6 @@ module.exports = {
         },
 
         ".sidebar-item": {
-          transform: " rotate(-90deg)",
           color: "#565656",
           fontSize: "0.875rem",
           cursor: "pointer",

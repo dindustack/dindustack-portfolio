@@ -52,8 +52,9 @@ export function Sidebar({ children }: SidebarProps) {
 
   return (
     <div className="grid grid-cols-12 min-h-screen px-8">
-      <div className="flex col-start-1 col-end-1">
-        <div className="flex max-w-[3.25rem] flex-col justify-center items-center p-0 gap-[4.5rem] h-full fixed z-10 border-r-2 border-gray-500 top-0 overflow-x-hidden">
+      <div className="col-start-1 col-end-1">
+        <div className="flex max-w-[3.25rem] justify-center items-center  h-full fixed z-10 border-r-2 border-gray-500 top-0 overflow-x-hidden">
+          <div className="flex transform -rotate-90  p-0 gap-[1.5rem]" dir="rtl">
           {navItems.map(({ label, path }) => (
             <a
               key={path}
@@ -66,6 +67,7 @@ export function Sidebar({ children }: SidebarProps) {
               {label}
             </a>
           ))}
+          </div>
         </div>
       </div>
 
