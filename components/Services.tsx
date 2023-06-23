@@ -10,7 +10,7 @@ export function Services() {
           what i do
         </div>
 
-        <div className="grid grid-cols-2 gap-x-32 gap-y-16">
+        <div className="grid md:grid-cols-2 gap-x-32 gap-y-16">
           {React.Children.toArray(
             services.map((service) => (
               <div className="flex flex-row items-start p-0 gap-2">
