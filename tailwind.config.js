@@ -148,10 +148,22 @@ module.exports = {
           textTransform: "uppercase",
           fontFamily: "Eastman Regular",
 
-          ".active": {
+          "&:hover": {
+            color: "#202020",
+          },
+
+          "&:focus": {
             color: "#202020",
             fontFamily: "Eastman Bold",
           },
+        },
+
+        ".sidebar-item-active": {
+          color: "#202020",
+          fontFamily: "Eastman Bold",
+          fontSize: "0.875rem",
+          cursor: "pointer",
+          textTransform: "uppercase",
 
           "&:hover": {
             color: "#202020",

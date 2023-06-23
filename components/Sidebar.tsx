@@ -19,15 +19,19 @@ type SidebarProps = {
 };
 
 export function Sidebar({ children }: SidebarProps) {
-  const [activeLink, setActiveLink] = useState("");
+  const [activeLink, setActiveLink] = useState(navItems[0].path);
+
+  // make the first navitem active by default
 
   useEffect(() => {
     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setActiveLink(entry.target.id);
-        }
-      });
+      const visibleEntries = entries
+        .filter((entry) => entry.isIntersecting)
+        .map((entry) => entry.target.id);
+
+      if (visibleEntries.length !== 0) {
+        setActiveLink(visibleEntries[0]);
+      }
     };
 
     const observerOptions = {
@@ -54,26 +58,25 @@ export function Sidebar({ children }: SidebarProps) {
     <div className="grid grid-cols-12 min-h-screen px-8">
       <div className="col-start-1 col-end-1">
         <div className="flex max-w-[3.25rem] justify-center items-center  h-full fixed z-10 border-r-2 border-gray-500 top-0 overflow-x-hidden">
-          <div className="flex transform -rotate-90  p-0 gap-[1.5rem]" dir="rtl">
-          {navItems.map(({ label, path }) => (
-            <a
-              key={path}
-              href={`#${path}`}
-              className={`sidebar-item ${
-                activeLink === path && "font-eastman-bold text-gray-900"
-              }`}
-              data-scroll-to
-            >
-              {label}
-            </a>
-          ))}
+          <div
+            className="flex transform -rotate-90  p-0 gap-[1.5rem] font-eastman uppercase text-gray-900 text-[0.875rem]"
+            dir="rtl"
+          >
+            {navItems.map(({ label, path }) => (
+              <a
+                key={path}
+                href={`#${path}`}
+                className={`${activeLink === path && "sidebar-item-active"}`}
+                data-scroll-to
+              >
+                {label}
+              </a>
+            ))}
           </div>
         </div>
       </div>
 
-      <div className="col-start-2 col-end-13">
-        {children}
-      </div>
+      <div className="col-start-2 col-end-13">{children}</div>
       <ScrollDownArrow />
     </div>
   );

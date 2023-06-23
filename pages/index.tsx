@@ -48,17 +48,12 @@ const HomePage: NextPage = () => {
       <LocomotiveScrollProvider
         options={{
           smooth: true,
-          smartphone: {
-            smooth: true,
-          },
-          tablet: {
-            smooth: true,
-          },
+          lerp: 0.1,
         }}
         watch={[]}
         containerRef={containerRef}
       >
-        <ScrollTriggerProxy />
+        {/* <ScrollTriggerProxy /> */}
         <main data-scroll-container ref={containerRef}>
           <Navbar />
           <Hero />
