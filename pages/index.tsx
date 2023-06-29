@@ -54,7 +54,11 @@ const HomePage: NextPage = () => {
         containerRef={containerRef}
       >
         {/* <ScrollTriggerProxy /> */}
-        <main data-scroll-container ref={containerRef}>
+        <main
+          data-scroll-container
+          ref={containerRef}
+          className="overflow-hidden"
+        >
           <Navbar />
           <Hero />
           <MarqueeSection />
