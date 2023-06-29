@@ -1,14 +1,19 @@
 /** @format */
 
 @font-face {
-  font-family: "Migra";
+  font-family: "Neue Machina Light";
   font-style: normal;
-  src: url("/fonts/Migra-Extralight.woff") format("woff");
+  src: url("/fonts/NeueMachina-Light.otf") format("opentype");
 }
 @font-face {
-  font-family: "Migra ExtraBold";
+  font-family: "Neue Machina";
   font-style: normal;
-  src: url("/fonts/Migra-Extrabold.woff") format("woff");
+  src: url("/fonts/NeueMachina-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: "Neue Machina Ultrabold";
+  font-style: normal;
+  src: url("/fonts/NeueMachina-Ultrabold.otf") format("opentype");
 }
 
 @font-face {
@@ -47,5 +52,5 @@ body {
 @layer utilities {
   .text-stroke {
     -webkit-text-stroke: 1px #fffef4;
-  }   
+  }
 }

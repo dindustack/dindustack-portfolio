@@ -151,54 +151,42 @@ export function SplashScreen() {
         <div>
           {/* ONE */}
           <div className="flex absolute items-center justify-center w-full h-screen">
-            <div
-              className="logoOne font-semibold text-[#E7E7E7] text-[3vmax] md:text-[10.1vmax] mix-blend-difference leading-none"
-            >
+            <div className="logoOne font-semibold text-[#E7E7E7] text-[3vmax] md:text-[10.1vmax] mix-blend-difference leading-none">
               dindustack
             </div>
           </div>
 
           {/* TWO */}
           <div className="flex absolute items-center justify-center w-full h-screen">
-            <div
-              className="logoTwo font-semibold text-[#01FF01] text-[3.1vmax] md:text-[10.2vmax] mix-blend-difference leading-none"
-            >
+            <div className="logoTwo font-semibold text-[#01FF01] text-[3.1vmax] md:text-[10.2vmax] mix-blend-difference leading-none">
               dindustack
             </div>
           </div>
 
           {/* THREE */}
           <div className="flex absolute items-center justify-center w-full h-screen">
-            <div
-              className="logoThree font-semibold text-[#FC1F1F] text-[3.2vmax] md:text-[10.3vmax] mix-blend-difference leading-none"
-            >
+            <div className="logoThree font-semibold text-[#FC1F1F] text-[3.2vmax] md:text-[10.3vmax] mix-blend-difference leading-none">
               dindustack
             </div>
           </div>
 
           {/* FOUR */}
           <div className="flex absolute items-center justify-center w-full h-screen">
-            <div
-              className="logoFour font-semibold text-[#8CF7F7] text-[3.3vmax] md:text-[10.4vmax] mix-blend-difference leading-none"
-            >
+            <div className="logoFour font-semibold text-[#8CF7F7] text-[3.3vmax] md:text-[10.4vmax] mix-blend-difference leading-none">
               dindustack
             </div>
           </div>
 
           {/* FIVE */}
           <div className="flex absolute items-center justify-center w-full h-screen">
-            <div
-              className="logoFive font-semibold text-[#4254F8] text-[3.4vmax] md:text-[10.5vmax] mix-blend-difference leading-none"
-            >
+            <div className="logoFive font-semibold text-[#4254F8] text-[3.4vmax] md:text-[10.5vmax] mix-blend-difference leading-none">
               dindustack
             </div>
           </div>
 
           {/* SIX */}
           <div className="flex absolute items-center justify-center w-full h-screen">
-            <div
-              className="logoSix font-semibold text-[#AC00AC] text-[3.5vmax] md:text-[10.6vmax] mix-blend-difference leading-none"
-            >
+            <div className="logoSix font-semibold text-[#AC00AC] text-[3.5vmax] md:text-[10.6vmax] mix-blend-difference leading-none">
               dindustack
             </div>
           </div>
