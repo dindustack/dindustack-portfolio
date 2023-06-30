@@ -20,21 +20,6 @@ export function About() {
   const text =
     "As a frontend developer I create engaging and intuitive web applications that deliver a great user experience across all devices and platforms.";
 
-  // useEffect(() => {
-  //   const element = aboutRef.current;
-  //   gsap.to(element.querySelectorAll(".about-text"), {
-  //     backgroundPositionX: "0%",
-  //     stagger: 1,
-  //     color: "#565656",
-  //     scrollTrigger: {
-  //       trigger: element.querySelectorAll(".about-text"),
-  //       scrub: 1,
-  //       start: "top center",
-  //       end: "bottom top",
-  //     },
-  //   });
-  // }, []);
-
   useEffect(() => {
     const element = aboutRef.current;
 

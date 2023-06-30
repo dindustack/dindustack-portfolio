@@ -7,7 +7,7 @@ export function SplashScreen() {
   const timeline = gsap.timeline();
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
+    let ctx = gsap.context(() => {
       timeline.from(".logoOne", {
         opacity: 0,
         duration: 0.5,

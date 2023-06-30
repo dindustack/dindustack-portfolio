@@ -11,7 +11,7 @@ export const ScrollDownArrow = () => {
   useEffect(() => {
     const arrow = arrowRef.current;
 
-    const ctx = gsap.context(() => {
+    let ctx = gsap.context(() => {
       // GSAP animation configuration
       gsap.set(arrow, { y: 10 });
 
