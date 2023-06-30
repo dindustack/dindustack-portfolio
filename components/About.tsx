@@ -79,11 +79,9 @@ export function About() {
           about
         </span>
         <div className="flex font-eastman-medium space-x-[2.875rem] mt-[44px]">
-          <div className="about-title">
-            <span className="transform -rotate-90 whitespace-nowrap text-[1rem] text-gray-300 uppercase -mt-[2.5rem]">
-              my role
-            </span>
-          </div>
+          <span className="whitespace-nowrap text-[1rem] text-gray-300 uppercase">
+            my role
+          </span>
           <div ref={triggerRef} className="max-w-[60vw]">
             {text.split("").map((letter, index) => (
               <span
@@ -98,11 +96,9 @@ export function About() {
         </div>
 
         <div className="mt-[5.5rem] flex font-eastman-medium space-x-[2.875rem]">
-          <div className="about-title">
-            <span className="transform -rotate-90 whitespace-nowrap text-[1rem] text-gray-300 uppercase -mt-[6.5rem]">
-              my stack
-            </span>
-          </div>
+          <span className="whitespace-nowrap text-[1rem] text-gray-300 uppercase">
+            my stack
+          </span>
           <div ref={aboutRef} className="grid grid-cols-3 gap-x-16 gap-y-8">
             <div className="about-text">GraqhQL</div>
             <div className="about-text">Next.js</div>

@@ -4,7 +4,7 @@ import navbarLogo from "../public/icons/dindustack-navbar-header.svg";
 export const Navbar: React.FC = () => {
   return (
     <nav className="w-full relative z-50 font-neue-ultrabold uppercase">
-      <div className="pt-8 pl-8">
+      <div className="pt-8 px-4 md:px-8">
         <div className="flex justify-between">
           <Image src={navbarLogo} alt="Dindustack Logo" />
           {/* <div className="max-w-[6.625rem] flex flex-col text-center before:block before:absolute before:-inset-y-2 before:-inset-x-2 before:-rotate-[174deg] before:rounded-[2px] before:flex-shrink-0 before:w-[6.25rem] before:h-[1.8rem] before:bg-[#F9C200] relative mb-0">
