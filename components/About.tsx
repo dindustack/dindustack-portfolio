@@ -60,38 +60,40 @@ export function About() {
         data-scroll-section
         id="about"
       >
-        <span className="uppercase font-migra-extrabold text-[3.5rem] text-gray-900">
+        <span className="capitalize font-neue-ultrabold font-[800] text-[3.5rem] text-gray-900">
           about
         </span>
-        <div className="flex font-eastman-medium space-x-[2.875rem] mt-[44px]">
-          <span className="whitespace-nowrap text-[1rem] text-gray-300 uppercase">
-            my role
-          </span>
-          <div ref={triggerRef} className="max-w-[60vw]">
-            {text.split("").map((letter, index) => (
-              <span
-                key={index}
-                ref={setlettersRef}
-                className="about-first-text break-words  text-[1.5rem] md:text-[2rem]  first-letter:text-7xl"
-              >
-                {letter}
-              </span>
-            ))}
+        <div className="lg:pl-[7.5rem] pt-[4rem] md:space-y-[5.5rem]">
+          <div className="flex font-eastman-medium space-x-[2.875rem]">
+            <span className="whitespace-nowrap text-[1rem] text-gray-300 uppercase">
+              my role
+            </span>
+            <div ref={triggerRef} className="max-w-[60vw]">
+              {text.split("").map((letter, index) => (
+                <span
+                  key={index}
+                  ref={setlettersRef}
+                  className="about-first-text break-words  text-[1.5rem] md:text-[2rem]  first-letter:text-7xl"
+                >
+                  {letter}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
 
-        <div className="mt-[5.5rem] flex font-eastman-medium space-x-[2.875rem]">
-          <span className="whitespace-nowrap text-[1rem] text-gray-300 uppercase">
-            my stack
-          </span>
-          <div ref={aboutRef} className="grid grid-cols-3 gap-x-16 gap-y-8">
-            <div className="about-text">GraqhQL</div>
-            <div className="about-text">Next.js</div>
-            <div className="about-text">React-Query</div>
-            <div className="about-text">Storybook</div>
-            <div className="about-text">TailwindCSS</div>
-            <div className="about-text">TypeScript</div>
-            <div className="about-text">Zustand</div>
+          <div className="flex font-eastman-medium space-x-[2.875rem]">
+            <span className="whitespace-nowrap text-[1rem] text-gray-300 uppercase">
+              my stack
+            </span>
+            <div ref={aboutRef} className="grid grid-cols-3 gap-x-16 gap-y-8">
+              <div className="about-text">GraqhQL</div>
+              <div className="about-text">Next.js</div>
+              <div className="about-text">React-Query</div>
+              <div className="about-text">Storybook</div>
+              <div className="about-text">TailwindCSS</div>
+              <div className="about-text">TypeScript</div>
+              <div className="about-text">Zustand</div>
+            </div>
           </div>
         </div>
       </div>
