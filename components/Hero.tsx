@@ -79,25 +79,27 @@ export function Hero() {
 
   return (
     <Sidebar>
-      <div className="flex flex-col items-center justify-center relative h-screen" data-scroll-section id="intro">
+      <div
+        className="flex flex-col items-center justify-center relative h-screen"
+        data-scroll-section
+        id="intro"
+      >
         {/* absolute text to the left */}
         <div className="absolute  left-0 z-[20]">
           <div
             ref={heroTextAnimation}
             className="leading-[3.75rem] text-gray-900"
           >
-            <div className="name-animation font-migra-extrabold font-extrabold">
-              <div className=" leading-[0] hero-text text-[5.7425rem]">Hey</div>
+            <div className="name-animation font-neue-ultrabold font-extrabold text-[4.5rem]">
+              <div className=" leading-[0] hero-text">Hey</div>
               <br />
-              <span className=" leading-[0] text-[5.7425rem]">I&apos;m</span>
-              <span className=" ml-2 md:ml-4 xl:ml-8 text-[5.7425rem]">
-                Chinwendu
-              </span>
+              <span className=" leading-[0]">I&apos;m</span>
+              <span className=" ml-2 md:ml-4 xl:ml-8">Chinwendu</span>
             </div>
-            <div className="role-animation uppercase font-eastman-offset text-[2rem] tracking-[0.06em]">
+            <div className="role-animation uppercase font-eastman-offset text-[2rem] tracking-[0.06em] mt-[1.5rem]">
               creative frontend developer
             </div>
-            <div className="text-animation font-eastman leading-[1.25rem] text-[#000000] mt-6 text-[1rem] max-w-[28.6875rem]">
+            <div className="text-animation font-eastman leading-[1.25rem] text-[#000000] mt-7 text-[1rem] max-w-[28.6875rem]">
               Crafting beautiful and intuitive user experiences, one line of
               code at a time.
             </div>
