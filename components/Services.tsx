@@ -5,12 +5,14 @@ import { Sidebar } from "./Sidebar";
 export function Services() {
   return (
     <Sidebar>
-      <div className="flex flex-col justify-center min-h-screen" data-scroll-section id="services">
-        <div className="font-migra-extrabold text-[3.5rem] text-gray-900 uppercase pb-12">
-          what i do
-        </div>
+      <div
+        className="flex flex-col justify-center min-h-screen"
+        data-scroll-section
+        id="services"
+      >
+        <div className="section-title pb-[3.625rem]">skillsets</div>
 
-        <div className="grid md:grid-cols-2 gap-x-32 gap-y-16">
+        <div className="lg:pl-[7.5rem] grid md:grid-cols-2 gap-x-32 gap-y-16">
           {React.Children.toArray(
             services.map((service) => (
               <div className="flex flex-row items-start p-0 gap-2">
@@ -31,6 +33,5 @@ export function Services() {
         </div>
       </div>
     </Sidebar>
-    
   );
 }

@@ -175,6 +175,14 @@ module.exports = {
             fontFamily: "Eastman Bold",
           },
         },
+
+        ".section-title": {
+          textTransform: "capitalize",
+          fontFamily: "Neue Machina Ultrabold",
+          fontWeight: 800,
+          fontSize: " 3.5rem",
+          color: "#202020",
+        },
       });
     }),
   ],

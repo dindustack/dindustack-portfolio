@@ -23,8 +23,12 @@ export function Projects() {
 
   return (
     <Sidebar>
-      <div className="flex flex-col justify-center min-h-screen" data-scroll-section id="projects">
-        <div className="font-migra-extrabold text-[3.5rem] text-gray-900 uppercase py-12">
+      <div
+        className="flex flex-col justify-center min-h-screen"
+        data-scroll-section
+        id="projects"
+      >
+        <div className="section-title py-12">
           works
           <span className="ml-4 normal-case text-[1.5rem]">
             (Work in progress)
@@ -34,6 +38,7 @@ export function Projects() {
         <div
           onMouseEnter={() => projectBoxRef.current?.animateIn()}
           onMouseLeave={() => projectBoxRef.current?.animateOut()}
+          className="lg:pl-[14.75rem]"
         >
           {React.Children.toArray(
             projects.map((project, index) => (
@@ -56,7 +61,7 @@ export function Projects() {
         />
 
         <div className="flex flex-col justify-center items-center gap-2 mt-[13.5rem] mb-[8.5rem]">
-          <div className="text-[2.5rem] text-gray-900 font-migra-extrabold uppercase leading-[auto] mb-2">
+          <div className="text-[2.5rem] text-gray-900 font-neue-ultrabold uppercase leading-[auto] mb-2">
             Want to hire me?
           </div>
           <div className="normal-case font-eastman text-[1.5rem]">

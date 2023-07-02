@@ -60,9 +60,7 @@ export function About() {
         data-scroll-section
         id="about"
       >
-        <span className="capitalize font-neue-ultrabold font-[800] text-[3.5rem] text-gray-900">
-          about
-        </span>
+        <span className="section-title">about</span>
         <div className="lg:pl-[7.5rem] pt-[4rem] md:space-y-[5.5rem]">
           <div className="flex font-eastman-medium space-x-[2.875rem]">
             <span className="whitespace-nowrap text-[1rem] text-gray-300 uppercase">

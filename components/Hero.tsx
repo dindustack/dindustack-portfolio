@@ -80,28 +80,34 @@ export function Hero() {
   return (
     <Sidebar>
       <div
-        className="flex flex-col items-center justify-center relative h-screen"
+        className="flex flex-col-reverse items-center justify-center relative h-screen"
         data-scroll-section
         id="intro"
       >
         {/* absolute text to the left */}
-        <div className="absolute  left-0 z-[20]">
+        <div className="md:absolute md:left-0 z-[20]">
           <div
             ref={heroTextAnimation}
             className="leading-[3.75rem] text-gray-900"
           >
-            <div className="name-animation font-neue-ultrabold font-extrabold text-[4.5rem]">
-              <div className=" leading-[0] hero-text">Hey</div>
-              <br />
-              <span className=" leading-[0]">I&apos;m</span>
-              <span className=" ml-2 md:ml-4 xl:ml-8">Chinwendu</span>
+            <div className="name-animation  flex flex-col font-neue-ultrabold font-extrabold text-[2.5rem] md:text-[4.5rem]">
+              <div className="leading-[0] hero-text">Hey</div>
+              <div className="space-x-8 md:mt-8">
+                <span className="leading-[0]">I&apos;m</span>
+                <span>Chinwendu</span>
+              </div>
             </div>
-            <div className="role-animation uppercase font-eastman-offset text-[2rem] tracking-[0.06em] mt-[1.5rem]">
+            <div className="role-animation hidden md:block uppercase font-eastman-offset text-[2rem] tracking-[0.06em] mt-[1.5rem]">
               creative frontend developer
             </div>
-            <div className="text-animation font-eastman leading-[1.25rem] text-[#000000] mt-7 text-[1rem] max-w-[28.6875rem]">
+            <div className="text-animation hidden md:block font-eastman leading-[1.25rem] text-[#000000] mt-7 text-[1rem] max-w-[28.6875rem]">
               Crafting beautiful and intuitive user experiences, one line of
               code at a time.
+            </div>
+
+            <div className="text-animation block md:hidden font-eastman leading-[1.25rem] text-[#000000] mt-7 text-[1rem] max-w-[28.6875rem]">
+              I am a creative developer and I craft beautiful and intuitive user
+              experiences, one line of code at a time.
             </div>
           </div>
         </div>
