@@ -41,13 +41,18 @@ module.exports = {
       addComponents({
         ".about-text": {
           background: "#8C8C8C",
-          fontSize: "2rem",
+          fontSize: "0.875rem",
           backgroundSize: "200% 100%",
           backgroundPositionX: "100%",
           color: "transparent",
           backgroundClip: "text",
           webkitBackgroundClip: "text",
+
+          "@screen md": {
+            fontSize: "2rem",
+          },
         },
+
         ".about-first-text": {
           background: "#8C8C8C",
           backgroundSize: "200% 100%",
