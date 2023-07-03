@@ -85,7 +85,7 @@ export function Hero() {
         id="intro"
       >
         {/* absolute text to the left */}
-        <div className="md:absolute md:left-0 z-[20]">
+        <div className="lg:absolute lg:left-0 z-[20]">
           <div
             ref={heroTextAnimation}
             className="leading-[3.75rem] text-gray-900"
