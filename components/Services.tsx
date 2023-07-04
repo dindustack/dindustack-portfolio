@@ -6,11 +6,13 @@ export function Services() {
   return (
     <Sidebar>
       <div
-        className="flex flex-col justify-center min-h-screen"
+        className="flex flex-col justify-center min-h-screen lg:min-h-[1px]"
         data-scroll-section
         id="services"
       >
-        <div className="section-title pb-[3.625rem]">skillsets</div>
+        <div className="section-title pt-[6.25rem] md:pt-0 pb-[3.625rem]">
+          skillsets
+        </div>
 
         <div className="lg:pl-[7.5rem] grid md:grid-cols-2 gap-x-32 gap-y-16">
           {React.Children.toArray(
