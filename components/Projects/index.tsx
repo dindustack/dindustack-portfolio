@@ -61,10 +61,10 @@ export function Projects() {
         />
 
         <div className="flex flex-col justify-center items-center gap-2 mt-[13.5rem] mb-[8.5rem]">
-          <div className="text-[2.5rem] text-gray-900 font-neue-ultrabold uppercase leading-[auto] mb-2">
+          <div className="text-[2rem] md:text-[2.5rem] text-gray-900 font-neue-ultrabold uppercase leading-[auto] mb-2">
             Want to hire me?
           </div>
-          <div className="normal-case font-eastman text-[1.5rem]">
+          <div className="normal-case font-eastman text-[1.1rem] md:text-[1.5rem]">
             <span>Reach out via</span>
             <a
               href="mailto:contact@dindustack.com"
