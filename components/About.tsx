@@ -72,7 +72,7 @@ export function About() {
         data-scroll-section
         id="about"
       >
-        <span className="section-title">about</span>
+        <span className="about-title">about</span>
         <div className="lg:pl-[7.5rem] pt-[2.25rem] md:pt-[4rem] space-y-[5.5rem]">
           <div className="flex flex-col lg:flex-row font-eastman-medium lg:space-x-[2.875rem]">
             <span className="whitespace-nowrap text-[1rem] text-gray-300 uppercase mb-3">

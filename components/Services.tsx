@@ -10,7 +10,7 @@ export function Services() {
         data-scroll-section
         id="services"
       >
-        <div className="section-title pt-[6.25rem] md:pt-0 pb-[3.625rem]">
+        <div className="skillset-title pt-[6.25rem] md:pt-0 pb-[3.625rem]">
           skillsets
         </div>
 
@@ -18,7 +18,7 @@ export function Services() {
           {React.Children.toArray(
             services.map((service) => (
               <div className="flex flex-col md:flex-row items-start p-0 gap-2">
-                <span className=" font-migra-extrabold font-extrabold text-gray-300 text-[2.5rem] md:text-[4rem] leading-none mb-2">
+                <span className="font-neue md:font-migra md:font-extrabold text-gray-300 text-[2.5rem] md:text-[4rem] leading-[40px] md:leading-none mb-2">
                   {service.id}
                 </span>
                 <div className="flex flex-col items-start p-0 gap-2 max-w-[21.875rem]">

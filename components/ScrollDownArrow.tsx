@@ -32,7 +32,7 @@ export const ScrollDownArrow = () => {
   }, []);
 
   return (
-    <div className="fixed right-5 bottom-5 h-[2.5rem] flex justify-center flex-col items-center z-[9990]">
+    <div className="fixed right-5 bottom-5 h-[2.5rem] flex justify-center flex-col items-center z-[1]">
       <span className="inline-block font-eastman text-[12px] text-black">
         scroll
       </span>

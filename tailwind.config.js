@@ -19,9 +19,10 @@ module.exports = {
         "eastman-medium": ["Eastman Medium", "sans-serif"],
         "eastman-offset": ["Eastman Regular Offset", "sans-serif"],
         "eastman-bold": ["Eastman Bold", "sans-serif"],
-        neue: ["Neue Machina Regular", "sans-serif"],
+        neue: ["Neue Machina", "sans-serif"],
         "neue-light": ["Neue Machina Light", "sans-serif"],
         "neue-ultrabold": ["Neue Machina Ultrabold", "sans-serif"],
+        migra: ["Migra Extrabold", "serif"],
       },
     },
   },
@@ -181,12 +182,50 @@ module.exports = {
           },
         },
 
-        ".section-title": {
+        ".skillset-title": {
           textTransform: "capitalize",
           fontFamily: "Neue Machina Ultrabold",
           fontWeight: 800,
-          fontSize: " 3.5rem",
+          fontSize: "3.5rem",
           color: "#202020",
+
+          // after only for small screen
+          "@media (max-width: 768px)": {
+            fontSize: "2.25rem",
+            "&::after": {
+              content: '""',
+              display: "inline-block",
+              border: "1px solid #8C8C8C",
+              width: "10.25rem",
+              margin: "0 auto 0.625rem 3rem",
+              transform: "translateY(-3px)",
+            },
+          },
+        },
+
+        ".about-title": {
+          textTransform: "capitalize",
+          fontFamily: "Neue Machina Ultrabold",
+          fontWeight: 800,
+          fontSize: "3.5rem",
+          color: "#202020",
+
+          // after only for small screen
+          "@media (max-width: 768px)": {
+            fontSize: "2.25rem",
+            "&::after": {
+              content: '""',
+              display: "inline-block",
+              border: "1px solid #8C8C8C",
+              width: "12.625rem",
+              margin: "0 auto 0.625rem 4.6rem",
+              transform: "translateY(-3px)",
+            },
+          },
+        },
+
+        ".navbar-icon-shadow": {
+          boxShadow: "0px 8px 13px -3px rgba(0, 0, 0, 0.16);",
         },
       });
     }),

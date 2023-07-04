@@ -28,13 +28,12 @@ export function Projects() {
         data-scroll-section
         id="projects"
       >
-        <div className="section-title py-12">
+        <div className="capitalize text-[2.25rem] md:text-[3.5rem] font-neue-ultrabold text-gray-900 py-12">
           works
           <span className="ml-4 normal-case text-[1.5rem]">
             (Work in progress)
           </span>
         </div>
-
         <div
           onMouseEnter={() => projectBoxRef.current?.animateIn()}
           onMouseLeave={() => projectBoxRef.current?.animateOut()}
@@ -52,14 +51,12 @@ export function Projects() {
             ))
           )}
         </div>
-
         <ProjectBox
           projectImages={projects}
           activeIndex={activeIndex}
           ref={projectBoxRef}
           offsets={offsets.current}
         />
-
         <div className="flex flex-col justify-center items-center gap-2 mt-[13.5rem] mb-[8.5rem]">
           <div className="text-[2rem] md:text-[2.5rem] text-gray-900 font-neue-ultrabold uppercase leading-[auto] mb-2">
             Want to hire me?

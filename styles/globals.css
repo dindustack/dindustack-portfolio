@@ -1,6 +1,12 @@
 /** @format */
 
 @font-face {
+  font-family: "Migra Extrabold";
+  font-style: normal;
+  src: url("/fonts/Migra-Extrabold.woff") format("woff");
+}
+
+@font-face {
   font-family: "Neue Machina Light";
   font-style: normal;
   src: url("/fonts/NeueMachina-Light.otf") format("opentype");

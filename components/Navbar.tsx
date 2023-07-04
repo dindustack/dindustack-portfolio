@@ -1,24 +1,52 @@
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import navbarLogo from "../public/icons/dindustack-navbar-header.svg";
+import menu from "../public/icons/menu-fill.svg";
+import close from "../public/icons/close-fill.svg";
 
 export const Navbar: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto"; // Enable scrolling when the menu is closed
+    }
+
+    return () => {
+      document.body.style.overflow = "auto"; // Revert to default scrolling when the component is unmounted
+    };
+  }, [isMenuOpen]);
   return (
     <nav className="w-full relative z-50 font-neue-ultrabold uppercase">
       <div className="pt-8 px-4 md:px-8">
         <div className="flex justify-between">
           <Image src={navbarLogo} alt="Dindustack Logo" />
-          {/* <div className="max-w-[6.625rem] flex flex-col text-center before:block before:absolute before:-inset-y-2 before:-inset-x-2 before:-rotate-[174deg] before:rounded-[2px] before:flex-shrink-0 before:w-[6.25rem] before:h-[1.8rem] before:bg-[#F9C200] relative mb-0">
-            <span className="relative inline-block text-black text-[1.2rem] font-[800] leading-[0] tracking-[4.2px] mb-1">
-              dindu
-            </span>
-            <span className="before:block mt-0 before:absolute  before:-rotate-[7deg]  before:rounded-[15px] before:flex-shrink-0 before:w-[6.25rem] before:h-[1.1rem] before:bg-gray-900 before:border-2 before:border-[#000] relative inline-block">
-              <span className="relative inline-block text-[#FFFEF4] text-[1.2rem] leading-[0] tracking-[4.2px]">
-                stack
-              </span>
-            </span>
-          </div> */}
+          <div
+            className="flex lg:hidden justify-center items-center w-[2.875rem] h-[2.875rem] bg-gray-900 rounded-[1.4375rem] navbar-icon-shadow"
+            onClick={handleClick}
+          >
+            {isMenuOpen ? (
+              <Image src={close} alt="close icon" />
+            ) : (
+              <Image src={menu} alt="menu icon" />
+            )}
+          </div>
         </div>
       </div>
+
+      {isMenuOpen && (
+        <div className="sm:hidden absolute left-0 top-[6rem] my-auto h-screen w-[100%] bg-[#FFFEF4] z-[9999] overflow-hidden">
+          <div className="px-[0.75rem] py-[5rem] text-center space-y-16">
+            <div>call</div>
+          </div>
+        </div>
+      )}
     </nav>
   );
 };
