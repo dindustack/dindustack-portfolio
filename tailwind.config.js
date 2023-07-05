@@ -187,18 +187,17 @@ module.exports = {
           fontFamily: "Neue Machina Ultrabold",
           fontWeight: 800,
           fontSize: "3.5rem",
+          display: "flex",
+          alignItems: "center",
           color: "#202020",
 
-          // after only for small screen
           "@media (max-width: 768px)": {
             fontSize: "2.25rem",
             "&::after": {
               content: '""',
-              display: "inline-block",
-              border: "1px solid #8C8C8C",
-              width: "10.25rem",
-              margin: "0 auto 0.625rem 3rem",
-              transform: "translateY(-3px)",
+              borderTop: "1px solid #8C8C8C",
+              flex: "auto",
+              marginLeft: "3rem",
             },
           },
         },
@@ -208,18 +207,17 @@ module.exports = {
           fontFamily: "Neue Machina Ultrabold",
           fontWeight: 800,
           fontSize: "3.5rem",
+          display: "flex",
+          alignItems: "center",
           color: "#202020",
 
-          // after only for small screen
           "@media (max-width: 768px)": {
             fontSize: "2.25rem",
             "&::after": {
               content: '""',
-              display: "inline-block",
-              border: "1px solid #8C8C8C",
-              width: "12.625rem",
-              margin: "0 auto 0.625rem 4.6rem",
-              transform: "translateY(-3px)",
+              borderTop: "1px solid #8C8C8C",
+              flex: "auto",
+              marginLeft: "3rem",
             },
           },
         },
