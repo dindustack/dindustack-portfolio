@@ -63,17 +63,6 @@ module.exports = {
           webkitBackgroundClip: "text",
         },
 
-        ".hero-text": {
-          "&::after": {
-            content: '""',
-            display: "inline-block",
-            border: "1px solid #202020",
-            width: "100px",
-            margin: "0 1.3rem 0.625rem 1.3125rem",
-            transform: "translateY(-3px)",
-          },
-        },
-
         ".about-title": {
           flex: "0 0 15px",
           minWidth: 0,
