@@ -24,11 +24,11 @@ export function Projects() {
   return (
     <Sidebar>
       <div
-        className="flex flex-col justify-center min-h-screen"
+        className="flex flex-col justify-center min-h-screen py-[6.25rem] md:py-0"
         data-scroll-section
         id="projects"
       >
-        <div className="capitalize text-[2.25rem] md:text-[3.5rem] font-neue-ultrabold text-gray-900 py-12">
+        <div className="capitalize text-[2.25rem] md:text-[3.5rem] font-neue-ultrabold text-gray-900 py-[1.125rem] md:py-12">
           works
           <span className="ml-4 normal-case text-[1.5rem]">
             (Work in progress)
