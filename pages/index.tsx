@@ -53,7 +53,6 @@ const HomePage: NextPage = () => {
         watch={[]}
         containerRef={containerRef}
       >
-        {/* <ScrollTriggerProxy /> */}
         <main
           data-scroll-container
           ref={containerRef}

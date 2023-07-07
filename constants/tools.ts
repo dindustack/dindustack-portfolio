@@ -1,5 +1,6 @@
 import { StaticImageData } from "next/image";
 import next from "../public/icons/next.svg";
+import react from "../public/icons/react.svg";
 import graphql from "../public/icons/graphql.svg";
 import typescript from "../public/icons/typescript.svg";
 import reactQuery from "../public/icons/react-query.svg";
@@ -16,6 +17,10 @@ export const toolItems: Tools[] = [
   {
     name: "Figma",
     imgSrc: figma,
+  },
+  {
+    name: "React",
+    imgSrc: react,
   },
   {
     name: "GraphQL",

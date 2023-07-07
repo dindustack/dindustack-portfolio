@@ -31,7 +31,7 @@ export function MarqueeSection() {
         {React.Children.toArray(
           marqueeContent.map((content) => (
             <SplideSlide>
-              <span className="inline-block relative pr-[7.5rem] text-[1.5rem] md:text-[1.25rem] text-[#FFFEF4]  uppercase  tracking-wider">
+              <span className="inline-block relative pr-[7.5rem] text-[1rem] md:text-[1.25rem] text-[#FFFEF4]  uppercase  tracking-wider">
                 {content.firstWord}
                 <span className="ml-2 text-stroke text-gray-900 tracking-wider">
                   {content.secondWord}

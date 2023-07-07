@@ -6,7 +6,7 @@ export function Services() {
   return (
     <Sidebar>
       <div
-        className="flex flex-col justify-center min-h-screen lg:min-h-[1px]"
+        className="flex flex-col justify-center min-h-screen xl:min-h-[1px]"
         data-scroll-section
         id="services"
       >
