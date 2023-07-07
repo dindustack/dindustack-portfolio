@@ -40,7 +40,16 @@ export function Footer() {
 
       {/* Small screens */}
       <div className="flex md:hidden flex-row items-center justify-center gap-12 uppercase text-white text-[0.875rem] ">
-        so
+        {React.Children.toArray(
+          socialItems.map((item) => (
+            <a href={item.href} target="_blank">
+              <Image
+                src={item.imgSrc}
+                alt={`Chinwendu Agbaetuo - ${item.name}`}
+              />
+            </a>
+          ))
+        )}
       </div>
 
       <div className="flex flex-col-reverse lg:flex-row mt-12 md:mt-16 items-center md:justify-between font-eastman-offset text-[0.75rem]">
