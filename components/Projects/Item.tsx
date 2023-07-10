@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import { Power2, gsap } from "gsap";
+import arrowLink from "../../public/icons/arrow-link.svg";
+import Image from "next/image";
 
 type ProjectItemProps = {
   serialNumber: string;
@@ -72,9 +74,13 @@ export default function ProjectItem({
             {projectName}
           </p>
 
-          <span className="font-eastman text-gray-500 text-[0.875rem] leading-[1.25rem]">
+          <span className="block md:hidden font-eastman text-gray-500 text-[0.875rem] leading-[1.25rem]">
             {content}
           </span>
+        </div>
+
+        <div className="block md:hidden absolute top-8 right-4">
+          <Image src={arrowLink} alt="arrow link" />
         </div>
       </a>
     </div>
