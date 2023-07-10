@@ -68,7 +68,7 @@ export default function ProjectItem({
           <span className="font-eastman text-gray-300 text-[1.125rem] translate-y-[0.4rem] md:translate-y-3">
             {serialNumber}
           </span>
-          <p className="font-eastman-offset text-[1.75rem] md:text-[4rem] text-gray-900 leading-[40px] normal-case pointer-events-none">
+          <p className="font-eastman md:font-eastman-offset text-[1.75rem] md:text-[4rem] text-gray-900 leading-[40px] normal-case pointer-events-none">
             {projectName}
           </p>
 
