@@ -74,8 +74,8 @@ export const Navbar: React.FC = () => {
       {isMenuOpen && (
         <div className="sm:hidden absolute left-0 top-0 h-screen w-[100%] bg-[#FFFEF4]  overflow-hidden -z-[1]">
           <div className="grid grid-cols-6 gap-6">
-            <div className="col-start-1 col-end-1 ml-[20px]">
-              <div className="flex items-end h-[80%] fixed  overflow-x-hidden">
+            <div className="col-start-1 col-end-1 mx-auto">
+              <div className="flex items-end h-[90%] fixed  overflow-x-hidden">
                 <div className="flex flex-col gap-[1.5rem]">
                   {React.Children.toArray(
                     socialItems.map((item) => (
@@ -92,7 +92,7 @@ export const Navbar: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="col-start-2 col-end-7 -ml-[1rem]">
+            <div className="col-start-2 col-end-7 sm:-ml-[1rem]">
               <div className="border-l border-black top-[4.4rem] h-full fixed  overflow-x-hidden">
                 <div className="flex flex-col gap-[2rem] mt-[6.25rem] pl-6 ">
                   {navItems.map(({ label, path }) => (
@@ -113,7 +113,7 @@ export const Navbar: React.FC = () => {
                       >
                         <span>{label}</span>
                         {activeNavItem && activeNavItem.path === path && (
-                          <span className="fixed left-[3.03rem] mt-2">
+                          <span className="fixed indicator mt-2">
                             <Image src={rectangle} alt="rectangle" />
                           </span>
                         )}

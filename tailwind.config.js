@@ -224,6 +224,16 @@ module.exports = {
           color: "#565656",
           fontFamily: "Neue Machina Light",
         },
+
+        ".indicator": {
+          "@media (max-width: 425px)": {
+            left: "3.5rem",
+          },
+
+          "@media (min-width: 425px)": {
+            left: "4rem",
+          },
+        },
       });
     }),
   ],
