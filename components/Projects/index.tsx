@@ -30,9 +30,9 @@ export function Projects() {
       >
         <div className="capitalize text-[2.25rem] md:text-[3.5rem] font-neue-ultrabold text-gray-900 py-[1.125rem] md:py-12">
           works
-          <span className="ml-4 normal-case text-[1.5rem]">
+          {/* <span className="ml-4 normal-case text-[1.5rem]">
             (Work in progress)
-          </span>
+          </span> */}
         </div>
         <div
           onMouseEnter={() => projectBoxRef.current?.animateIn()}
@@ -44,6 +44,7 @@ export function Projects() {
               <ProjectItem
                 serialNumber={project.id}
                 projectName={project.projectName}
+                content={project.content}
                 index={index}
                 onEnter={(index) => setActiveIndex(index)}
                 onMove={(event) => handleMove(event)}
@@ -61,7 +62,7 @@ export function Projects() {
           <div className="text-[2rem] md:text-[2.5rem] text-gray-900 font-neue-ultrabold uppercase leading-[auto] mb-2">
             Want to hire me?
           </div>
-          <div className="normal-case font-eastman text-[1.1rem] md:text-[1.5rem]">
+          <div className="normal-case font-eastman text-[1rem] md:text-[1.5rem]">
             <span>Reach out via</span>
             <a
               href="mailto:contact@dindustack.com"

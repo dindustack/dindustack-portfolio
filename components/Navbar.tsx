@@ -55,9 +55,9 @@ export const Navbar: React.FC = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="sm:hidden absolute left-0 top-[5rem] h-screen w-[100%] bg-[#FFFEF4]  overflow-hidden">
+        <div className="sm:hidden absolute left-0 top-0 h-screen w-[100%] bg-[#FFFEF4]  overflow-hidden -z-[1]">
           <div className="grid grid-cols-6 gap-6">
-            <div className="col-start-1 col-end-1 m-auto">
+            <div className="col-start-1 col-end-1 mx-auto">
               <div className="flex items-end h-[80%] fixed  overflow-x-hidden">
                 <div className="flex flex-col   gap-[1.5rem]">
                   {React.Children.toArray(
