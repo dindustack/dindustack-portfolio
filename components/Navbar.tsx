@@ -57,9 +57,9 @@ export const Navbar: React.FC = () => {
       {isMenuOpen && (
         <div className="sm:hidden absolute left-0 top-[5rem] h-screen w-[100%] bg-[#FFFEF4]  overflow-hidden">
           <div className="grid grid-cols-6 gap-6">
-            <div className="col-start-1 col-end-1">
-              <div className="flex h-[80%] fixed  overflow-x-hidden">
-                <div className="flex flex-col items-end  gap-[1.5rem]">
+            <div className="col-start-1 col-end-1 m-auto">
+              <div className="flex items-end h-[80%] fixed  overflow-x-hidden">
+                <div className="flex flex-col   gap-[1.5rem]">
                   {React.Children.toArray(
                     socialItems.map((item) => (
                       <a href={item.href} target="_blank">
