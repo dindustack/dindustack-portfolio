@@ -37,7 +37,7 @@ export const Navbar: React.FC = () => {
     };
   }, [isMenuOpen]);
   return (
-    <nav className="w-full relative z-50 font-neue-ultrabold uppercase">
+    <nav className="w-full fixed bg-[#FFFEF4]  md:bg-inherit  md:relative font-neue-ultrabold uppercase z-[9999]">
       <div className="pt-8 px-4 md:px-8">
         <div className="flex justify-between">
           <Image src={navbarLogo} alt="Dindustack Logo" />
@@ -55,10 +55,10 @@ export const Navbar: React.FC = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="sm:hidden absolute left-0 top-[6rem] h-screen w-[100%] bg-[#FFFEF4] z-[9999] overflow-hidden">
+        <div className="sm:hidden absolute left-0 top-[5rem] h-screen w-[100%] bg-[#FFFEF4]  overflow-hidden">
           <div className="grid grid-cols-6 gap-6">
             <div className="col-start-1 col-end-1">
-              <div className="flex w-[3.75rem] justify-center items-center  h-full fixed border-r-2 border-gray-500 top-[4.5rem] overflow-x-hidden">
+              <div className="flex w-[3.75rem] justify-center items-center h-full fixed border-r-2 border-gray-500 top-[4.5rem] overflow-x-hidden">
                 <div className="flex flex-col  gap-[1.5rem]">
                   {React.Children.toArray(
                     socialItems.map((item) => (
@@ -76,13 +76,16 @@ export const Navbar: React.FC = () => {
             <div className="col-start-2 col-end-7">
               <div className="flex flex-col gap-[2rem] mt-[6.25rem] pl-6">
                 {navItems.map(({ label, path }) => (
-                  <a
-                    key={path}
-                    href={`#${path}`}
-                    className="font-neue text-[1.875rem] tracking-[2.4px] text-gray-900"
-                  >
-                    {label}
-                  </a>
+                  <div onClick={handleClick} key={path}>
+                    <a
+                      key={path}
+                      href={`#${path}`}
+                      className="font-neue text-[1.875rem] tracking-[2.4px] text-gray-900"
+                      data-scroll-to
+                    >
+                      {label}
+                    </a>
+                  </div>
                 ))}
               </div>
             </div>

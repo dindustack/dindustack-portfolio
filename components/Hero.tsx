@@ -92,7 +92,7 @@ export function Hero() {
           >
             <div className="name-animation  flex flex-col -space-y-[1rem] md:space-y-[1rem] font-neue-ultrabold font-extrabold text-[2.5rem] md:text-[4.5rem]">
               <div className="">Hey -</div>
-              <div className="space-x-8 md:mt-8">
+              <div className="space-x-4 md:space-x-8 md:mt-8">
                 <span className="leading-[0]">I&apos;m</span>
                 <span>Chinwendu</span>
               </div>
