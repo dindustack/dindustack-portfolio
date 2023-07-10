@@ -73,8 +73,8 @@ export const Navbar: React.FC = () => {
 
       {isMenuOpen && (
         <div className="sm:hidden absolute left-0 top-0 h-screen w-[100%] bg-[#FFFEF4]  overflow-hidden -z-[1]">
-          <div className="grid grid-cols-6 gap-6">
-            <div className="col-start-1 col-end-1 mx-auto">
+          <div className="grid grid-cols-6">
+            <div className="col-start-1 col-end-1 pl-4">
               <div className="flex items-end h-[90%] fixed  overflow-x-hidden">
                 <div className="flex flex-col gap-[1.5rem]">
                   {React.Children.toArray(
@@ -92,9 +92,9 @@ export const Navbar: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="col-start-2 col-end-7 sm:-ml-[1rem]">
+            <div className="col-start-2 col-end-7 sm:-ml-[2rem]">
               <div className="border-l border-black top-[4.4rem] h-full fixed  overflow-x-hidden">
-                <div className="flex flex-col gap-[2rem] mt-[6.25rem] pl-6 ">
+                <div className="flex flex-col gap-[2rem] mt-[6.25rem] pl-6">
                   {navItems.map(({ label, path }) => (
                     <div
                       key={path}
