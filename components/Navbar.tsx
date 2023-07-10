@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import navbarLogo from "../public/icons/dindustack-navbar-header.svg";
 import menu from "../public/icons/menu-fill.svg";
 import close from "../public/icons/close-fill.svg";
+import rectangle from "../public/icons/rectangle.svg";
 import { socialItems } from "@/constants/socials";
 
 type NavItem = {
@@ -20,9 +22,24 @@ const navItems: NavItem[] = [
 
 export const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
 
-  const handleClick = () => {
+  const matchedValue = router.asPath.split("#")[1];
+
+  const [activeNavItem, setActiveNavItem] = useState<NavItem>(
+    (router && navItems.find((item) => item.path === matchedValue)) ||
+      navItems[0]
+  );
+
+  const closeMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const handleClick = (path: string) => {
+    setIsMenuOpen(!isMenuOpen);
+    setActiveNavItem(
+      navItems.find((item) => item.path === path) || navItems[0]
+    );
   };
 
   useEffect(() => {
@@ -43,7 +60,7 @@ export const Navbar: React.FC = () => {
           <Image src={navbarLogo} alt="Dindustack Logo" />
           <div
             className="flex lg:hidden justify-center items-center w-[2.875rem] h-[2.875rem] bg-gray-900 rounded-[1.4375rem] navbar-icon-shadow"
-            onClick={handleClick}
+            onClick={closeMenu}
           >
             {isMenuOpen ? (
               <Image src={close} alt="close icon" />
@@ -79,14 +96,27 @@ export const Navbar: React.FC = () => {
               <div className="border-l border-black top-[4.4rem] h-full fixed  overflow-x-hidden">
                 <div className="flex flex-col gap-[2rem] mt-[6.25rem] pl-6 ">
                   {navItems.map(({ label, path }) => (
-                    <div onClick={handleClick} key={path}>
+                    <div
+                      key={path}
+                      className="text-[1.875rem] tracking-[2.4px]"
+                    >
                       <a
                         key={path}
                         href={`#${path}`}
-                        className="font-neue text-[1.875rem] tracking-[2.4px] text-gray-900"
+                        className={` ${
+                          activeNavItem.path === path
+                            ? "navbar-item-active"
+                            : "navbar-item"
+                        }`}
+                        onClick={() => handleClick(path)}
                         data-scroll-to
                       >
-                        {label}
+                        <span>{label}</span>
+                        {activeNavItem && activeNavItem.path === path && (
+                          <span className="fixed left-[3.03rem] mt-2">
+                            <Image src={rectangle} alt="rectangle" />
+                          </span>
+                        )}
                       </a>
                     </div>
                   ))}

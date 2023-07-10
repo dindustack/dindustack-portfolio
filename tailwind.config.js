@@ -214,6 +214,16 @@ module.exports = {
         ".navbar-icon-shadow": {
           boxShadow: "0px 8px 13px -3px rgba(0, 0, 0, 0.16);",
         },
+
+        ".navbar-item-active": {
+          color: "#202020",
+          fontFamily: "Neue Machina",
+        },
+
+        ".navbar-item": {
+          color: "#565656",
+          fontFamily: "Neue Machina Light",
+        },
       });
     }),
   ],
