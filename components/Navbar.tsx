@@ -92,7 +92,7 @@ export const Navbar: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="col-start-2 col-end-7 sm:-ml-[2rem]">
+            <div className="col-start-2 col-end-7 -ml-[0.5rem]">
               <div className="border-l border-black top-[4.4rem] h-full fixed  overflow-x-hidden">
                 <div className="flex flex-col gap-[2rem] mt-[6.25rem] pl-6">
                   {navItems.map(({ label, path }) => (
