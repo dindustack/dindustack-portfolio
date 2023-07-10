@@ -231,7 +231,7 @@ module.exports = {
           },
 
           "@media (min-width: 425px)": {
-            left: "3.78rem",
+            left: "3.79rem",
           },
         },
       });
