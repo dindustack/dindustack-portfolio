@@ -7,7 +7,7 @@ import { socialItems } from "@/constants/socials";
 export function Footer() {
   return (
     <div
-      className="bg-[#070707] rounded-t-[3.75rem] md:rounded-none text-[#FFFEF4] px-8 pt-[3.75rem] pb-8 md:pb-[2.5rem] relative z-[9999]"
+      className="bg-[#070707] rounded-t-[3.75rem] md:rounded-none text-[#FFFEF4] px-8 pt-[3.75rem] pb-8 md:pb-[2.5rem] relative z-[9900]"
       data-scroll-section
       id="contact"
     >
