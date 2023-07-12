@@ -1,13 +1,13 @@
 import { useRef, useEffect, useCallback } from "react";
 
-export function useRafFn(callback: any) {
-  const callbackRef = useRef(callback);
+export function useRafFn(callback: () => void): () => void {
+  const callbackRef = useRef<() => void>(callback);
 
   useEffect(() => {
     callbackRef.current = callback;
   }, [callback]);
 
-  const frameRef: any = useRef();
+  const frameRef = useRef<number | undefined>();
 
   const rafFn = useCallback(() => {
     const callback = callbackRef.current;
@@ -19,7 +19,7 @@ export function useRafFn(callback: any) {
 
   useEffect(() => {
     frameRef.current = requestAnimationFrame(rafFn);
-    return () => cancelAnimationFrame(frameRef.current);
+    return () => cancelAnimationFrame(frameRef.current as number);
   }, [rafFn]);
 
   return rafFn;
