@@ -13,7 +13,7 @@ import { Project } from "@/constants/projects";
 type ProjectBoxProps = {
   activeIndex: number;
   projectImages: Project[];
-  offsets: any;
+  offsets: { x: number | undefined; y: number | undefined }[];
 };
 
 export const ProjectBox = forwardRef(function ProjectBox(
@@ -171,9 +171,8 @@ export const ProjectBox = forwardRef(function ProjectBox(
                 }
               }}
               style={{
-                transform: `translateX(${12.5 * offsets[index]?.x || 0}%) 
-                translateY(${12.5 * offsets[index]?.y || 0}%) scale(1.25)
-                `,
+                transform: `translateX(${12.5 * (offsets[index]?.x || 0)}%) 
+                translateY(${12.5 * (offsets[index]?.y || 0)}%) scale(1.25)`,
               }}
             >
               <Image
