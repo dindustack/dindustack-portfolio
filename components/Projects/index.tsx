@@ -5,7 +5,7 @@ import { projects } from "@/constants/projects";
 import { ProjectBox } from "./Box";
 import { Sidebar } from "../Sidebar";
 
-type Offset = { x: number; y: number };
+// type Offset = { x: number; y: number };
 type ProjectBoxRef = {
   animateIn: () => void;
   animateOut: () => void;
@@ -14,7 +14,9 @@ type ProjectBoxRef = {
 export function Projects() {
   const [activeIndex, setActiveIndex] = useState(0);
   const projectBoxRef = useRef<ProjectBoxRef | null>(null);
-  const offsets = useRef<{ [key: number]: Offset }>({});
+  const offsets = useRef<{ x: number | undefined; y: number | undefined }[]>(
+    []
+  );
 
   const handleMove = (event: { x: number; y: number; index: number }) => {
     const { x, y, index } = event;
