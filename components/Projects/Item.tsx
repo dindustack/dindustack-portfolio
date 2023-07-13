@@ -61,25 +61,25 @@ export default function ProjectItem({
       <a
         href="#"
         ref={textRef}
-        className="relative  flex py-[1.5rem] md:py-[2.5rem] cursor-pointer border-b border-gray-300 w-[100%] border-t z-20"
+        className="relative flex py-[1.5rem] md:py-[2.5rem] cursor-pointer border-b border-gray-300 w-[100%] border-t z-20"
         onMouseEnter={handleEnter}
         onMouseLeave={handleLeave}
         onMouseMove={handleMove}
       >
-        <div className="flex flex-col md:flex-row items-start gap-y-2 md:gap-x-4">
+        <div className="flex flex-col lg:flex-row items-start gap-y-2 md:gap-y-8 lg:gap-x-4">
           <span className="font-eastman text-gray-300 text-[1.125rem] translate-y-[0.4rem] md:translate-y-3">
             {serialNumber}
           </span>
-          <p className="font-eastman md:font-eastman-offset text-[1.75rem] md:text-[4rem] text-gray-900 leading-[40px] normal-case pointer-events-none">
+          <p className="font-eastman lg:font-eastman-offset text-[1.75rem] md:text-[4rem] text-gray-900 leading-[40px] normal-case pointer-events-none">
             {projectName}
           </p>
 
-          <span className="block md:hidden font-eastman text-gray-500 text-[0.875rem] leading-[1.25rem]">
+          <span className="block lg:hidden font-eastman text-gray-500 text-[0.875rem] leading-[1.25rem]">
             {content}
           </span>
         </div>
 
-        <div className="block md:hidden absolute top-8 right-4">
+        <div className="block lg:hidden absolute top-8 right-4">
           <Image src={arrowLink} alt="arrow link" />
         </div>
       </a>
