@@ -5,7 +5,6 @@ import { projects } from "@/constants/projects";
 import { ProjectBox } from "./Box";
 import { Sidebar } from "../Sidebar";
 
-// type Offset = { x: number; y: number };
 type ProjectBoxRef = {
   animateIn: () => void;
   animateOut: () => void;
