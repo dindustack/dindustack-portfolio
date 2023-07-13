@@ -49,7 +49,7 @@ module.exports = {
           backgroundClip: "text",
           webkitBackgroundClip: "text",
 
-          "@screen md": {
+          "@screen lg": {
             fontSize: "2rem",
           },
         },

@@ -56,7 +56,7 @@ export function Sidebar({ children }: SidebarProps) {
 
   return (
     <div className="grid grid-cols-12 min-h-screen px-4 md:px-8">
-      <div className="lg:col-start-1 lg:col-end-1 hidden lg:block">
+      <div className="md:col-start-1 md:col-end-1 hidden md:block">
         <div className="flex max-w-[3.25rem] justify-center items-center  h-full fixed z-10 border-r-2 border-gray-500 top-0 overflow-x-hidden">
           <div
             className="flex transform -rotate-90  p-0 gap-[1.5rem] font-eastman uppercase text-gray-900 text-[0.875rem]"
@@ -76,7 +76,7 @@ export function Sidebar({ children }: SidebarProps) {
         </div>
       </div>
 
-      <div className="col-start-1 col-end-13 lg:col-start-2 lg:col-end-13">
+      <div className="col-start-1 col-end-13 md:col-start-2 md:col-end-13">
         {children}
       </div>
       <ScrollDownArrow />

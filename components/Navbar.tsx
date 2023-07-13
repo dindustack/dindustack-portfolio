@@ -59,7 +59,7 @@ export const Navbar: React.FC = () => {
         <div className="flex justify-between">
           <Image src={navbarLogo} alt="Dindustack Logo" />
           <div
-            className="flex lg:hidden justify-center items-center w-[2.875rem] h-[2.875rem] bg-gray-900 rounded-[1.4375rem] navbar-icon-shadow"
+            className="flex md:hidden justify-center items-center w-[2.875rem] h-[2.875rem] bg-gray-900 rounded-[1.4375rem] navbar-icon-shadow"
             onClick={closeMenu}
           >
             {isMenuOpen ? (
