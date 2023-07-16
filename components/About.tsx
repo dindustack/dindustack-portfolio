@@ -97,7 +97,7 @@ export function About() {
             </span>
             <div
               ref={aboutRef}
-              className="hidden md:grid grid-cols-3 gap-x-16 gap-y-8"
+              className="hidden lg:grid grid-cols-3 gap-x-16 gap-y-8"
             >
               {React.Children.toArray(
                 tools.map((tool) => <div className="about-text">{tool}</div>)
@@ -106,7 +106,7 @@ export function About() {
 
             <div
               ref={aboutRef}
-              className="grid grid-cols-3 md:hidden gap-x-4 gap-y-8"
+              className="grid grid-cols-3 gap-5  place-content-between lg:hidden"
             >
               {React.Children.toArray(
                 toolItems.map((tool) => (
