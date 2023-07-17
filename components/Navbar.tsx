@@ -16,7 +16,7 @@ const navItems: NavItem[] = [
 	{ label: "Intro", path: "intro" },
 	{ label: "About", path: "about" },
 	{ label: "Services", path: "services" },
-	{ label: "Projects", path: "projects" },
+	// { label: "Projects", path: "projects" },
 	{ label: "Contact", path: "contact" },
 ];
 

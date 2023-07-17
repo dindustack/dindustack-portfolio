@@ -27,7 +27,7 @@ export default function ProjectItem({
 		gsap.killTweensOf(textRef.current);
 
 		gsap.to(textRef.current, {
-			// paddingLeft: "9rem",
+			paddingLeft: "9rem",
 			duration: 0.335,
 			ease: Power2.easeInOut,
 		});
@@ -37,7 +37,7 @@ export default function ProjectItem({
 		gsap.killTweensOf(textRef.current);
 
 		gsap.to(textRef.current, {
-			// paddingLeft: 0,
+			paddingLeft: 0,
 			duration: 0.335,
 			ease: Power2.easeInOut,
 		});
