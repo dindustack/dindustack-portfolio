@@ -63,7 +63,7 @@ export function About() {
     return () => {
       ctx.revert();
     };
-  });
+  }, [aboutRef, lettersRef]);
 
   return (
     <Sidebar>
