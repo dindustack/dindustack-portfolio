@@ -7,6 +7,7 @@ type ProjectItemProps = {
   serialNumber: string;
   projectName: string;
   content: string;
+  url: string;
   index: number;
   onEnter: (index: number) => void;
   onMove: (data: { x: number; y: number; index: number }) => void;
@@ -16,6 +17,7 @@ export default function ProjectItem({
   index,
   serialNumber,
   projectName,
+  url,
   content,
   onEnter,
   onMove,
@@ -59,7 +61,8 @@ export default function ProjectItem({
   return (
     <div>
       <a
-        href="#"
+        href={url}
+        target="_blank"
         ref={textRef}
         className="relative flex py-[1.5rem] md:py-[2.5rem] cursor-pointer border-b border-gray-300 w-[100%] border-t z-20"
         onMouseEnter={handleEnter}

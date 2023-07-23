@@ -43,6 +43,7 @@ export function Projects() {
           {React.Children.toArray(
             projects.map((project, index) => (
               <ProjectItem
+                url={project.url}
                 serialNumber={project.id}
                 projectName={project.projectName}
                 content={project.content}
