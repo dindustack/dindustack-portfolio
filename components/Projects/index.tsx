@@ -30,7 +30,7 @@ export function Projects() {
         id="projects"
       >
         <div className="capitalize text-[2.25rem] md:text-[3.5rem] font-neue-ultrabold text-gray-900 py-[1.125rem] md:py-12">
-          works
+          work
           {/* <span className="ml-4 normal-case text-[1.5rem]">
             (Work in progress)
           </span> */}
