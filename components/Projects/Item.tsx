@@ -58,6 +58,10 @@ export default function ProjectItem({
     onMove({ x, y, index });
   };
 
+  /**
+   * TODO: Refactor component for better performance
+   */
+
   return (
     <div>
       <a
