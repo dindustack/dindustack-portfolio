@@ -19,15 +19,16 @@ export const projects: Project[] = [
     imgSrc: imageOne,
     content:
       "Twitter clone with React, Tailwind, Next, Prisma, Mongo, NextAuth & Vercel",
-    url: "https://twitter-clone-kuc7ayq5x-dindustack.vercel.app/",
+    url: "https://twitter-clone-gamma-three-44.vercel.app/",
   },
-  // {
-  //   id: "02 -",
-  //   projectName: "Happy Camper",
-  //   imgSrc: imageTwo,
-  //   content:
-  //     "Build responsive websites using modern tools; and optimise for speed and performance.",
-  // },
+  {
+    id: "02 -",
+    projectName: "Venuefy",
+    imgSrc: imageTwo,
+    content:
+      "Venue booking platform built with Next.js 13 App Router: React, Tailwind, Prisma, MongoDB, NextAuth",
+    url: "https://venuefy.vercel.app/",
+  },
   // {
   //   id: "03 -",
   //   projectName: "Wealthy Smiles",
