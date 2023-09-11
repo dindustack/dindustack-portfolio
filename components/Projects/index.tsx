@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { forwardRef, useRef, useState } from "react";
 
 import ProjectItem from "./Item";
 import { projects } from "@/constants/projects";
@@ -10,24 +10,29 @@ type ProjectBoxRef = {
   animateOut: () => void;
 };
 
-export function Projects() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const projectBoxRef = useRef<ProjectBoxRef | null>(null);
-  const offsets = useRef<{ x: number | undefined; y: number | undefined }[]>(
-    []
-  );
+type ProjectsProps = {
+  id: string;
+};
 
-  const handleMove = (event: { x: number; y: number; index: number }) => {
-    const { x, y, index } = event;
-    offsets.current[index] = { x, y };
-  };
+export const Projects = forwardRef<HTMLDivElement, ProjectsProps>(
+  function Projects({ id }, ref) {
+    const [activeIndex, setActiveIndex] = useState(0);
+    const projectBoxRef = useRef<ProjectBoxRef | null>(null);
+    const offsets = useRef<{ x: number | undefined; y: number | undefined }[]>(
+      []
+    );
 
-  return (
-    <Sidebar>
+    const handleMove = (event: { x: number; y: number; index: number }) => {
+      const { x, y, index } = event;
+      offsets.current[index] = { x, y };
+    };
+
+    return (
       <div
-        className="flex flex-col justify-center min-h-screen py-[6.25rem] md:py-0"
+        className="flex flex-col justify-center min-h-screen py-[6.25rem]"
         data-scroll-section
-        id="projects"
+        id={id}
+        ref={ref}
       >
         <div className="capitalize text-[2.25rem] md:text-[3.5rem] font-neue-ultrabold text-gray-900 py-[1.125rem] md:py-12">
           work
@@ -75,6 +80,6 @@ export function Projects() {
           </div>
         </div>
       </div>
-    </Sidebar>
-  );
-}
+    );
+  }
+);

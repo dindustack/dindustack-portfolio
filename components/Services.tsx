@@ -1,20 +1,23 @@
 import { services } from "@/constants/services";
-import React from "react";
-import { Sidebar } from "./Sidebar";
+import React, { forwardRef } from "react";
 
-export function Services() {
-  return (
-    <Sidebar>
+type ServicesProps = {
+  id: string;
+};
+
+export const Services = forwardRef<HTMLDivElement, ServicesProps>(
+  function Services(props, ref) {
+    return (
       <div
         className="flex flex-col justify-center min-h-screen xl:min-h-[1px] mb-24 md:mb-0"
-        data-scroll-section
-        id="services"
+        id={props.id}
+        ref={ref}
       >
         <div className="skillset-title pt-[6.25rem] md:pt-0 pb-[3.625rem]">
           skillsets
         </div>
 
-        <div className="lg:pl-[7.5rem] grid lg:grid-cols-2 gap-x-32 gap-y-16">
+        <div className="xl:pl-[7.5rem] grid lg:grid-cols-2 gap-x-32 gap-y-16">
           {React.Children.toArray(
             services.map((service) => (
               <div className="flex flex-col lg:flex-row items-start p-0 gap-2">
@@ -34,6 +37,6 @@ export function Services() {
           )}
         </div>
       </div>
-    </Sidebar>
-  );
-}
+    );
+  }
+);

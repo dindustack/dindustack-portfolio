@@ -1,8 +1,6 @@
 import Head from "next/head";
 import { NextPage } from "next";
 import { useRef } from "react";
-import { LocomotiveScrollProvider } from "react-locomotive-scroll";
-import "locomotive-scroll/dist/locomotive-scroll.css";
 
 import { About } from "@/components/About";
 import { Footer } from "@/components/Footer";
@@ -11,9 +9,14 @@ import { MarqueeSection } from "@/components/Marquee";
 import { Navbar } from "@/components/Navbar";
 import { Services } from "@/components/Services";
 import { Projects } from "@/components/Projects";
+import { ScrollDownArrow } from "@/components/ScrollDownArrow";
+import { Sidebar } from "@/components/Sidebar";
+import { useIsomorphicLayoutEffect } from "@/constants/isomorphicEffect";
+import { Main } from "@/components/Main";
 
 const HomePage: NextPage = () => {
-  const containerRef = useRef(null);
+  const main = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const smoother: any = useRef();
 
   return (
     <>
@@ -44,28 +47,10 @@ const HomePage: NextPage = () => {
         />
         <link rel="manifest" href="/site.webmanifest"></link>
       </Head>
-      <LocomotiveScrollProvider
-        options={{
-          smooth: true,
-          lerp: 0.1,
-        }}
-        watch={[]}
-        containerRef={containerRef}
-      >
-        <main
-          data-scroll-container
-          ref={containerRef}
-          className="overflow-hidden"
-        >
-          <Navbar />
-          <Hero />
-          <MarqueeSection />
-          <About />
-          <Services />
-          <Projects />
-          <Footer />
-        </main>
-      </LocomotiveScrollProvider>
+
+      <Navbar />
+      <Main />
+      <Footer />
     </>
   );
 };
