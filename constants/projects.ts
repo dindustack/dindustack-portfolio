@@ -1,7 +1,7 @@
 import { StaticImageData } from "next/image";
 import imageOne from "../public/images/image1.png";
 import imageTwo from "../public/images/image2.png";
-import imageThree from "../public/images/image3.jpeg";
+import imageThree from "../public/images/image3.png";
 // import imageFour from "../public/images/image4.jpeg";
 
 export type Project = {
