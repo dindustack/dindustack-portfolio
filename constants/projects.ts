@@ -2,7 +2,7 @@ import { StaticImageData } from "next/image";
 import imageOne from "../public/images/image1.png";
 import imageTwo from "../public/images/image2.png";
 import imageThree from "../public/images/image3.jpeg";
-import imageFour from "../public/images/image4.jpeg";
+// import imageFour from "../public/images/image4.jpeg";
 
 export type Project = {
   id: string;
@@ -28,6 +28,14 @@ export const projects: Project[] = [
     content:
       "Venue booking platform built with Next.js 13 App Router: React, Tailwind, Prisma, MongoDB, NextAuth",
     url: "https://venuefy.vercel.app/",
+  },
+  {
+    id: "03 -",
+    projectName: "Scroll Magic",
+    imgSrc: imageThree,
+    content:
+      "Build responsive websites using modern tools; and optimise for speed and performance.",
+    url: "https://scroll-magic-nine.vercel.app/",
   },
   // {
   //   id: "03 -",
