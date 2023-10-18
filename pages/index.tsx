@@ -1,22 +1,11 @@
 import Head from "next/head";
 import { NextPage } from "next";
-import { useRef } from "react";
 
-import { About } from "@/components/About";
 import { Footer } from "@/components/Footer";
-import { Hero } from "@/components/Hero";
-import { MarqueeSection } from "@/components/Marquee";
 import { Navbar } from "@/components/Navbar";
-import { Services } from "@/components/Services";
-import { Projects } from "@/components/Projects";
-import { ScrollDownArrow } from "@/components/ScrollDownArrow";
-import { Sidebar } from "@/components/Sidebar";
-import { useIsomorphicLayoutEffect } from "@/constants/isomorphicEffect";
 import { Main } from "@/components/Main";
 
 const HomePage: NextPage = () => {
-  const main = useRef() as React.MutableRefObject<HTMLDivElement>;
-  const smoother: any = useRef();
 
   return (
     <>

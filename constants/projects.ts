@@ -33,8 +33,7 @@ export const projects: Project[] = [
     id: "03 -",
     projectName: "Scroll Magic",
     imgSrc: imageThree,
-    content:
-      "Build responsive websites using modern tools; and optimise for speed and performance.",
+    content: "Scroll animation using Vite and GSAP",
     url: "https://scroll-magic-nine.vercel.app/",
   },
   // {

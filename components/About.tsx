@@ -72,7 +72,7 @@ export const About = forwardRef<HTMLDivElement, AboutProps>(function About(
   }, [aboutRef, lettersRef]);
 
   return (
-    <div
+    <section
       className="flex flex-col justify-center min-h-screen mt-16"
       data-scroll-section
       id={id}
@@ -129,6 +129,6 @@ export const About = forwardRef<HTMLDivElement, AboutProps>(function About(
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 });

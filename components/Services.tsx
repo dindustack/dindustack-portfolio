@@ -8,7 +8,7 @@ type ServicesProps = {
 export const Services = forwardRef<HTMLDivElement, ServicesProps>(
   function Services(props, ref) {
     return (
-      <div
+      <section
         className="flex flex-col justify-center min-h-screen xl:min-h-[1px] mb-24 md:mb-0"
         id={props.id}
         ref={ref}
@@ -36,7 +36,7 @@ export const Services = forwardRef<HTMLDivElement, ServicesProps>(
             ))
           )}
         </div>
-      </div>
+      </section>
     );
   }
 );

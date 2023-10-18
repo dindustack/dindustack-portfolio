@@ -24,6 +24,15 @@ export default function ProjectItem({
 }: ProjectItemProps) {
   const textRef = useRef() as React.MutableRefObject<HTMLAnchorElement>;
 
+  // function invertHex(hex: string): string {
+  //   const parsedHex = parseInt(`1${hex}`, 16);
+  //   const invertedValue = (parsedHex ^ 0xffffff)
+  //     .toString(16)
+  //     .toUpperCase()
+  //     .slice(1);
+  //   return invertedValue;
+  // }
+
   const handleEnter = () => {
     onEnter(index);
     gsap.killTweensOf(textRef.current);
@@ -32,6 +41,7 @@ export default function ProjectItem({
       paddingLeft: "9rem",
       duration: 0.335,
       ease: Power2.easeInOut,
+      color: "#FFFEF4",
     });
   };
 
@@ -42,6 +52,7 @@ export default function ProjectItem({
       paddingLeft: 0,
       duration: 0.335,
       ease: Power2.easeInOut,
+      color: "#202020",
     });
   };
 
@@ -77,7 +88,7 @@ export default function ProjectItem({
           <span className="font-eastman text-gray-300 text-[1.125rem] translate-y-[0.4rem] md:translate-y-3">
             {serialNumber}
           </span>
-          <p className="font-eastman lg:font-eastman-offset text-[1.75rem] md:text-[4rem] text-gray-900 leading-[40px] normal-case pointer-events-none">
+          <p className="font-eastman lg:font-eastman-offset text-[1.75rem] md:text-[4rem] leading-[40px] normal-case pointer-events-none">
             {projectName}
           </p>
 

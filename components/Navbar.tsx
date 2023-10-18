@@ -57,16 +57,19 @@ export const Navbar: React.FC = () => {
     };
   }, [isMenuOpen]);
   return (
-    <nav className="w-full fixed md:relative font-neue-ultrabold uppercase z-[9999]">
+    <nav
+      role="navigation"
+      className="w-full fixed md:relative font-neue-ultrabold uppercase z-[9999]"
+    >
       <div className="pt-8 px-4 md:px-8 bg-transparent backdrop-blur-[5px] md:backdrop-blur-none">
         <div className="flex justify-between">
-          <Image src={navbarLogo} alt="Dindustack Logo" />
+          <Image src={navbarLogo} alt="Dindustack Home" />
           <div
             className="flex md:hidden justify-center items-center w-[2.875rem] h-[2.875rem] bg-gray-900 rounded-[1.4375rem] navbar-icon-shadow"
             onClick={closeMenu}
           >
             {isMenuOpen ? (
-              <Image src={close} alt="close icon" />
+              <Image src={close} alt="close icon" aria-hidden="true" />
             ) : (
               <Image src={menu} alt="menu icon" />
             )}

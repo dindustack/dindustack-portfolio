@@ -6,7 +6,7 @@ import { socialItems } from "@/constants/socials";
 
 export function Footer() {
   return (
-    <div
+    <footer
       className="bg-[#070707] rounded-t-[3.75rem] md:rounded-none text-[#FFFEF4] px-8 pt-[3.75rem] pb-8 md:pb-[2.5rem] relative z-[9900] overflow-hidden"
       id="contact"
     >
@@ -44,7 +44,7 @@ export function Footer() {
             <a href={item.href} target="_blank">
               <Image
                 src={item.imgSrc}
-                alt={`Chinwendu Agbaetuo - ${item.name}`}
+                alt={`Find me on - ${item.name}`}
               />
             </a>
           ))
@@ -59,6 +59,6 @@ export function Footer() {
           all rights reserved. copyright 2023 — ds
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

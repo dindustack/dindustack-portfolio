@@ -86,7 +86,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(function Hero(
   });
 
   return (
-    <div
+    <section
       className="flex flex-col-reverse items-center justify-center relative h-screen"
       id={id}
       ref={ref}
@@ -119,6 +119,6 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(function Hero(
         </div>
       </div>
       <div className="hero-image"></div>
-    </div>
+    </section>
   );
 });

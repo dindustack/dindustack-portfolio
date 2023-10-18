@@ -3,7 +3,6 @@ import React, { forwardRef, useRef, useState } from "react";
 import ProjectItem from "./Item";
 import { projects } from "@/constants/projects";
 import { ProjectBox } from "./Box";
-import { Sidebar } from "../Sidebar";
 
 type ProjectBoxRef = {
   animateIn: () => void;
@@ -28,7 +27,7 @@ export const Projects = forwardRef<HTMLDivElement, ProjectsProps>(
     };
 
     return (
-      <div
+      <section
         className="flex flex-col justify-center min-h-screen py-[6.25rem]"
         data-scroll-section
         id={id}
@@ -36,9 +35,6 @@ export const Projects = forwardRef<HTMLDivElement, ProjectsProps>(
       >
         <div className="capitalize text-[2.25rem] md:text-[3.5rem] font-neue-ultrabold text-gray-900 py-[1.125rem] md:py-12">
           work
-          {/* <span className="ml-4 normal-case text-[1.5rem]">
-            (Work in progress)
-          </span> */}
         </div>
         <div
           onMouseEnter={() => projectBoxRef.current?.animateIn()}
@@ -70,16 +66,15 @@ export const Projects = forwardRef<HTMLDivElement, ProjectsProps>(
             Want to hire me?
           </div>
           <div className="normal-case font-eastman text-[1rem] md:text-[1.5rem]">
-            <span>Reach out via</span>
             <a
               href="mailto:contact@dindustack.com"
               className="relative py-1 ml-1"
             >
-              contact@dindustack.com
+              Send email to contact@dindustack.com
             </a>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 );
