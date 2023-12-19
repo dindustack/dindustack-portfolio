@@ -2,7 +2,7 @@ import { StaticImageData } from "next/image";
 import imageOne from "../public/images/image1.png";
 import imageTwo from "../public/images/image2.png";
 import imageThree from "../public/images/image3.png";
-// import imageFour from "../public/images/image4.jpeg";
+import imageFour from "../public/images/image4.png";
 
 export type Project = {
   id: string;
@@ -36,18 +36,12 @@ export const projects: Project[] = [
     content: "Scroll animation using Vite and GSAP",
     url: "https://scroll-magic-nine.vercel.app/",
   },
-  // {
-  //   id: "03 -",
-  //   projectName: "Wealthy Smiles",
-  //   imgSrc: imageThree,
-  //   content:
-  //     "Build responsive websites using modern tools; and optimise for speed and performance.",
-  // },
-  // {
-  //   id: "04 -",
-  //   projectName: "Joyful Degree",
-  //   imgSrc: imageFour,
-  //   content:
-  //     "Build responsive websites using modern tools; and optimise for speed and performance.",
-  // },
+  {
+    id: "04 -",
+    projectName: "Flexilist",
+    imgSrc: imageFour,
+    content:
+      "Build responsive websites using modern tools; and optimise for speed and performance.",
+    url: "https://flexilist.vercel.app/",
+  },
 ];

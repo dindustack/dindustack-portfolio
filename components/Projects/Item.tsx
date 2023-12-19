@@ -24,15 +24,6 @@ export default function ProjectItem({
 }: ProjectItemProps) {
   const textRef = useRef() as React.MutableRefObject<HTMLAnchorElement>;
 
-  // function invertHex(hex: string): string {
-  //   const parsedHex = parseInt(`1${hex}`, 16);
-  //   const invertedValue = (parsedHex ^ 0xffffff)
-  //     .toString(16)
-  //     .toUpperCase()
-  //     .slice(1);
-  //   return invertedValue;
-  // }
-
   const handleEnter = () => {
     onEnter(index);
     gsap.killTweensOf(textRef.current);
@@ -41,7 +32,6 @@ export default function ProjectItem({
       paddingLeft: "9rem",
       duration: 0.335,
       ease: Power2.easeInOut,
-      color: "#FFFEF4",
     });
   };
 
