@@ -5,6 +5,7 @@ import footerMobileLogo from "../public/icons/dindustack-footer-mobile.svg";
 import { socialItems } from "@/constants/socials";
 
 export function Footer() {
+  const year = new Date().getFullYear();
   return (
     <footer
       className="bg-[#070707] rounded-t-[3.75rem] md:rounded-none text-[#FFFEF4] px-8 pt-[3.75rem] pb-8 md:pb-[2.5rem] relative z-[9900] overflow-hidden"
@@ -42,10 +43,7 @@ export function Footer() {
         {React.Children.toArray(
           socialItems.map((item) => (
             <a href={item.href} target="_blank">
-              <Image
-                src={item.imgSrc}
-                alt={`Find me on - ${item.name}`}
-              />
+              <Image src={item.imgSrc} alt={`Find me on - ${item.name}`} />
             </a>
           ))
         )}
@@ -55,9 +53,7 @@ export function Footer() {
         <div className="mt-8 lg:my-0">
           Made with 💚 in <span className="font-eastman-bold">Nigeria</span>
         </div>
-        <div className="uppercase">
-          all rights reserved. copyright 2023 — ds
-        </div>
+        <div className="uppercase">all rights reserved. copyright {year} — ds</div>
       </div>
     </footer>
   );
