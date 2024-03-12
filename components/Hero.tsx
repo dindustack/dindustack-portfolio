@@ -91,7 +91,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(function Hero(
       ref={ref}
     >
       <div
-        className="absolute top-1/2 lg:top-[40%] left-1/2 
+        className="absolute top-[40%] left-1/2 
       -translate-x-1/2 -translate-y-1/2"
       >
         <div className="hero-image"></div>
