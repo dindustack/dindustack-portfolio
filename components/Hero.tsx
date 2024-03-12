@@ -1,8 +1,7 @@
 "use client";
 import { gsap, Power2 } from "gsap";
 import hoverEffect from "hover-effect";
-import React, { forwardRef, useEffect, useRef } from "react";
-import { Sidebar } from "./Sidebar";
+import { forwardRef, useEffect, useRef } from "react";
 
 type HeroProps = {
   id: string;
@@ -91,8 +90,15 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(function Hero(
       id={id}
       ref={ref}
     >
+      <div
+        className="absolute top-1/2 lg:top-[40%] left-1/2 
+      -translate-x-1/2 -translate-y-1/2"
+      >
+        <div className="hero-image"></div>
+      </div>
+
       {/* absolute text to the left */}
-      <div className="lg:absolute lg:left-0 z-[20]">
+      <div className="absolute top-[60%] md:top-[40%] lg:left-0 z-[20]">
         <div
           ref={heroTextAnimation}
           className="leading-[3.75rem] text-gray-900"
@@ -118,7 +124,6 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(function Hero(
           </div>
         </div>
       </div>
-      <div className="hero-image"></div>
     </section>
   );
 });

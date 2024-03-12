@@ -9,11 +9,11 @@ export const Services = forwardRef<HTMLDivElement, ServicesProps>(
   function Services(props, ref) {
     return (
       <section
-        className="flex flex-col justify-center min-h-screen xl:min-h-[1px] mb-24 md:mb-0"
+        className="flex flex-col py-24"
         id={props.id}
         ref={ref}
       >
-        <div className="skillset-title pt-[6.25rem] md:pt-0 pb-[3.625rem]">
+        <div className="skillset-title pb-[3.625rem]">
           skillsets
         </div>
 

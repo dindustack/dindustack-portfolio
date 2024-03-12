@@ -15,8 +15,8 @@ export const marqueeContent: MarqueeProps[] = [
     imgSrc: star,
   },
   {
-    firstWord: "product",
-    secondWord: "designer",
+    firstWord: "creative",
+    secondWord: "web developer",
     imgSrc: star,
   },
   {

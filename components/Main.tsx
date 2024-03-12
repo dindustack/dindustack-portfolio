@@ -1,11 +1,12 @@
 import React, { useRef, useState } from "react";
-import { NavItem, Sidebar } from "./Sidebar";
-import { Hero } from "./Hero";
+import { InView } from "react-intersection-observer";
 import { About } from "./About";
-import { Services } from "./Services";
+import { Hero } from "./Hero";
+import { MarqueeSection } from "./Marquee";
 import { Projects } from "./Projects";
 import { ScrollDownArrow } from "./ScrollDownArrow";
-import { InView } from "react-intersection-observer";
+import { Services } from "./Services";
+import { NavItem, Sidebar } from "./Sidebar";
 
 const sectionInfo = [
   {
@@ -16,6 +17,7 @@ const sectionInfo = [
     id: "about",
     component: About,
   },
+
   {
     id: "services",
     component: Services,

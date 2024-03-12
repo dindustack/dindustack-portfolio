@@ -35,7 +35,7 @@ export const ProjectBox = forwardRef(function ProjectBox(
   /**
    * Refs
    */
-  const boxRef = useRef() as React.MutableRefObject<HTMLDivElement>;
+  const boxRef = useRef<HTMLDivElement>(null);
   const elRef = useRef() as React.MutableRefObject<HTMLDivElement>;
   const imagesRef = useRef<HTMLDivElement[]>([]);
 
