@@ -3,6 +3,7 @@ import imageOne from "../public/images/image1.png";
 import imageTwo from "../public/images/image2.png";
 import imageThree from "../public/images/image3.png";
 import imageFour from "../public/images/image4.png";
+import imageFive from "../public/images/formify.png";
 
 export type Project = {
   id: string;
@@ -15,14 +16,22 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "01 -",
-    projectName: "Twitter Clone",
+    projectName: "Capital Cruise",
     imgSrc: imageOne,
     content:
-      "Twitter clone with React, Tailwind, Next, Prisma, Mongo, NextAuth & Vercel",
-    url: "https://twitter-clone-gamma-three-44.vercel.app/",
+      "Construction agency website made with React, Tailwind, Next & Prismic",
+    url: "https://www.capitalcruiseng.com/",
   },
   {
     id: "02 -",
+    projectName: "Formify",
+    imgSrc: imageFive,
+    content:
+      "Form builder using React, Typescript , Dnd-Kit, PostgreSQL, Prisma & Tailwind",
+    url: "https://formify-lake.vercel.app/",
+  },
+  {
+    id: "03 -",
     projectName: "Venuefy",
     imgSrc: imageTwo,
     content:
@@ -30,18 +39,18 @@ export const projects: Project[] = [
     url: "https://venuefy.vercel.app/",
   },
   {
-    id: "03 -",
+    id: "04 -",
     projectName: "Scroll Magic",
     imgSrc: imageThree,
     content: "Scroll animation using Vite and GSAP",
     url: "https://scroll-magic-nine.vercel.app/",
   },
   {
-    id: "04 -",
+    id: "05 -",
     projectName: "Flexilist",
     imgSrc: imageFour,
     content:
-      "Build responsive websites using modern tools; and optimise for speed and performance.",
+      "Task board built with React, Typescript , Dnd-Kit, Prisma & Tailwind",
     url: "https://flexilist.vercel.app/",
   },
 ];

@@ -59,11 +59,11 @@ export const Navbar: React.FC = () => {
   return (
     <nav
       role="navigation"
-      className="w-full fixed md:relative font-neue-ultrabold uppercase z-[9999]"
+      className="w-full fixed  font-neue-ultrabold uppercase z-[9999]"
     >
       <div className="pt-8 px-4 md:px-8 bg-transparent backdrop-blur-[5px] md:backdrop-blur-none">
         <div className="flex justify-between">
-          <Image src={navbarLogo} alt="Dindustack Home" />
+          <Image src={navbarLogo} alt="Dindustack Home" priority />
           <div
             className="flex md:hidden justify-center items-center w-[2.875rem] h-[2.875rem] bg-gray-900 rounded-[1.4375rem] navbar-icon-shadow"
             onClick={closeMenu}

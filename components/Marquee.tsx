@@ -1,14 +1,15 @@
+import { marqueeContent } from "@/constants/marquee";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/splide/dist/css/splide.min.css";
 import Image from "next/image";
 import React from "react";
-import { marqueeContent } from "@/constants/marquee";
 
 export function MarqueeSection() {
   return (
     <div
-      className="hidden mx-[-200px] md:grid border-gray-900 bg-gray-900 border-t border-b font-eastman-offset absolute z-50"
+      className="hidden mx-[-200px] md:grid border-gray-900 bg-gray-900 
+      border-t border-b font-eastman-offset absolute -z-[2]"
       id="marquee"
     >
       <Splide

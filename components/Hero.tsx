@@ -85,7 +85,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(function Hero(
   });
 
   return (
-    <section className="relative  h-screen" id={id} ref={ref}>
+    <section className="relative h-screen" id={id} ref={ref}>
       <div
         className="absolute top-1/2 lg:top-[30%] left-1/2 
       -translate-x-1/2 -translate-y-1/2"
