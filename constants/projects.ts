@@ -19,7 +19,7 @@ export const projects: Project[] = [
     projectName: "Capital Cruise",
     imgSrc: imageOne,
     content:
-      "Construction agency website made with React, Tailwind, Next & Prismic",
+      "Construction agency website made with React, Typescript, Tailwind, Next & Prismic",
     url: "https://www.capitalcruiseng.com/",
   },
   {
@@ -50,7 +50,7 @@ export const projects: Project[] = [
     projectName: "Flexilist",
     imgSrc: imageFour,
     content:
-      "Task board built with React, Typescript , Dnd-Kit, Prisma & Tailwind",
+      "Task board built with React, Typescript, Dnd-Kit, Prisma & Tailwind",
     url: "https://flexilist.vercel.app/",
   },
 ];

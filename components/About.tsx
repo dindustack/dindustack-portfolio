@@ -73,7 +73,7 @@ export const About = forwardRef<HTMLDivElement, AboutProps>(function About(
 
   return (
     <section
-      className="flex flex-col justify-center min-h-screen mt-16"
+      className="flex flex-col py-24"
       data-scroll-section
       id={id}
       ref={ref}
