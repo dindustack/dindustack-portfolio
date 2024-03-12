@@ -1,1 +1,1 @@
-My portfolio as a frontend developer using Nextjs, TypeScript, TailwindCSS AND GSAP
+My portfolio as a frontend developer using Nextjs, TypeScript, TailwindCSS and GSAP
