@@ -111,7 +111,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(function Hero(
             </div>
           </div>
           <div className="role-animation hidden md:block uppercase font-eastman-offset text-[2rem] tracking-[0.06em] mt-[1.5rem]">
-            creative frontend developer
+            creative software engineer
           </div>
           <div className="text-animation hidden md:block font-eastman leading-[1.25rem] text-[#000000] mt-7 text-[1rem] max-w-[28.6875rem]">
             Crafting beautiful and intuitive user experiences, one line of code
