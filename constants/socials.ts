@@ -1,6 +1,5 @@
 import { StaticImageData } from "next/image";
 import github from "../public/icons/github.svg";
-import linkedin from "../public/icons/linkedin.svg";
 import x from "../public/icons/x.svg";
 import dribbble from "../public/icons/dribbble.svg";
 
@@ -16,12 +15,7 @@ export const socialItems: Socials[] = [
     href: "https://www.github.com/dindustack/",
     imgSrc: github,
   },
-  {
-    name: "linkedin",
-    href: "https://www.linkedin.com/in/dindustack/",
-    imgSrc: linkedin,
-  },
-  { name: "twitter", href: "https://twitter.com/dindustack", imgSrc: x },
+  { name: "x", href: "https://twitter.com/dindustack", imgSrc: x },
   {
     name: "dribbble",
     href: "https://dribbble.com/dindustack",

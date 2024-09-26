@@ -2,7 +2,6 @@ import React, { useRef, useState } from "react";
 import { InView } from "react-intersection-observer";
 import { About } from "./About";
 import { Hero } from "./Hero";
-import { MarqueeSection } from "./Marquee";
 import { Projects } from "./Projects";
 import { ScrollDownArrow } from "./ScrollDownArrow";
 import { Services } from "./Services";
