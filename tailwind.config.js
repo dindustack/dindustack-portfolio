@@ -227,11 +227,11 @@ module.exports = {
 
         ".indicator": {
           "@media (max-width: 425px)": {
-            left: "2.785rem",
+            left: "3.12rem",
           },
 
           "@media (min-width: 425px)": {
-            left: "3.28rem",
+            left: "3.12rem",
           },
         },
       });

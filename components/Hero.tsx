@@ -87,6 +87,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(function Hero(
   return (
     <section
       className="flex flex-col-reverse items-center justify-center relative h-screen"
+      data-scroll-section
       id={id}
       ref={ref}
     >

@@ -14,7 +14,7 @@ interface ISidebarProps {
 }
 
 const navItems: NavItem[] = [
-  { label: "Intro", path: "hero" },
+  { label: "Intro", path: "intro" },
   { label: "About", path: "about" },
   { label: "Services", path: "services" },
   { label: "Projects", path: "projects" },

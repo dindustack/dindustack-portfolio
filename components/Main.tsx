@@ -9,7 +9,7 @@ import { NavItem, Sidebar } from "./Sidebar";
 
 const sectionInfo = [
   {
-    id: "hero",
+    id: "intro",
     component: Hero,
   },
   {
@@ -28,7 +28,7 @@ const sectionInfo = [
 ];
 
 const navItems: NavItem[] = [
-  { label: "Intro", path: "hero" },
+  { label: "Intro", path: "intro" },
   { label: "About", path: "about" },
   { label: "Services", path: "services" },
   { label: "Projects", path: "projects" },
