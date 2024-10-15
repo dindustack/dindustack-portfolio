@@ -59,7 +59,7 @@ export const Navbar: React.FC = () => {
   return (
     <nav
       role="navigation"
-      className="w-full fixed  font-neue-ultrabold uppercase z-[9999]"
+      className="w-full fixed font-neue-ultrabold uppercase z-[9999]"
     >
       <div className="pt-8 px-4 md:px-8 bg-transparent backdrop-blur-[5px] md:backdrop-blur-none">
         <div className="flex justify-between">
