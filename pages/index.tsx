@@ -10,7 +10,7 @@ const HomePage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Chinwendu Agbaetuo | Software Engineer</title>
+        <title>Chinwendu Agbaetuo | Design Engineer</title>
         <meta
           name="description"
           content="Portfolio showcasing frontend experience"
