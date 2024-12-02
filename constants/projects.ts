@@ -2,8 +2,7 @@ import { StaticImageData } from "next/image";
 import imageOne from "../public/images/image1.png";
 import imageSix from "../public/images/quin.png";
 import imageTwo from "../public/images/image2.png";
-import imageThree from "../public/images/image3.png";
-import imageFour from "../public/images/image4.png";
+import imageThree from "../public/images/mojola.png";
 import imageFive from "../public/images/formify.png";
 
 export type Project = {
@@ -33,6 +32,14 @@ export const projects: Project[] = [
   },
   {
     id: "03 -",
+    projectName: "Mojolaoluwa Olunaike",
+    imgSrc: imageThree,
+    content:
+      "Public health professional portfolio landing page using React, Typescript , Framer Motion, Prismic & Tailwind",
+    url: "https://www.mojolaoluwaolunaike.com/",
+  },
+  {
+    id: "04 -",
     projectName: "Formify",
     imgSrc: imageFive,
     content:
@@ -40,26 +47,11 @@ export const projects: Project[] = [
     url: "https://formify-lake.vercel.app/",
   },
   {
-    id: "04 -",
+    id: "05 -",
     projectName: "Venuefy",
     imgSrc: imageTwo,
     content:
       "Venue booking platform built with Next.js 13 App Router: React, Tailwind, Prisma, MongoDB, NextAuth",
     url: "https://venuefy.vercel.app/",
-  },
-  {
-    id: "05 -",
-    projectName: "Scroll Magic",
-    imgSrc: imageThree,
-    content: "Scroll animation using Vite and GSAP",
-    url: "https://scroll-magic-nine.vercel.app/",
-  },
-  {
-    id: "06 -",
-    projectName: "Flexilist",
-    imgSrc: imageFour,
-    content:
-      "Task board built with React, Typescript, Dnd-Kit, Prisma & Tailwind",
-    url: "https://flexilist.vercel.app/",
   },
 ];
