@@ -44,7 +44,7 @@ export const projects: Project[] = [
     imgSrc: imageTwo,
     content:
       "Pastel Artist portfolio using React, Typescript, Prismic & Tailwind",
-    url: "https://folorunsodideolu.com/",
+    url: "https://www.folorunsodideolu.com/",
   },
 
   {
