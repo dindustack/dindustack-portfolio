@@ -4,6 +4,7 @@ import imageSix from "../public/images/quin.png";
 import imageTwo from "../public/images/folo.png";
 import imageThree from "../public/images/mojola.png";
 import imageFive from "../public/images/formify.png";
+import image7 from "../public/images/image2.png";
 
 export type Project = {
   id: string;
@@ -46,7 +47,6 @@ export const projects: Project[] = [
       "Pastel Artist portfolio using React, Typescript, Prismic & Tailwind",
     url: "https://www.folorunsodideolu.com/",
   },
-
   {
     id: "05 -",
     projectName: "Formify",
@@ -54,5 +54,13 @@ export const projects: Project[] = [
     content:
       "Form builder using React, Typescript , Dnd-Kit, PostgreSQL, Prisma & Tailwind",
     url: "https://formify-lake.vercel.app/",
+  },
+  {
+    id: "06 -",
+    projectName: "Venuefy",
+    imgSrc: image7,
+    content:
+      "Venue booking web app using React, Typescript, Prisma, MongoDB, NextAuth & Tailwind",
+    url: "https://venuefy.vercel.app/",
   },
 ];
