@@ -29,7 +29,7 @@ export const projects: Project[] = [
     projectName: "Mojolaoluwa Olunaike",
     imgSrc: imageThree,
     content:
-      "Public health professional portfolio landing page using React, Typescript, Framer Motion, Prismic & Tailwind",
+      "Public health professional portfolio landing page using React, Typescript, Framer Motion, Next, Prismic & Tailwind",
     url: "https://www.mojolaoluwaolunaike.com/",
   },
   {
