@@ -120,7 +120,7 @@ export const Hero = forwardRef<HTMLDivElement, HeroProps>(function Hero(
           </div>
 
           <div className="text-animation block md:hidden font-eastman leading-[1.25rem] text-[#000000] mt-7 text-[1rem] max-w-[28.6875rem]">
-            I am a creative developer and I craft beautiful and intuitive user
+            I am a creative web developer and I craft beautiful and intuitive user
             experiences, one line of code at a time.
           </div>
         </div>

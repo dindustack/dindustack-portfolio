@@ -26,7 +26,7 @@ export const About = forwardRef<HTMLDivElement, AboutProps>(function About(
   }
 
   const text =
-    "As a frontend developer I create engaging and intuitive web applications that deliver a great user experience across all devices and platforms.";
+    "As a web developer I create engaging and intuitive web applications that deliver a great user experience across all devices and platforms.";
 
   const tools = [
     "GraqhQL",

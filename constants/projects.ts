@@ -18,11 +18,11 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "01 -",
-    projectName: "TCN Sangotedo",
+    projectName: "TCN Jesutedo",
     imgSrc: image8,
     content:
       "Religious organization website made with React, Typescript, Tailwind, Framer Motion, Next & Prismic",
-    url: "https://www.tcnsangotedo.org/",
+    url: "https://www.jesutedo.org/",
   },
   {
     id: "02 -",
