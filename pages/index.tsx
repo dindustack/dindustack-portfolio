@@ -10,10 +10,10 @@ const HomePage: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Chinwendu Agbaetuo | Design Engineer</title>
+        <title>Chinwendu Agbaetuo | Web Developer</title>
         <meta
           name="description"
-          content="Portfolio showcasing frontend experience"
+          content="Portfolio showcasing creativity"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
