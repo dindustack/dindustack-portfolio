@@ -22,7 +22,7 @@ export const projects: Project[] = [
     imgSrc: image8,
     content:
       "Religious organization website made with React, Typescript, Tailwind, Framer Motion, Next & Prismic",
-    url: "https://www.jesutedo.org/",
+    url: "https://www.tcnjesutedo.org/",
   },
   {
     id: "02 -",
