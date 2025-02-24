@@ -5,7 +5,8 @@ import imageTwo from "../public/images/folo.png";
 import imageThree from "../public/images/mojola.png";
 import imageFive from "../public/images/formify.png";
 import image7 from "../public/images/image2.png";
-import image8 from "../public/images/tcnsangotedo.webp";
+import image8 from "../public/images/tcnjesutedo.webp";
+import image9 from "../public/images/modupesf.webp";
 
 export type Project = {
   id: string;
@@ -18,6 +19,14 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "01 -",
+    projectName: "Modupe Sapiential Foundation",
+    imgSrc: image9,
+    content:
+      "Non-profit organization website made with React, Typescript, Tailwind, Framer Motion, Next & Prismic",
+    url: "https://www.modupesf.org/",
+  },
+  {
+    id: "02 -",
     projectName: "TCN Jesutedo",
     imgSrc: image8,
     content:
@@ -25,7 +34,7 @@ export const projects: Project[] = [
     url: "https://www.tcnjesutedo.org/",
   },
   {
-    id: "02 -",
+    id: "03 -",
     projectName: "Mojolaoluwa Olunaike",
     imgSrc: imageThree,
     content:
@@ -33,7 +42,7 @@ export const projects: Project[] = [
     url: "https://www.mojolaoluwaolunaike.com/",
   },
   {
-    id: "03 -",
+    id: "04 -",
     projectName: "Folorunso Dideolu",
     imgSrc: imageTwo,
     content:
@@ -41,7 +50,7 @@ export const projects: Project[] = [
     url: "https://www.folorunsodideolu.com/",
   },
   {
-    id: "04 -",
+    id: "05 -",
     projectName: "Capital Cruise",
     imgSrc: imageOne,
     content:
@@ -49,7 +58,7 @@ export const projects: Project[] = [
     url: "https://www.capitalcruiseng.com/",
   },
   {
-    id: "05 -",
+    id: "06 -",
     projectName: "Quintessence Homes",
     imgSrc: imageSix,
     content:
@@ -57,7 +66,7 @@ export const projects: Project[] = [
     url: "https://www.quintessencehomes.com/",
   },
   {
-    id: "06 -",
+    id: "07 -",
     projectName: "Formify",
     imgSrc: imageFive,
     content:
@@ -65,7 +74,7 @@ export const projects: Project[] = [
     url: "https://formify-lake.vercel.app/",
   },
   {
-    id: "07 -",
+    id: "08 -",
     projectName: "Venuefy",
     imgSrc: image7,
     content:
