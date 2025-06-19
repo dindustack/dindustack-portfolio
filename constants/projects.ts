@@ -3,10 +3,10 @@ import imageOne from "../public/images/image1.png";
 import imageSix from "../public/images/quin.png";
 import imageTwo from "../public/images/folo.png";
 import imageThree from "../public/images/mojola.png";
-import imageFive from "../public/images/formify.png";
-import image7 from "../public/images/image2.png";
 import image8 from "../public/images/tcnjesutedo.webp";
 import image9 from "../public/images/modupesf.webp";
+import image10 from "../public/images/funnerd-tutors.webp";
+import image11 from "../public/images/avana-energy.webp";
 
 export type Project = {
   id: string;
@@ -19,6 +19,22 @@ export type Project = {
 export const projects: Project[] = [
   {
     id: "01 -",
+    projectName: "Funnerd Tutors",
+    imgSrc: image10,
+    content:
+      "English and STEM subjects tutoring business website made with React, Typescript, Tailwind, Framer Motion, Next & Prismic",
+    url: "https://funnerd-tutors.netlify.app/",
+  },
+  {
+    id: "02 -",
+    projectName: "Avana Energy",
+    imgSrc: image11,
+    content:
+      "Sustainable energy company website made with React, Typescript, Tailwind, Framer Motion, Next & Prismic",
+    url: "https://avana-website.vercel.app/",
+  },
+  {
+    id: "03 -",
     projectName: "Modupe Sapiential Foundation",
     imgSrc: image9,
     content:
@@ -26,7 +42,7 @@ export const projects: Project[] = [
     url: "https://www.modupesf.org/",
   },
   {
-    id: "02 -",
+    id: "04 -",
     projectName: "TCN Jesutedo",
     imgSrc: image8,
     content:
@@ -34,7 +50,7 @@ export const projects: Project[] = [
     url: "https://www.tcnjesutedo.org/",
   },
   {
-    id: "03 -",
+    id: "05 -",
     projectName: "Mojolaoluwa Olunaike",
     imgSrc: imageThree,
     content:
@@ -42,7 +58,7 @@ export const projects: Project[] = [
     url: "https://www.mojolaoluwaolunaike.com/",
   },
   {
-    id: "04 -",
+    id: "06 -",
     projectName: "Folorunso Dideolu",
     imgSrc: imageTwo,
     content:
@@ -50,7 +66,7 @@ export const projects: Project[] = [
     url: "https://www.folorunsodideolu.com/",
   },
   {
-    id: "05 -",
+    id: "07 -",
     projectName: "Capital Cruise",
     imgSrc: imageOne,
     content:
@@ -58,27 +74,11 @@ export const projects: Project[] = [
     url: "https://www.capitalcruiseng.com/",
   },
   {
-    id: "06 -",
+    id: "08 -",
     projectName: "Quintessence Homes",
     imgSrc: imageSix,
     content:
       "Real estate developer website made with React, Typescript, Tailwind, Next & Prismic",
     url: "https://www.quintessencehomes.com/",
-  },
-  {
-    id: "07 -",
-    projectName: "Formify",
-    imgSrc: imageFive,
-    content:
-      "Form builder using React, Typescript , Dnd-Kit, PostgreSQL, Prisma & Tailwind",
-    url: "https://formify-lake.vercel.app/",
-  },
-  {
-    id: "08 -",
-    projectName: "Venuefy",
-    imgSrc: image7,
-    content:
-      "Venue booking web app using React, Typescript, Prisma, MongoDB, NextAuth & Tailwind",
-    url: "https://venuefy.vercel.app/",
   },
 ];
